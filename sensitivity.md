@@ -1,27 +1,17 @@
-**
+# Sensitivity
+## Comparing qPCR and Sequencing
 
-## Sensitivity - qPCR and Sequencing
-
-qPCR is widely believed to be the “gold standard” in molecular diagnostic testing. qPCR has a very low LoD (limit of detection), in some cases, a handful of copies can be detected in a sample. This is generally assessed using synthetic material spiked into a sample to create standard curves like the following:
-
-  
-  
+qPCR is widely believed to be the “gold standard” in molecular diagnostic testing. qPCR has a very low  limit of detection (LoD). In some cases, a handful of copies can be detected in a sample. This is generally assessed using synthetic material spiked into a sample to create standard curves like the following:
 
 ![](https://lh3.googleusercontent.com/45LCmGVIxaMMDK7f8jl2RiZNuIVEIuEclahtz6uLr3JEwCMaTThtwrw22ncYAjGE1Pr8hiHy2y_hM6zQozDO9BG_vlKGpmbrbq9xuh7tYmeQzkWmCDMMKSKE3rtWpskeMjY4YgE30T1fT30Oyrv2W4Y)
 
-Because qPCR targets a primer delimited region (the amplification region), it is insensitive to background material. A high fraction of human material (mostly rRNA in the case of RT-qPCR) or bacterial material will have only a minor effect on the sensitivity of qPCR. In other words, the LoD relies on the sample's absolute abundance of the target. 
+Because qPCR targets a primer-delimited region (the amplification region), it is **insensitive to background material**. A high fraction of human material (mostly rRNA in the case of RT-qPCR) or bacterial material will have only a minor effect on the sensitivity of qPCR. In other words, the LoD relies on the sample's **absolute abundance of the target**. 
 
-Metagenomic sequencing, however, is sensitive to background material. To ensure that your target(s) of interest is detected, you must also sequence through background fragments until your target is reached. Thus, metagenomic’s LoD relies on the relative abundance of the target among the other nucleic acid in the sample
-
-  
-
-At first glance, it seems like a foregone conclusion. qPCR will always be more sensitive than sequencing. In practice, however, it turns out that this may not be the case…
+**Metagenomic sequencing**, however, is **sensitive to background material**. To ensure that your target(s) of interest is detected, you must also sequence through background fragments until your target is reached. Thus, metagenomic’s LoD relies on the relative abundance of the target among the other nucleic acid in the sample.
 
 ## Metagenomic Sequencing Studies
 
 MGS literature demonstrates that not only does metagenomic sequencing have broader utility than qPCR, allowing the detection of known and unknown viruses[12](https://www.zotero.org/google-docs/?broken=jUvyc2), but that it also has at least comparable sensitivity when adequate read depth is used. Indeed, potential false negatives were detected by sequencing, indicating a greater test sensitivity in some cases. 
-
-  
 
 We reviewed 42 publications (Appendix D) where metagenomic sequencing was used on pathogenic samples. These were collected from literature searches, extracted from review papers, and received via a public call for relevant publications.
 
