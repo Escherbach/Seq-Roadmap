@@ -81,7 +81,7 @@ We can imagine an approach where flow cells are coated with different oligonucle
 
 To build an effective sample-to-answer platform we will need to automate the steps described above in a low cost platform. Such an automation system is currently unavailable for use on a single sample basis. This is largely because there is no current market for a fixed protocol metagenomic sample preparation system. However as we shall see, viable approaches have already been demonstrated for use in qPCR sample-to-answer systems. We therefore view the development of automated sample preparations systems as a low technical risk problem.
 
-#### Current Solutions
+### Current Solutions
 
 A number of integrated sample and library preparation devices are available or under development. Existing commercial approaches are largely built around pipette robots, and a number of turnkey platforms are available for use with Illumina sequencers[⁵⁶](https://www.zotero.org/google-docs/?tgNg6l). These almost exclusively are designed to process \>8 samples, to support larger labs, require skilled personnel, and are not suitable for use in a point of care context.
 
@@ -89,7 +89,7 @@ Digital fluidic platforms (Voltrax[⁵⁷](https://www.zotero.org/google-docs/?1
 
 One company (DNAe) is currently developing a sample-to-answer sequencing platform[⁶⁰](https://www.zotero.org/google-docs/?ZK4aFk). However, it is unclear if this platform will be applicable for hypothesis-free infectious disease testing.
 
-#### New Solutions
+### New Solutions
 
 The deployment of a viral MGS-based diagnostic platform would require a new generation of automated sample and library preparation instrumentation. In designing these, it is possible to take a page out of fully-integrated qPCR sample-to-answer platforms[⁶¹](https://www.zotero.org/google-docs/?tsg7sb) are available. Notable examples are the Cepheid Genexpert, GenMark ePlex and Abbott ID NOW. More recently, sample-to-answer platforms specifically targeting SARS-CoV-2 have also been developed. For example the DNANudge developed by TTP.
 
@@ -106,6 +106,6 @@ In the DNANudge post-clean up cDNA is eluted into an imaging region. This could 
 Both these approaches could be implemented without unduly increasing the complexity beyond that of the DNANudge device (manufactured and developed by TTP). As such we can expect such an integrated sample prep and sequencing instrument to have a COGS comparable to the DNANudge and other sample-to-answer platforms such as the Genexpert (~$3).
 <img src="https://lh5.googleusercontent.com/pjMPTRucxhSo8rMBSOmjHcpy-RNWHAAaOSLOvvAdyzECOurvjLs2IEhrjaemkVwpKM5pWe1Shk6_r6KsleX-LACNjCMTNV33dV4t137NGPeHZeIBvQlLNsU9BZPVfwb97eXdGgA_pNPx7qMfrmscNu0" alt="img" style="zoom: 25%;" /><img src="https://lh5.googleusercontent.com/SBEwKqvHI3q-1lpkT8fntKoQTnuk_awWFY87iL_ZK8WhYdaT41XXI_TPKWiYJLulw1MTBzEuot9upRh98bpgBRZ-kp_gbKj661YOEEkoqgMZXGKSK4Up26weixzeWBkG8zKONo-YlA1Nex6TIoT3Euo" alt="img" style="zoom: 25%;" />
 
-DNANudge and Cepheid sample-to-answer cartridges. Cepheid ship ~36 million units a year.
+*DNANudge and Cepheid sample-to-answer cartridges. Cepheid ship ~36 million units a year.*
 
 Beyond this, it’s possible that surface amplification (Illumina - bridge amplification) and cyclic sequencing could be integrated into the sequencing cartridge (as in the iSeq) however as discussed in “Sequencing Platforms” this may result in a platform that no longer meeting our requirements.
