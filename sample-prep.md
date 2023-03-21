@@ -2,11 +2,17 @@
 
 > **Summary:** The deployment of a viral MGS-based diagnostic platform will require a new generation of automated sample and library preparation instruments that are simple to use, economically competitive and that remove issues with contamination. Instrumentation from qPCR systems can be adapted with minimal technical risk.
 
-A complete sample-to-answer metagenomic sequencing platform will require the development of a sample acquisition and preparation system. This will take samples from patients and prepare them for introduction to sequencing instrumentation. In a clinically viable platform, sample preparation will be *integrated into sequencing instrumentation*, such that a clinician need only add the sample to a pre-loaded cartridge and insert it into an instrument. This is much the same workflow that exists for sample-to-answer qPCR instrumentation (Cepheid GeneXpert). And we shall see that it may be possible to leverage much of this work in the development of tools for sample-to-answer metagenomic sequencing platforms.
+## Overview of Current Workflows
 
-{:*toc*}
+A complete sample-to-answer metagenomic sequencing platform will require the development of a sample acquisition and preparation system. This will **take samples from patients** and prepare them for introduction to sequencing instrumentation. The first step in a sequencing wor Once a sample has been collected, it needs to undergo a number of preparation steps prior to sequencing. Broadly, we describe these as ***sample preparation*** and ***library preparation***. In a clinically viable platform, sample preparation will be ***integrated into sequencing instrumentation***, such that a clinician need only add the sample to a pre-loaded cartridge and insert it into an instrument, replicating the workflow of sample-to-answer qPCR instrumentation (e.g. the Cepheid GeneXpert).
 
-## Sample Acquisition 
+. *Library preparation* refers to the subsequent preparation steps required to prepare a sample for sequencing.
+
+Both sample and library preparation requirements will vary significantly depending on the *sequencing platform* being used. And both these processes will contribute to the complexity of any integrated infectious disease testing device. In fact, for many approaches the sample and library preparation steps *may be the most costly and time consuming parts of the sequencing process*.
+
+In this section we will discuss sample and library preparation requirements for RNA shotgun metagenomic sequencing of samples.
+
+### Sample Acquisition
 
 For the purpose of a ubiquitous sequencing system, sample collection should be **non-invasive** and **economically competitive**. Sample types of interest include 
 
@@ -19,27 +25,19 @@ For the purpose of a ubiquitous sequencing system, sample collection should be *
 
 Effective and non-invasive sample acquisition consumables have been developed for use during COVID-19. For ***respiratory conditions***, swab-based anterior nasal collection systems are the natural starting point.
 
-## Sample and Library Preparation 
-
-Once a sample has been collected, it needs to undergo a number of preparation steps prior to sequencing. Broadly, we describe these as ***sample preparation*** and ***library preparation***. 
-
-*Sample preparation* describes the preparation of a sample such that it largely contains only the material of interest, absent of contaminants. *Library preparation* refers to the subsequent preparation steps required to prepare a sample for sequencing.
-
-Both sample and library preparation requirements will vary significantly depending on the *sequencing platform* being used. And both these processes will contribute to the complexity of any integrated infectious disease testing device. In fact, for many approaches the sample and library preparation steps *may be the most costly and time consuming parts of the sequencing process*.
-
-In this section we will discuss sample and library preparation requirements for RNA shotgun metagenomic sequencing of samples.
-
 ### Sample Preparation
+
+The goal of a sample preparation step is to process the sample such that it contains the greatest possible fraction of the material of interest, absent of contaminants.
 
 Ideally, samples would require no preparation and raw samples could be loaded directly onto a sequencing instrument. While this could be a long-term aspiration for the field, it seems unlikely that there will be a practically useful approach within the next 5-10 years. Even in the most ambitious scenario, we will likely at least need to dilute the sample in a loading buffer.
 
-More realistically, we will need to remove contaminants and inhibitors, and may wish to remove material that is not of interest (see ***Selection*** below). In this context, the conventional phenol-chloroform based extraction approaches have largely been displaced by silica beads, columns or surfaces.
+More realistically, we will need to remove contaminants and inhibitors, and may wish to remove material that is not of interest (see [Selection](http://sequencing-roadmap.org/sample-prep#selection) below). In this context, the conventional phenol-chloroform based extraction approaches have largely been displaced by silica beads, columns or surfaces.
 
-For platforms only capable of sequencing DNA (Illumina, Ion Torrent), RNA samples will also need to be converted into cDNA prior to library preparation.
+For platforms only capable of sequencing DNA (Illumina, Ion Torrent), RNA samples will also need to be converted into cDNA prior to library preparation. Fortunately, the isolation and cDNA conversion of RNA samples has been performed at a low cost and scale during COVID-19 and thus should not pose a significant challenge.
 
-Fortunately, the isolation and cDNA conversion of RNA samples has been performed at a low cost and scale during COVID-19 and thus should not pose a significant challenge.
+### Library Preparation
 
-### Library Preparation: An overview
+#### Current Library Preparation Approaches
 
 | Complexity        | Platform                               | Summary                                                      |
 | ----------------- | -------------------------------------- | ------------------------------------------------------------ |
@@ -47,23 +45,17 @@ Fortunately, the isolation and cDNA conversion of RNA samples has been performed
 | Medium Complexity | Illumina, Ion Torrent, Oxford Nanopore | Oxford Nanopore, Illumina and Ion Torrent all require adaptor sequences to be added to templates to enable the sequencing process. This is usually performed using either ligation or transposon/topoisomerase based techniques.<br />While Oxford Nanopore have a direct RNA sequencing kit, sample preparation takes \~2 hours. Similarly Illumina and Ion Torrent kits also require \~2 hours of lab time. The fastest sample preparation route here is likely the transposon based approach used as used in Oxford Nanopore’s Rapid DNA sequencing kit, this process takes \~10 minutes. |
 | Low Complexity    | Helicos, PacBio (Direct RNA)           | In the case of Helicos direct RNA sequencing[⁴⁶](https://www.zotero.org/google-docs/?rYncGj) where input RNA already has a naturally pre-existing polyA tail in other contexts random hexamer primer single molecule sequencing has been demonstrated[⁵³](https://www.zotero.org/google-docs/?TDYCwr). As such no library preparation steps are required in these cases.<br />Similarly, Pacific Biosciences could adapt their platform for use with single templates (rather than SMRTbell constructs) sacrificing accuracy for simplified library prep, a configuration that was previously supported on older instruments. Failing this, a PolyA tail may be added using readily available polyA tailing kits[⁵⁴](https://www.zotero.org/google-docs/?cpcxLU). This protocol takes \~1 hour. |
 
+### Pre-sequencing Steps (Cluster and Colony Generation)
 
+While we haveve discussed sample and library preparation above, there is a third set of processing steps that material often undergoes prior to sequencing. These are often hidden from the user and integrated into the sequencing process itself. However, if we are to build a complete integrated solution they must be considered.
 
-### Integrated Approaches
+Most significantly these “pre-sequencing” steps include the **localized amplification** of a single template. These include:
 
-This section has discussed *existing* library preparation approaches. It’s important to note that current platforms have been designed to be *versatile* and serve a number of applications using the same reagent kits and flowcells. 
+- Clusters (Illumina - Bridge Amplification)
+- DNA amplified beads (Ion Torrent, Genapsys, Ultima Genomics)
+- DNB (DNA Nanoballs - MGI).
 
-However, we can further **simplify the library preparation process if we sacrifice this versatility**. For example, as discussed above, for Helicos direct RNA sequencing where naturally pre-existing polyA tails are present, no additional sample preparation is required. This is because the Helicos/SeqLL flow cells are coated with poly(dT) oligonucleotides to capture these polyA tailed templates.
-
-We can imagine an approach where flow cells are coated with different oligonucleotides enabling other templates to be captured. For example, the surface could be coated with random hexamer oligonucleotides allowing a material to be directly captured on the flowcell. This would allow material to be captured on the flow cell without additional library preparation steps. A targeted approach could also be employed where oligonucleotides target specific known sequences (for example known viral sequence).
-
-#### Pre-sequencing Steps (Cluster and Colony Generation) - Platform Preparation 
-
-While we’ve discussed sample and library preparation above there is a third set of processing steps that material often undergoes prior to sequencing. These are often hidden from the user and integrated into the sequencing process itself. However, if we are to build a complete integrated solution they must be considered.
-
-Most significantly these “pre-sequencing” steps include the localized amplification of a single template: Clusters (Illumina - Bridge Amplification), DNA amplified beads (Ion Torrent, Genapsys, Ultima Genomics), or DNB (DNA Nanoballs - MGI).
-
-DNA amplified beads in particular often require dedicated instrumentation (for example the Ion Torrent OneTouch). Adding significant complexity to a complete sequencing solution.
+DNA amplified beads in particular often require dedicated instrumentation (for example the Ion Torrent OneTouch), adding significant complexity to a complete sequencing solution.
 
 ### Selection
 
@@ -77,7 +69,15 @@ In RNA sequencing experiments ribosomal RNA (rRNA) is a significant contaminant.
 
 Beyond this other selection methods may be of interest. Most typically size selection and selection of material contained within viral envelopes. Unfortunately, as noted in Understanding the Target, the majority of viral material may be degraded in our samples, suggesting that it exists outside of the viral envelope. This material also appears to be similar in fragment size to background human derived RNA. As such particle, and RNA size selection methods may be of limited utility.
 
-### Solutions - Automated and Integrated
+### Integrated Approaches
+
+This section has discussed *existing* library preparation approaches. It’s important to note that current platforms have been designed to be *versatile* and serve a number of applications using the same reagent kits and flowcells. 
+
+However, we can further **simplify the library preparation process if we sacrifice this versatility**. For example, as discussed above, for Helicos direct RNA sequencing where naturally pre-existing polyA tails are present, no additional sample preparation is required. This is because the Helicos/SeqLL flow cells are coated with poly(dT) oligonucleotides to capture these polyA-tailed templates.
+
+We can imagine an approach where flow cells are coated with different oligonucleotides, enabling other templates to be captured. For example, the surface could be coated with random hexamer oligonucleotides allowing a material to be directly captured on the flowcell. This would allow material to be captured on the flow cell without additional library preparation steps. A targeted approach could also be employed where oligonucleotides target specific known sequences (for example known viral sequence).
+
+## Automated and Integrated Solutions
 
 To build an effective sample-to-answer platform we will need to automate the steps described above in a low cost platform. Such an automation system is currently unavailable for use on a single sample basis. This is largely because there is no current market for a fixed protocol metagenomic sample preparation system. However as we shall see, viable approaches have already been demonstrated for use in qPCR sample-to-answer systems. We therefore view the development of automated sample preparations systems as a low technical risk problem.
 
