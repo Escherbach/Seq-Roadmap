@@ -33,11 +33,11 @@ In this section we will discuss sample and library preparation requirements for 
 
 Ideally, samples would require no preparation and raw samples could be loaded directly onto a sequencing instrument. While this could be a long-term aspiration for the field, it seems unlikely that there will be a practically useful approach within the next 5-10 years. Even in the most ambitious scenario, we will likely at least need to dilute the sample in a loading buffer.
 
-More realistically, we will need to remove contaminants and inhibitors, and may wish to remove material that is not of interest (see ***Selection*** below). The traditional approaches (silica beads, columns or surfaces) have largely been displaced by conventional phenol-chloroform based extraction approaches.
+More realistically, we will need to remove contaminants and inhibitors, and may wish to remove material that is not of interest (see ***Selection*** below). In this context, the conventional phenol-chloroform based extraction approaches have largely been displaced by silica beads, columns or surfaces.
 
 For platforms only capable of sequencing DNA (Illumina, Ion Torrent), RNA samples will also need to be converted into cDNA prior to library preparation.
 
-Fortunately, the isolation and cDNA conversion of RNA samples has been performed at low cost and scale during COVID-19. As such we do not expect this to pose a significant challenge.
+Fortunately, the isolation and cDNA conversion of RNA samples has been performed at a low cost and scale during COVID-19 and thus should not pose a significant challenge.
 
 ### Library Preparation: An overview
 
