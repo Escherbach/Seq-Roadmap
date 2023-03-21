@@ -1,22 +1,28 @@
-# Background
+# Metagenomic Sequencing and Early Pandemic Detection
 
-## **Summary**
+COVID-19 was the first worldwide pandemic to occur since the early 20th century. And while we can draw some lessons from previous novel viral outbreaks (SARS, MERS, Ebola), we must principally look COVID-19 offers the most relevant insights when evaluating modern methods for pandemic response.
+
+In COVID-19 and prior viral outbreaks, it became clear that our methods for detecting a new viral outbreak are not up to the task. While the index case of SARS-CoV-2 has yet to be identified, it is clear that more than a month passed between the beginning of human-to-human transmission and its identification as the causative agent of respiratory disease cases in the Wuhan region[¹](https://www.zotero.org/google-docs/?OCagce).
 
 In this section, we discuss the COVID-19 pandemic and build a framework for thinking about pandemics and pandemic response. There are several conclusions we can draw from this. Firstly, we can think of pandemics occurring in three phases:
 
-Phase 1: Unknown and unmonitored  
-Phase 2: Known, but unmonitored.  
-Phase 3: Pandemic response capability developed and deployed.
+**Phase 1:** Unknown and unmonitored  
+**Phase 2:** Known, but unmonitored.  
+**Phase 3:** Pandemic response capability developed and deployed.
 
-Secondly, while sequencing based diagnostics offer significant advantages over traditional approaches (e.g. qPCR), they have not gained traction during COVID-19 beyond use for tracking variants that give rise to new strains. There are two strong factors which have prevented adoption:
+## Why sequencing had a limited impact on COVID-19
 
-- Cost: qPCR costs \~\$1 where sequencing costs \$50 to \$100 per sample/run.
+While sequencing based diagnostics offer significant advantages over traditional approaches (e.g. qPCR), they have not gained traction during COVID-19 beyond use for tracking variants that give rise to new strains. There are two strong factors which have prevented adoption:
 
-- Market: the value of sequencing over qPCR is not well understood.
+- **Cost:** qPCR costs less than $5 where sequencing costs \$50 to \$100 per sample/run.
 
-Applying metagenomic sequencing in a pandemic preparedness program will face similar issues. The value to both the user and clinicians of metagenomic sequencing-based diagnostics needs to be made clear. The cost of such a diagnostic test needs to be low enough to allow it to be economically performed.
+- **Market:** no metagenomic sequencing assay is currently clinically validated and approved as a diagnostic for infectious disease.
 
-Our most likely route here is to provide a universal metagenomic sequencing-based diagnostic for respiratory (and other) conditions. In one such scenario, a symptomatic individual would visit a primary care physician to be evaluated. The physician could perform a metagenomic sequencing-based test to detect both known and unknown pathogens, which would provide a valuable diagnostic to guide care. For example, an anterior nasal swab test could determine if a patient had a viral, bacterial or fungal infection, determine the strain of pathogen, and ideally identify any anti-microbial resistance genes to guide treatment. Essentially this provides an enhanced full respiratory diagnostic panel for the cost of a Flu/RSV/COVID qPCR kit.
+Applying metagenomic sequencing in a pandemic preparedness program will face similar issues. The value to both the user and clinicians of metagenomic sequencing-based diagnostics needs to be made clear. Among other considerations, the cost of such a diagnostic test needs to be low enough to allow it to be economically performed.
+
+An attractive option is to provide a **universal diagnostic for respiratory (and other) conditions** based on metagenomic sequencing (MGS).
+
+In one such scenario, a symptomatic individual would visit a primary care physician to be evaluated. The physician could perform a metagenomic sequencing-based test to detect both known and unknown pathogens, which would provide a valuable diagnostic to guide care. For example, an anterior nasal swab test could determine if a patient had a viral, bacterial or fungal infection, determine the strain of pathogen, and ideally identify any anti-microbial resistance genes to guide treatment. Essentially this provides an enhanced full respiratory diagnostic panel for the cost of a Flu/RSV/COVID qPCR kit.
 
 This is a clear value to both patients and clinicians and builds a more robust culture to detect and contain new viruses. And only by displacing qPCR as the first line diagnostic tool of choice, can we provide the robust pandemic preparedness technology we desire.
 
@@ -26,25 +32,11 @@ The most significant risk here is market and regulatory. But reports suggest the
 
 The following sections will discuss the requirements of such a system.
 
-## **Early detection and mass testing**
-
-COVID-19 was the first worldwide pandemic to occur in modern times. And while we can draw some lessons from previous novel viral outbreaks (SARS, MERS, Ebola), we must principally look to COVID-19 when evaluating modern methods for pandemic response.
-
-We can think of the global response to COVID-19 as occurring in 3 distinct phases.
-
-Phase 1: Unknown and unmonitored  
-Phase 2: Known, but unmonitored.  
-Phase 3: Pandemic response capability developed and deployed.
-
-![Group](media/image5.png)
-
 ### Phase 1: Unknown and unmonitored - COVID-19 
 
-In COVID-19 and prior viral outbreaks, it became clear that our methods for detecting a new viral outbreak are not up to the task. While the index case of SARS-CoV-2 has yet to be identified, it is clear that more than a month passed between the beginning of human-to-human transmission and its identification as the causative agent of respiratory disease cases in the Wuhan region[¹](https://www.zotero.org/google-docs/?OCagce).
+Currently, our systems of outbreak monitoring are far from pandemic-proof. Disease response centers monitor spikes in patients with novel symptoms. This monitoring relies largely on self-reporting by an “astute physician” to notice unusual signs of an illness (a challenging task given the similarity of symptoms across a wide range of pathogens) and on self-reporting by hospitals, with guidelines varying in countries across the world[¹](https://www.zotero.org/google-docs/?EzO1X2). Therefore, we are likely to **only notice an outbreak once a critical mass of infections has taken place.** At this point of the exponential growth typically exhibited by pandemic-capable pathogens, an outbreak is substantially more difficult to contain than it is at earlier phases.
 
-Disease response centers monitor spikes in patients with novel symptoms, this monitoring relies largely on self-reporting by on the “astute physician” to notice unusual signs of an illness (a challenging task given the similarity of symptoms across a wide range of pathogens) and on self-reporting by hospitals, with guidelines varying in countries across the world[¹](https://www.zotero.org/google-docs/?EzO1X2). Therefore, we are likely to only notice an outbreak when a critical mass of infections has taken place. At this point of the exponential growth typically exhibited by pandemic-capable pathogens, an outbreak is substantially more difficult to contain than it is at earlier phases.
-
-Once a suspected novel virus has been identified, it may be isolated and sequenced. In the case of SARS-CoV-2, known viruses were first ruled out through antigen kits, then confirmed by qPCR, prior to metagenomic sequencing which identified a novel viral strain.[²](https://www.zotero.org/google-docs/?AQxYU8)
+Once a suspected novel virus has been identified, it may be isolated and sequenced. In the case of SARS-CoV-2, known viruses were first ruled out through antigen kits and subsequently by qPCR. Only later analysis by metagenomic sequencing identified a novel viral strain.[²](https://www.zotero.org/google-docs/?AQxYU8)
 
 The availability of the viral genome is a critical milestone in pandemic response. Not only does it provide the foundation for the *development of diagnostic kits* (qPCR and other), but it also allows the first steps toward *vaccine development* to begin.
 
