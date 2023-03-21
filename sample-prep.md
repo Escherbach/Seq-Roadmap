@@ -1,5 +1,7 @@
 # Sample Acquisition and Preparation
 
+> **Summary:** The deployment of a viral MGS-based diagnostic platform will require a new generation of automated sample and library preparation instruments that are simple to use, economically competitive and that remove issues with contamination. Instrumentation from qPCR systems can be adapted with minimal technical risk.
+
 A complete sample-to-answer metagenomic sequencing platform will require the development of a sample acquisition and preparation system. This will take samples from patients and prepare them for introduction to sequencing instrumentation. In a clinically viable platform, sample preparation will be *integrated into sequencing instrumentation*, such that a clinician need only add the sample to a pre-loaded cartridge and insert it into an instrument. This is much the same workflow that exists for sample-to-answer qPCR instrumentation (Cepheid GeneXpert). And we shall see that it may be possible to leverage much of this work in the development of tools for sample-to-answer metagenomic sequencing platforms.
 
 {:*toc*}
@@ -29,41 +31,29 @@ In this section we will discuss sample and library preparation requirements for 
 
 ### Sample Preparation
 
-Ideally, samples would require no preparation and raw samples could be loaded directly onto a sequencing instrument. However, this is not generally practical. Even in the most ambitious scenario we will likely at least need to dilute the sample in a loading buffer.
+Ideally, samples would require no preparation and raw samples could be loaded directly onto a sequencing instrument. While this could be a long-term aspiration for the field, it seems unlikely that there will be a practically useful approach within the next 5-10 years. Even in the most ambitious scenario, we will likely at least need to dilute the sample in a loading buffer.
 
-More realistically we will need to remove contaminants and inhibitors, and may wish to remove material that is not of interest (see Selection below).
+More realistically, we will need to remove contaminants and inhibitors, and may wish to remove material that is not of interest (see ***Selection*** below). The traditional approaches (silica beads, columns or surfaces) have largely been displaced by conventional phenol-chloroform based extraction approaches.
 
-Typically either silica beads, columns or surfaces are used here, these techniques have largely displaced conventional phenol-chloroform based extraction[⁵²](https://www.zotero.org/google-docs/?F2yEdb) approaches.
-
-For platforms only capable of sequencing DNA (Illumina, Ion Torrent) RNA samples will also need to be converted into cDNA prior to library preparation.
+For platforms only capable of sequencing DNA (Illumina, Ion Torrent), RNA samples will also need to be converted into cDNA prior to library preparation.
 
 Fortunately, the isolation and cDNA conversion of RNA samples has been performed at low cost and scale during COVID-19. As such we do not expect this to pose a significant challenge.
 
-### Library Preparation
+### Library Preparation: An overview
 
-In this section we’ll review library preparation steps for current sequencing platforms. In Appendix G we review these in detail, here we draw on this to broadly describe approaches in order of complexity.
+| Complexity        | Platform                               | Summary                                                      |
+| ----------------- | -------------------------------------- | ------------------------------------------------------------ |
+| High Complexity   | Pacific Biosciences, MG                | While current Pacific Biosciences instruments could potentially be capable of direct RNA sequencing no such kits are currently available. The current Pacific Biosciences approach therefore relies on cDNA conversion during sample preparation. These DNA templates are further used to create “Universal SMRTbell templates” for sequencing. This is a complex process which generates circularized DNA as the input to the sequencing process. Similarly MGI requires circularized material for nanoball generation. |
+| Medium Complexity | Illumina, Ion Torrent, Oxford Nanopore | Oxford Nanopore, Illumina and Ion Torrent all require adaptor sequences to be added to templates to enable the sequencing process. This is usually performed using either ligation or transposon/topoisomerase based techniques.<br />While Oxford Nanopore have a direct RNA sequencing kit, sample preparation takes \~2 hours. Similarly Illumina and Ion Torrent kits also require \~2 hours of lab time. The fastest sample preparation route here is likely the transposon based approach used as used in Oxford Nanopore’s Rapid DNA sequencing kit, this process takes \~10 minutes. |
+| Low Complexity    | Helicos, PacBio (Direct RNA)           | In the case of Helicos direct RNA sequencing[⁴⁶](https://www.zotero.org/google-docs/?rYncGj) where input RNA already has a naturally pre-existing polyA tail in other contexts random hexamer primer single molecule sequencing has been demonstrated[⁵³](https://www.zotero.org/google-docs/?TDYCwr). As such no library preparation steps are required in these cases.<br />Similarly, Pacific Biosciences could adapt their platform for use with single templates (rather than SMRTbell constructs) sacrificing accuracy for simplified library prep, a configuration that was previously supported on older instruments. Failing this, a PolyA tail may be added using readily available polyA tailing kits[⁵⁴](https://www.zotero.org/google-docs/?cpcxLU). This protocol takes \~1 hour. |
 
-#### High Complexity - Pacific Biosciences, MGI
 
-While current Pacific Biosciences instruments could potentially be capable of direct RNA sequencing no such kits are currently available. The current Pacific Biosciences approach therefore relies on cDNA conversion during sample preparation. These DNA templates are further used to create “Universal SMRTbell templates” for sequencing. This is a complex process which generates circularized DNA as the input to the sequencing process. Similarly MGI requires circularized material for nanoball generation.
 
-#### Medium Complexity - Illumina, Ion Torrent, Oxford Nanopore
+### Integrated Approaches
 
-Oxford Nanopore, Illumina and Ion Torrent all require adaptor sequences to be added to templates to enable the sequencing process. This is usually performed using either ligation or transposon/topoisomerase based techniques.
+This section has discussed *existing* library preparation approaches. It’s important to note that current platforms have been designed to be *versatile* and serve a number of applications using the same reagent kits and flowcells. 
 
-While Oxford Nanopore have a direct RNA sequencing kit, sample preparation takes \~2 hours. Similarly Illumina and Ion Torrent kits also require \~2 hours of lab time. The fastest sample preparation route here is likely the transposon based approach used as used in Oxford Nanopore’s Rapid DNA sequencing kit, this process takes \~10 minutes.
-
-#### Low Complexity - Helicos, Pacific Biosciences, Direct RNA
-
-In the case of Helicos direct RNA sequencing[⁴⁶](https://www.zotero.org/google-docs/?rYncGj) where input RNA already has a naturally pre-existing polyA tail in other contexts random hexamer primer single molecule sequencing has been demonstrated[⁵³](https://www.zotero.org/google-docs/?TDYCwr). As such no library preparation steps are required in these cases.
-
-Similarly, Pacific Biosciences could adapt their platform for use with single templates (rather than SMRTbell constructs) sacrificing accuracy for simplified library prep, a configuration that was previously supported on older instruments.
-
-Failing this, a PolyA tail may be added using readily available polyA tailing kits[⁵⁴](https://www.zotero.org/google-docs/?cpcxLU). This protocol takes \~1 hour.
-
-#### Library Preparation - Integrated Approaches
-
-This section has discussed existing library preparation approaches. It’s important to note that current platforms have been designed to be versatile and serve a number of applications using the same reagent kits and flowcells. However, we can further simplify the library preparation process if we sacrifice this versatility. For example, as discussed above, for Helicos direct RNA sequencing where naturally pre-existing polyA tails are present, no additional sample preparation is required. This is because the Helicos/SeqLL flow cells are coated with poly(dT) oligonucleotides to capture these polyA tailed templates.
+However, we can further **simplify the library preparation process if we sacrifice this versatility**. For example, as discussed above, for Helicos direct RNA sequencing where naturally pre-existing polyA tails are present, no additional sample preparation is required. This is because the Helicos/SeqLL flow cells are coated with poly(dT) oligonucleotides to capture these polyA tailed templates.
 
 We can imagine an approach where flow cells are coated with different oligonucleotides enabling other templates to be captured. For example, the surface could be coated with random hexamer oligonucleotides allowing a material to be directly captured on the flowcell. This would allow material to be captured on the flow cell without additional library preparation steps. A targeted approach could also be employed where oligonucleotides target specific known sequences (for example known viral sequence).
 
@@ -97,11 +87,11 @@ A number of integrated sample and library preparation devices are available or u
 
 Digital fluidic platforms (Voltrax[⁵⁷](https://www.zotero.org/google-docs/?1gEuyQ), Volta[⁵⁸](https://www.zotero.org/google-docs/?fx2Y8I), Illumina Neoprep[⁵⁹](https://www.zotero.org/google-docs/?sInpeV)) are also available, to date these have largely been used in a research context. Potentially these instruments can automate complex workflows in a small footprint. But they are generally designed to address research requirements at relatively high cost, and are not integrated into the sequencing platform itself.
 
-One company (DNAe) is currently developing a sample-to-answer sequencing platform[⁶⁰](https://www.zotero.org/google-docs/?ZK4aFk). However, it’s unclear if this platform will be applicable for hypothesis-free infectious disease testing.
+One company (DNAe) is currently developing a sample-to-answer sequencing platform[⁶⁰](https://www.zotero.org/google-docs/?ZK4aFk). However, it is unclear if this platform will be applicable for hypothesis-free infectious disease testing.
 
 #### New Solutions
 
-The deployment of a viral metagenomics sequencing based diagnostic platform would require a new generation of automated sample and library preparation instrumentation. Outside of sequencing, fully integrated qPCR sample-to-answer platforms[⁶¹](https://www.zotero.org/google-docs/?tsg7sb) are available. Notable examples are the Cepheid Genexpert, GenMark ePlex and Abbott ID NOW. More recently, sample-to-answer platforms specifically targeting SARS-CoV-2 have also been developed. For example the DNANudge developed by TTP.
+The deployment of a viral MGS-based diagnostic platform would require a new generation of automated sample and library preparation instrumentation. In designing these, it is possible to take a page out of fully-integrated qPCR sample-to-answer platforms[⁶¹](https://www.zotero.org/google-docs/?tsg7sb) are available. Notable examples are the Cepheid Genexpert, GenMark ePlex and Abbott ID NOW. More recently, sample-to-answer platforms specifically targeting SARS-CoV-2 have also been developed. For example the DNANudge developed by TTP.
 
 These tools integrate both sample preparation and molecular diagnostics platforms into single instruments and consumables. We see three main approaches here, those which use traditional cartridge integrated fluidic systems (Cepheid, DNANudge), novel fluidic approaches (Digital fluidics, GenMark), and approaches which seek to simplify the chemistry, removing the fluidic system entirely (Abbott ID NOW).
 
