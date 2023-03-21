@@ -13,6 +13,8 @@ The final point may be surprising to those familiar with sequencing as applied t
 Moreover, while we would ideally seek to exceed these specifications, building a platform which fits all our requirements requires compromise. In the next section we shall see that current instrumentation has been designed around the requirements of different applications (research, and whole human genome sequencing), and is a poor fit for point-of-care diagnostics.
 
 ### Sequencing Landscape
+<img width="1000" alt="seqapproaches" src="https://user-images.githubusercontent.com/106965942/226617729-c9743f37-c873-422d-abbd-6f0ea8af98dd.png">
+
 
 Next-generation sequencing platforms are currently offered by Illumina, MGI, Oxford Nanopore, Pacific Biosciences, SeqLL, GenoMind, Qitan Technology and Thermo (Ion Torrent).
 
