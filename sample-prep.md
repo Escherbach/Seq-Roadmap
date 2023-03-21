@@ -2,9 +2,7 @@
 
 A complete sample-to-answer metagenomic sequencing platform will require the development of a sample acquisition and preparation system. This will take samples from patients and prepare them for introduction to sequencing instrumentation. In a clinically viable platform, sample preparation will be *integrated into sequencing instrumentation*, such that a clinician need only add the sample to a pre-loaded cartridge and insert it into an instrument. This is much the same workflow that exists for sample-to-answer qPCR instrumentation (Cepheid GeneXpert). And we shall see that it may be possible to leverage much of this work in the development of tools for sample-to-answer metagenomic sequencing platforms.
 
-[TOC]
-
-
+{:*toc*}
 
 ## Sample Acquisition 
 
