@@ -17,9 +17,11 @@ Effective and non-invasive sample acquisition consumables have been developed fo
 
 ## Sample and Library Preparation 
 
-Once a sample has been collected, it needs to undergo a number of preparation steps prior to sequencing. Broadly, we describe these as *sample preparation* and *library preparation*. Sample preparation describes the preparation of a sample such that it largely contains only the material of interest, absent of contaminants. Library preparation describes subsequent preparation steps required to prepare a sample for sequencing.
+Once a sample has been collected, it needs to undergo a number of preparation steps prior to sequencing. Broadly, we describe these as ***sample preparation*** and ***library preparation***. 
 
-Both sample and library preparation requirements will vary significantly depending on the sequencing platform being used. And both these processes will contribute to the complexity of any integrated infectious disease testing device. In fact, for many approaches the sample and library preparation steps may be the most costly and time consuming parts of the sequencing process.
+*Sample preparation* describes the preparation of a sample such that it largely contains only the material of interest, absent of contaminants. *Library preparation* refers to the subsequent preparation steps required to prepare a sample for sequencing.
+
+Both sample and library preparation requirements will vary significantly depending on the *sequencing platform* being used. And both these processes will contribute to the complexity of any integrated infectious disease testing device. In fact, for many approaches the sample and library preparation steps *may be the most costly and time consuming parts of the sequencing process*.
 
 In this section we will discuss sample and library preparation requirements for RNA shotgun metagenomic sequencing of samples.
 
