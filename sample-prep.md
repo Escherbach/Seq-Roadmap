@@ -1,16 +1,23 @@
 # Sample Acquisition and Preparation
 
-A complete sample-to-answer metagenomic sequencing platform will require the development of a sample acquisition and preparation system. This will take samples from patients and prepare them for introduction to sequencing instrumentation. In clinically viable platform sample preparation will be integrated into sequencing instrumentation, such that a clinician need only add the sample to a pre-loaded cartridge and insert it into an instrument. This is much the same workflow that exists for sample-to-answer qPCR instrumentation (Cepheid GeneXpert). And we shall see that it may be possible to leverage much of this work in the development of tools for sample-to-answer metagenomic sequencing platforms.
+A complete sample-to-answer metagenomic sequencing platform will require the development of a sample acquisition and preparation system. This will take samples from patients and prepare them for introduction to sequencing instrumentation. In a clinically viable platform, sample preparation will be *integrated into sequencing instrumentation*, such that a clinician need only add the sample to a pre-loaded cartridge and insert it into an instrument. This is much the same workflow that exists for sample-to-answer qPCR instrumentation (Cepheid GeneXpert). And we shall see that it may be possible to leverage much of this work in the development of tools for sample-to-answer metagenomic sequencing platforms.
 
 ## Sample Acquisition 
 
-For the purpose of a ubiquitous sequencing system, sample collection should be non-invasive and cheap. Sample types of interest are: nasopharyngeal swabs, anterior nasal swabs, breath condensate, urine, saliva and blood.
+For the purpose of a ubiquitous sequencing system, sample collection should be **non-invasive** and **economically competitive**. Sample types of interest include 
 
-Effective and non-invasive sample acquisition consumables have been developed for use during COVID-19. For respiratory conditions we would expect swab based anterior nasal collection systems to provide an effective solution.
+- nasopharyngeal swabs
+- anterior nasal swabs
+- breath condensates
+- urine
+- saliva
+- blood
+
+Effective and non-invasive sample acquisition consumables have been developed for use during COVID-19. For ***respiratory conditions***, swab-based anterior nasal collection systems are the natural starting point.
 
 ## Sample and Library Preparation 
 
-Once a sample has been collected it needs to undergo a number of preparation steps prior to sequencing. Broadly we describe these as “sample preparation” and “library preparation”. Sample preparation describes the preparation of a sample such that it largely contains only the material of interest, absent of contaminants. Library preparation describes subsequent preparation steps required to prepare a sample for sequencing.
+Once a sample has been collected, it needs to undergo a number of preparation steps prior to sequencing. Broadly, we describe these as *sample preparation* and *library preparation*. Sample preparation describes the preparation of a sample such that it largely contains only the material of interest, absent of contaminants. Library preparation describes subsequent preparation steps required to prepare a sample for sequencing.
 
 Both sample and library preparation requirements will vary significantly depending on the sequencing platform being used. And both these processes will contribute to the complexity of any integrated infectious disease testing device. In fact, for many approaches the sample and library preparation steps may be the most costly and time consuming parts of the sequencing process.
 
