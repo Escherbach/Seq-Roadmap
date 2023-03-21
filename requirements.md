@@ -18,5 +18,3 @@ Using this data, we can calculate the false negative and positive rates from the
 |---------------------|------|----------------|
 | False Negative Rate | 1%   | 0.01%          |
 | False Positive Rate | 1.1% | 0%             |
-
-# 
