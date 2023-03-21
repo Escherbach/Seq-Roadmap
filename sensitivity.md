@@ -13,7 +13,7 @@ Because qPCR targets a primer-delimited region (the amplification region), it is
 
 Here, we review the literature on the sensitivity of MGS in the context of human clinical samples. This literature demonstrates that not only does MGS have a broader scope of applications than qPCR, allowing the detection of known and unknown viruses, but that it also has at least comparable sensitivity when adequate read depth is used. Indeed, potential false negatives were detected by sequencing, indicating a greater test sensitivity in some cases. 
 
-## Metagenomic sequencing studies suggest that MGS can be competitive with qPCR on sensitivity
+## Empirical studies suggest that MGS can be competitive with qPCR on sensitivity
 
 We reviewed 42 publications (Appendix D) where metagenomic sequencing was used on pathogenic samples. These were collected from literature searches, extracted from review papers, and received via a public call for relevant publications.
 
@@ -38,7 +38,7 @@ Where a sensitivity estimate could be calculated against qPCR (5/8 papers), it w
 
 Moreover, 4 of the 8 papers have explicit statements on qPCR false negatives stating that sequencing was able to identify likely false negatives from qPCR using sequencing (see Appendix E) and therefore showed the potential for increased sensitivity relative to qPCR.
 
-## Contrasting qPCR and Sequencing
+## Modeling suggests that platform requirements for viral detection are relatively modest
 
 As discussed above, the LoD for qPCR is very low, and the approach is insensitive to background material. However, qPCR is limited to a single region of our target pathogen. In the case of a viral target, this is typically approximately 100 bp. For SARS-CoV-2, this is 0.3% of the genome. In sequencing, any location on the genome provides information that can enable detection.
 
@@ -46,7 +46,7 @@ If all viral fragments are fully intact at the point of detection, this distinct
 
 Moreover, because qPCR uses primer sequences to enable detection, mutations in the primer region will cause issues for qPCR (see Appendix H). While this has not been a significant issue during COVID-19, it is worth noting.
 
-## Modeling qPCR and Sequencing
+### Model assumptions
 
 In order to more completely explore the specifications of a metagenomic sequencing based diagnostic we have created a simple model. In the first instance, we parameterize this model estimating our parameters from the JumpCode dataset mentioned in the review above: 
 
@@ -62,7 +62,8 @@ In order to more completely explore the specifications of a metagenomic sequenci
     
 -   **Read Count:** 40M
 
-The model then calculated the number of reads generated, and “on target fragments” which can be used to estimate CT values from standard curves.
+### Model results
+The model then calculated the number of reads generated, and “on target fragments” which can be used to estimate Ct values from standard curves.
 
 ![](https://lh6.googleusercontent.com/qjy568MhIsKtK70_KOFLLzolcjQAUHLD2a1wIQ1RDaXQVs3lyOHE0a5Z3hwMnhp-P_h8NcGiLt4BoheB3UfMAm7jx-cDDLiCfmpVsBE95OF1_CxVMOVikHnDOPL_oYRB-5v4mcwbpeCC1Ua4molgnvs)
 
