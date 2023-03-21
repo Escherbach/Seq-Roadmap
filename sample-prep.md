@@ -2,11 +2,12 @@
 
 > **Summary:** The deployment of a viral MGS-based diagnostic platform will require a new generation of automated sample and library preparation instruments that are simple to use, economically competitive and that remove issues with contamination. Instrumentation from qPCR systems can be adapted with minimal technical risk.
 
+<img src="https://lh5.googleusercontent.com/pjMPTRucxhSo8rMBSOmjHcpy-RNWHAAaOSLOvvAdyzECOurvjLs2IEhrjaemkVwpKM5pWe1Shk6_r6KsleX-LACNjCMTNV33dV4t137NGPeHZeIBvQlLNsU9BZPVfwb97eXdGgA_pNPx7qMfrmscNu0" alt="img" style="zoom: 25%;" /><img src="https://lh5.googleusercontent.com/SBEwKqvHI3q-1lpkT8fntKoQTnuk_awWFY87iL_ZK8WhYdaT41XXI_TPKWiYJLulw1MTBzEuot9upRh98bpgBRZ-kp_gbKj661YOEEkoqgMZXGKSK4Up26weixzeWBkG8zKONo-YlA1Nex6TIoT3Euo" alt="img" style="zoom: 25%;" />
+*DNANudge and Cepheid sample-to-answer cartridges. Cepheid ship ~36 million units a year.*
+
 ## Overview of Current Workflows
 
 A complete sample-to-answer metagenomic sequencing platform will require the development of a sample acquisition and preparation system. This will **take samples from patients** and prepare them for introduction to sequencing instrumentation. The first step in a sequencing wor Once a sample has been collected, it needs to undergo a number of preparation steps prior to sequencing. Broadly, we describe these as ***sample preparation*** and ***library preparation***. In a clinically viable platform, sample preparation will be ***integrated into sequencing instrumentation***, such that a clinician need only add the sample to a pre-loaded cartridge and insert it into an instrument, replicating the workflow of sample-to-answer qPCR instrumentation (e.g. the Cepheid GeneXpert).
-
-. *Library preparation* refers to the subsequent preparation steps required to prepare a sample for sequencing.
 
 Both sample and library preparation requirements will vary significantly depending on the *sequencing platform* being used. And both these processes will contribute to the complexity of any integrated infectious disease testing device. In fact, for many approaches the sample and library preparation steps *may be the most costly and time consuming parts of the sequencing process*.
 
@@ -37,7 +38,7 @@ For platforms only capable of sequencing DNA (Illumina, Ion Torrent), RNA sample
 
 ### Library Preparation
 
-#### Current Library Preparation Approaches
+*Library preparation* refers to the subsequent preparation steps required to prepare a sample for sequencing. We summarize the current approaches and their complexity below:
 
 | Complexity        | Platform                               | Summary                                                      |
 | ----------------- | -------------------------------------- | ------------------------------------------------------------ |
@@ -91,21 +92,20 @@ One company (DNAe) is currently developing a sample-to-answer sequencing platfor
 
 ### New Solutions
 
-The deployment of a viral MGS-based diagnostic platform would require a new generation of automated sample and library preparation instrumentation. In designing these, it is possible to take a page out of fully-integrated qPCR sample-to-answer platforms[⁶¹](https://www.zotero.org/google-docs/?tsg7sb) are available. Notable examples are the Cepheid Genexpert, GenMark ePlex and Abbott ID NOW. More recently, sample-to-answer platforms specifically targeting SARS-CoV-2 have also been developed. For example the DNANudge developed by TTP.
+The deployment of a viral MGS-based diagnostic platform would require a new generation of automated sample and library preparation instrumentation. In designing these, it is possible to take a page out of fully-integrated qPCR sample-to-answer platforms[⁶¹](https://www.zotero.org/google-docs/?tsg7sb) are available. Notable examples are the Cepheid GeneXpert, GenMark ePlex and Abbott ID NOW. More recently, sample-to-answer platforms specifically targeting SARS-CoV-2 have also been developed (e.g. DNANudge developed by TTP).
 
-These tools integrate both sample preparation and molecular diagnostics platforms into single instruments and consumables. We see three main approaches here, those which use traditional cartridge integrated fluidic systems (Cepheid, DNANudge), novel fluidic approaches (Digital fluidics, GenMark), and approaches which seek to simplify the chemistry, removing the fluidic system entirely (Abbott ID NOW).
+These tools integrate both sample preparation and molecular diagnostics platforms into single instruments and consumables. Three approaches stand out in this context:
 
-Digital fluidic platforms tend to be more expensive, with the Genmark test sold at \$157[⁶²](https://www.zotero.org/google-docs/?Zs1EnC), and aimed at a larger number of targets.
+1. those which use traditional cartridge integrated fluidic systems (Cepheid, DNANudge), 
+2. novel fluidic approaches (Digital fluidics, GenMark), and 
+3. approaches which seek to simplify the chemistry, removing the fluidic system entirely (Abbott ID NOW).
 
-Traditional fluidic approaches (Cepheid Genexpert, DNANudge) have an estimated manufacturing cost of \$3[⁶³](https://www.zotero.org/google-docs/?nqu5ni), and are typically sold for \~\$20.
+**Digital fluidic platforms** tend to be more expensive, with the Genmark test sold at \$157[⁶²](https://www.zotero.org/google-docs/?Zs1EnC), and aimed at a larger number of targets.
 
-These platforms incorporate the necessary reagents to lyse and extract RNA from a sample. As noted above, for some single molecule platforms (Helicos-like single molecule direct RNA sequencing) this provides sufficient sample preparation to proceed to sequencing.
+**Traditional fluidic approaches** (Cepheid Genexpert, DNANudge) have an estimated manufacturing cost of \$3[⁶³](https://www.zotero.org/google-docs/?nqu5ni), and are typically sold for \~\$20. These platforms incorporate the necessary reagents to lyse and extract RNA from a sample. As noted above, for some single-molecule platforms (Helicos-like single molecule direct RNA sequencing), this provides sufficient sample preparation to proceed to sequencing.
 
-In the DNANudge post-clean up cDNA is eluted into an imaging region. This could be replaced with a single molecule imaging region using a non-cyclic chemistry (Reticula). Alternatively, additional reagents could be added to enable adapter ligation or transposon based adapter addition. In this case the imaging window could be replaced with a nanopore array.
+In the DNANudge post-clean up phase, cDNA is eluted into an imaging region. This could be replaced with a single-molecule imaging region using a non-cyclic chemistry. Alternatively, additional reagents could be added to enable adapter ligation or transposon=based adapter addition. In this case the imaging window could be replaced with a nanopore array.
 
-Both these approaches could be implemented without unduly increasing the complexity beyond that of the DNANudge device (manufactured and developed by TTP). As such we can expect such an integrated sample prep and sequencing instrument to have a COGS comparable to the DNANudge and other sample-to-answer platforms such as the Genexpert (~$3).
-<img src="https://lh5.googleusercontent.com/pjMPTRucxhSo8rMBSOmjHcpy-RNWHAAaOSLOvvAdyzECOurvjLs2IEhrjaemkVwpKM5pWe1Shk6_r6KsleX-LACNjCMTNV33dV4t137NGPeHZeIBvQlLNsU9BZPVfwb97eXdGgA_pNPx7qMfrmscNu0" alt="img" style="zoom: 25%;" /><img src="https://lh5.googleusercontent.com/SBEwKqvHI3q-1lpkT8fntKoQTnuk_awWFY87iL_ZK8WhYdaT41XXI_TPKWiYJLulw1MTBzEuot9upRh98bpgBRZ-kp_gbKj661YOEEkoqgMZXGKSK4Up26weixzeWBkG8zKONo-YlA1Nex6TIoT3Euo" alt="img" style="zoom: 25%;" />
+Both these approaches could be implemented without unduly increasing the complexity beyond that of the DNANudge device (manufactured and developed by TTP). We can therefore expect such an integrated sample prep and sequencing instrument to have a **COGS comparable to the DNANudge and other sample-to-answer platforms such as the Genexpert (~$3)**.
 
-*DNANudge and Cepheid sample-to-answer cartridges. Cepheid ship ~36 million units a year.*
-
-Beyond this, it’s possible that surface amplification (Illumina - bridge amplification) and cyclic sequencing could be integrated into the sequencing cartridge (as in the iSeq) however as discussed in “Sequencing Platforms” this may result in a platform that no longer meeting our requirements.
+Beyond this, it is possible that **surface amplification** (Illumina - bridge amplification) and **cyclic sequencing** could be integrated into the sequencing cartridge (as in the iSeq). However, as discussed in our chapter on , this may result in a platform that no longer meets our time-to-answer a cost requirements.
