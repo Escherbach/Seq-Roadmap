@@ -2,6 +2,7 @@
 
 > **Summary:** The deployment of a viral MGS-based diagnostic platform will require a new generation of automated sample and library preparation instruments that are simple to use, economically competitive and that remove issues with contamination. Instrumentation from qPCR systems can be adapted with minimal technical risk.
 
+
 <img src="https://lh5.googleusercontent.com/pjMPTRucxhSo8rMBSOmjHcpy-RNWHAAaOSLOvvAdyzECOurvjLs2IEhrjaemkVwpKM5pWe1Shk6_r6KsleX-LACNjCMTNV33dV4t137NGPeHZeIBvQlLNsU9BZPVfwb97eXdGgA_pNPx7qMfrmscNu0" alt="img" style="zoom: 25%;" /><img src="https://lh5.googleusercontent.com/SBEwKqvHI3q-1lpkT8fntKoQTnuk_awWFY87iL_ZK8WhYdaT41XXI_TPKWiYJLulw1MTBzEuot9upRh98bpgBRZ-kp_gbKj661YOEEkoqgMZXGKSK4Up26weixzeWBkG8zKONo-YlA1Nex6TIoT3Euo" alt="img" style="zoom: 25%;" />
 *DNANudge and Cepheid sample-to-answer cartridges. Cepheid ship ~36 million units a year.*
 
