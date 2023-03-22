@@ -25,5 +25,5 @@ E --> F[Fully integrated, low-cost sample-to-answer MGS platform]
 1. [Clinical MGS and Early Detection](http://sequencing-roadmap.org/early-detection)
 2. [Sensitivity and Platform Requirements](http://sequencing-roadmap.org/sensitivity)
 3. [Sample Preparation](http://sequencing-roadmap.org/sample-prep)
-4. [Sequencing Platforms](http://sequencing-roadmap.org/platforms)
+4. [Sequencing Platforms](platforms)
 5. Conclusions and Recommendations
