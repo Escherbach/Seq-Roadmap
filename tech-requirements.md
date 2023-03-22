@@ -1,6 +1,22 @@
 # Technical requirements and Bottlenecks in current approaches
 
-In the [previous section](early-detection), we have laid out the need for ubiquitous metagenomic sequencing at the point of care. In this chapter, we focus on the concrete requirements
+In the [previous section](early-detection), we have laid out the need for ubiquitous metagenomic sequencing at the point of care. In this chapter, we focus on the concrete requirements for a clinically viable sequencing device.
+
+## Changing the culture of infectious disease diagnostics
+
+As previously noted, widespread MGS has a clear value for pandemic prevention. However, in the absence of (justified) large-scale investment in a pandemic monitoring networks at the point of care, this technology has to be practical for the clinician in order to become widely used.
+
+In the absence of formal surveys, anecdotal evidence suggests that there is latent demand for a universal diagnostic for respiratory infectious disease. Individuals showing symptoms (fever and or flu-like symptoms) may already be inclined to seek medical assistance. Reports suggest that patients increasingly want to receive a diagnosis rather than “non-specific upper respiratory infection”, the majority diagnosis in ambulatory care visits for respiratory issues.
+
+For instance, Emily Volk[⁶](https://www.zotero.org/google-docs/?qDxcPN) reports:
+
+> *“Frankly, patient experience scores increase when patients leave our care and have a name for the thing that is bothering them even if there isn’t a targeted antibiotic or antimicrobial that has been identified, that would work against the pathogen. It still is comforting to patients and their families to have a name for the illness that they have.”*
+
+Clinicians themselves are becoming more inclined to order broader panels. According to Emmanuel André[⁶](https://www.zotero.org/google-docs/?DXh03H):
+
+> *“The single pathogenic approach will progressively disappear. Why? Because it’s simply not efficient from a clinical perspective, from a lab perspective and care requires a more comprehensive approach. Where I think we’re going is toward broader panels.”*
+
+In samples acquired from patients infected by SARS-CoV-2, the total RNA from nasopharyngeal samples contains viral RNA at up to 5% when ribosomal RNA (rRNA) is depleted.[⁵](https://www.zotero.org/google-docs/?OU3DwX) At this level of abundance, direct sequencing of total RNA would almost certainly reveal the presence of a novel, SARS-CoV-2-like respiratory virus.[^1] Any unknown pathogen sequence identified by these tests may be transmitted to pandemic monitoring centers, allowing novel human pathogen cases to be identified almost as soon as they occur.
 
 It is of note that a number of sequencing-based diagnostic approaches have been attempted during COVID-19. However, they have largely failed to gain traction and cumulatively represented \<1% of the testing used to detect and monitor COVID-19 infections[⁸](https://www.zotero.org/google-docs/?mhRwMO):
 
