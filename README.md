@@ -14,12 +14,10 @@ In this roadmap, we work backward from the vision of ubiquitous metagenomic sequ
 - For clinical viability, any platform will need to be integrated into a dramatically simplified sample-to-answer system. While the exact design of these devices will have to be adapted for particular platform of choice, we conclude design of a simple, low-cost sample prep cartridge can be quite straightforwardly adapted from qPCR sample-to-answer systems. See chapter on [sample preparation](http://sequencing-roadmap.org/sample-prep).
 
 
-```
 ```mermaid
 graph LR
 C --> E[Sample-to-library cartridges + low-cost sequencing platforms]
 E --> F[Fully integrated, low-cost sample-to-answer MGS platform]
-```
 ```
 
 ## Chapters
