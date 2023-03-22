@@ -20,7 +20,7 @@ Unless these issues are addressed, metagenomic sequencing-based approaches are u
 graph LR
 A[High cost per sample] --> B[Multiplexing]
 B --> C[Slow turnaround time]
-A --> D[Low sensitivity]
+B --> D[Low sensitivity]
 ```
 
 The cheapest runs of Illumina instruments currently cost \~\$300 to \$500[⁹](https://www.zotero.org/google-docs/?NJMTcC). To our knowledge, the cheapest run (Oxford Nanopore’s Flongle) costs closer to $100[¹⁰]. Even at this price point, healthcare providers are unlikely to use these instruments for sequencing single samples.
