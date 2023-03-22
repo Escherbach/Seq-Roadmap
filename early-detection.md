@@ -84,9 +84,7 @@ However, a more practical and versatile proposition is to design our diagnostic 
 
 In this approach, our diagnostic instruments are *already* deployed as part of our pandemic monitoring program and provide patients with valuable diagnostic information regarding their suspected infections, ideally building a culture where the majority of suspected respiratory infections receive a full metagenomic-based diagnostic test.
 
-## Technical requirements and Bottlenecks in current approaches 
-
-
+## Technical requirements and Bottlenecks in current approaches
 
 Our proposed future solution to pandemic monitoring is, therefore, to use metagenomic sequencing to address all phases of the pandemic. We will consider how such a system might be built using existing platforms, what the cost barriers to adoption are, and how we might address the deficiencies of these platforms.
 
@@ -104,15 +102,13 @@ Unless these issues are addressed, metagenomic sequencing-based approaches are u
 
 ### Cost
 
-Illumina’s (current market leader in sequencing) cheapest runs cost \~\$300 to \$500[⁹](https://www.zotero.org/google-docs/?NJMTcC). As such, healthcare providers are unlikely to use these instruments for sequencing single samples. Batching and multiplexing multiple samples onto a single sequencing run can significantly reduce the cost per sample, but introduces a delay before sequencing can begin. The delay is dependent on the nature of the testing facility and the number of samples being received per day, but typically, this is on the order of a week.
+The cheapest runs of Illumina instruments currently cost \~\$300 to \$500[⁹](https://www.zotero.org/google-docs/?NJMTcC). To our knowledge, the cheapest run (Oxford Nanopore’s Flongle) costs closer to $100[¹⁰]. Even at this price point, healthcare providers are unlikely to use these instruments for sequencing single samples.
 
-Other instruments (for example, Oxford Nanopore’s Flongle) cost \~\$100[¹⁰](https://www.zotero.org/google-docs/?QpfDWf), which could enable fewer samples to be multiplexed, perhaps on a daily basis.
+Batching and **multiplexing** multiple samples onto a single sequencing run can significantly reduce the cost per sample, but introduces a delay before sequencing can begin. The delay is dependent on the nature of the testing facility and the number of samples being received per day, but typically, this is on the order of a week. This **delay of days to weeks** is likely unacceptable in an infectious disease diagnostic context where we ideally want to provide results as rapidly as possible.
 
-However, a delay of days to weeks is likely unacceptable in an infectious disease diagnostic context where we ideally want to provide results as rapidly as possible.
+Another downside of multiplexing onto a single chip is the significant reduction in sensitivity of the test, since the sequence coverage per sample reduces proportional to the number of samples.
 
-Furthermore, and perhaps most problematically, multiplexing multiple samples onto a single chip significantly reduces the sensitivity of the test since the sequence coverage per sample reduces proportional to the number of samples.
-
-Therefore the high single-run cost for current instruments makes them a poor fit for diagnostic applications. This is the case even if we look at the COGS (Illumina \$50 to \$100s, Oxford Nanopore \$50 to \$450 based on stated margins^([1](https://www.zotero.org/google-docs/?uZfJ69) [12](https://www.zotero.org/google-docs/?tljpmF)). Cheaper options could make running single-sample tests economically viable.
+Therefore, the high single-run cost for current instruments makes them a poor fit for diagnostic applications. This is the case even if we look at the COGS (Illumina \$50 to \$100s, Oxford Nanopore \$50 to \$450 based on stated margins^([1](https://www.zotero.org/google-docs/?uZfJ69) [12](https://www.zotero.org/google-docs/?tljpmF)). Cheaper options could make running single-sample tests economically viable.
 
 ### Automation
 
