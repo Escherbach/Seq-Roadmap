@@ -1,6 +1,6 @@
 # Appendix A - Platform Requirements
 
-The metagenomic sequencing approach described in this document relies in the direct or indirect sequencing of viral material. Acquired sequence data may be processed in a number of ways. As a baseline, we will need to be able to detect known, viruses. This is most commonly performed through alignment of reads to a reference of known viruses.
+The metagenomic sequencing approach described in this document relies in the direct or indirect sequencing of viral material. Acquired sequence data may be processed in a number of ways. As a baseline, we will need to be able to detect known viruses. This is most commonly performed through alignment of reads to a reference of known viruses.
 
 In order to assess the read length and accuracy requirements of our sequencing platform we simulated SARS-CoV-2 reads of varying lengths and accuracy. These reads were then aligned to the complete human genome, all NCBI Viruses, and the SARS-CoV-2 reference.
 

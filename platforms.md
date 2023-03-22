@@ -41,7 +41,7 @@ Sequencing technologies are complex and require significant investment; this is 
 
 In this section we discuss lower risk approaches developing low cost, high speed sequencing platforms which build up existing sensing methodologies. It should be noted however, that while these approaches are lower risk, bringing any novel sequencing platform to commercial launch will likely require at least \$100M, and that there is still significant market, regulatory and technical risk.
 
-#### Colony based approaches
+#### Colony-based approaches
 
 Current market leading approaches use amplified copies of a single template on a surface or bead. The most popular of these is provided by Illumina, using bridge amplification.
 
