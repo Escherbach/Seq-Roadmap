@@ -1,4 +1,4 @@
-# Sensitivity: MGS and qPCR
+# Matching the sensitivity of qPCR
 ## Unlike qPCR, sequencing is sensitive to background material
 
 qPCR is widely believed to be the “gold standard” in molecular diagnostic testing. qPCR has a very low  limit of detection (LoD). In some cases, a handful of copies can be detected in a sample. This is generally assessed using synthetic material spiked into a sample to create standard curves like the following:
