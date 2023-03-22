@@ -14,8 +14,14 @@ There are a number of reasons for this which we summarize in the table below:
 
 Unless these issues are addressed, metagenomic sequencing-based approaches are unlikely to gain widespread adoption.
 
-### Cost
+### High cost per sample necessitates multiplexing
 
+```
+graph LR
+A[High cost per sample] --> B[Multiplexing]
+B --> C[Slow turnaround time]
+A --> D[Low sensitivity]
+```
 The cheapest runs of Illumina instruments currently cost \~\$300 to \$500[⁹](https://www.zotero.org/google-docs/?NJMTcC). To our knowledge, the cheapest run (Oxford Nanopore’s Flongle) costs closer to $100[¹⁰]. Even at this price point, healthcare providers are unlikely to use these instruments for sequencing single samples.
 
 Batching and **multiplexing** multiple samples for a single sequencing run can significantly reduce the cost per sample, but introduces a delay before sequencing can begin. The delay is dependent on the nature of the testing facility and the number of samples being received per day, but typically, this is on the order of a week. This **delay of days to weeks** is likely unacceptable in an infectious disease diagnostic context where we ideally want to provide results as rapidly as possible.
