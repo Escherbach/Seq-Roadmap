@@ -13,6 +13,15 @@ In this roadmap, we work backward from the vision of ubiquitous metagenomic sequ
 - In the context of infectious disease testing, **time to answer**, **simplicity of sample preparation** and **cost** are essential. Currently available sequencing technologies have largely been optimized for a different set of criteria. In particular, the most widespread approach of Illumina-style sequencing by synthesis is unlikely to provide sufficient sequencing depth if we are aiming for a sample-to-answer time of ~1 hour. We see **two candidate technologies** that could provide sufficient sequencing depth in this timeframe at a cost comparable with qPCR. These are **nanopore sequencing** and **single-molecule optical sequencing**. See discussion of [platforms](https://escherbach.github.io/seq-roadmap/platforms).
 - For clinical viability, any platform will need to be integrated into a dramatically simplified sample-to-answer system. While the exact design of these devices will have to be adapted for particular platform of choice, we conclude design of a simple, low-cost sample prep cartridge can be quite straightforwardly adapted from qPCR sample-to-answer systems. See chapter on [sample preparation](http://sequencing-roadmap.org/sample-prep).
 
+
+```
+```mermaid
+graph LR
+C --> E[Sample-to-library cartridges + low-cost sequencing platforms]
+E --> F[Fully integrated, low-cost sample-to-answer MGS platform]
+```
+```
+
 ## Chapters
 
 1. [Clinical MGS and Early Detection](http://sequencing-roadmap.org/early-detection)
