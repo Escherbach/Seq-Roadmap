@@ -17,5 +17,5 @@ In this roadmap, we work backward from the vision of ubiquitous metagenomic sequ
 1. [Clinical MGS and Early Detection](http://sequencing-roadmap.org/early-detection)
 2. [Sensitivity and Platform Requirements](http://sequencing-roadmap.org/sensitivity)
 3. [Sample Preparation](http://sequencing-roadmap.org/sample-prep)
-4. [Sequencing Platforms](http://sequencing-roadmap.orgplatforms)
+4. [Sequencing Platforms](http://sequencing-roadmap.org/platforms)
 5. Conclusions and Recommendations
