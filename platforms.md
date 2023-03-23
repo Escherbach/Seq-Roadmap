@@ -23,6 +23,14 @@ In terms of run time, only Oxford Nanopore and Pacific Biosciences platforms cur
 
 ![img](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F04ac909d-664e-4ba7-8027-eddef4ae3d6c_671x465.png)
 
+### Blue-sky Technologies
+
+A number of other novel sequencing approaches have been proposed. We document these in detail in Appendix B.
+
+The most interesting of these for our application are solid-state nanopore approaches, which could potentially retain many of the advantages of protein nanopore platforms, while also potentially rectifying many of its problems. Specifically, solid-state nanopore platforms promise higher accuracy, throughput, lower cost, and simpler sample preparation.
+
+However, it is worth noting that this technology is at an experimental stage: research has been underway for more than 20 years and, to date, no reproducible demonstration of near single base resolution sequencing has been shown.
+
 ### Existing Approaches
 
 Given that existing sequencing approaches have clear limitations, we have two routes forward:
@@ -43,11 +51,5 @@ Given that we are interested in approaches that can make a difference in clinica
 
 
 
-### Blue-sky Technologies
 
-A number of other novel sequencing approaches have been proposed, these are documented in detail in Appendix B.
-
-The most interesting of these for our application are solid-state nanopore approaches, which could potentially retain many of the advantages of protein nanopore platforms, while also potentially rectifying many of its problems. Specifically, solid-state nanopore platforms promise higher accuracy, throughput, lower cost, and simpler sample preparation.
-
-However, it is worth noting that this technology is at an experimental stage: research has been underway for more than 20 years and, to date, no reproducible demonstration of near single base resolution sequencing has been shown.
 
