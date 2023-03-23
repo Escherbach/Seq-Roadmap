@@ -4,6 +4,10 @@ COVID-19 was the first worldwide pandemic to occur since the early 20th century.
 
 In COVID-19 and prior viral outbreaks, it became clear that our methods for detecting a new viral outbreak are not up to the task. While the index case of SARS-CoV-2 has yet to be identified, it is clear that more than a month passed between the beginning of human-to-human transmission and its identification as the causative agent of respiratory disease cases in the Wuhan region[¹](https://www.zotero.org/google-docs/?OCagce).
 
+This is especially worrying since it is clear that SARS-CoV-2 is far from bein the most devastating pathogen we could encounter. Where the case fatality rate of SARS-CoV-2 was below 1%, outbreaks of filoviruses such as Ebola come with rates ranging from 25% to 90%. Where the R0 of SARS-CoV-2 hovers between 2 and 3, a single person with measles infects 12-18 others on average. Before its eradication in 1980, smallpox caused by variola major combined an R0 of 3.5 to 6
+
+Even if we only consider zoonotic disease and imagine drawing straws every year, we should expect, at some point, to draw a much longer one: a pathogen that combines high asymptomatic transmissibility with a substantially higher mortality rate. In addition, the increasing number of laboratories performing research on high-consequence pathogens, and the ever-decreasing barrier to entry for malicious or reckless actors, means that our current inability to detect novel pathogens is substantially worse than merely playing with fire.
+
 In this section, we discuss the COVID-19 pandemic and build a framework for thinking about pandemics and pandemic response. There are several conclusions we can draw from this. Firstly, we can think of pandemics occurring in three phases:
 
 **Phase 1:** Unknown and unmonitored  
