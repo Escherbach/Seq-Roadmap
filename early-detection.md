@@ -8,12 +8,6 @@ This is especially worrying since it is clear that SARS-CoV-2 is far from bein t
 
 Even if we only consider zoonotic disease and imagine drawing straws every year, we should expect, at some point, to draw a much longer one: a pathogen that combines high asymptomatic transmissibility with a substantially higher mortality rate. In addition, the increasing number of laboratories performing research on high-consequence pathogens, and the ever-decreasing barrier to entry for malicious or reckless actors, means that our current inability to detect novel pathogens is substantially worse than merely playing with fire.
 
-In this section, we discuss the COVID-19 pandemic and build a framework for thinking about pandemics and pandemic response. There are several conclusions we can draw from this. Firstly, we can think of pandemics occurring in three phases:
-
-**Phase 1:** Unknown and unmonitored  
-**Phase 2:** Known, but unmonitored.  
-**Phase 3:** Pandemic response capability developed and deployed.
-
 ## Why sequencing had a limited impact on COVID-19
 
 ### The state of the art: PCR testing
