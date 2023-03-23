@@ -1,0 +1,4 @@
+- Cepheid GeneXpert
+- BioFire FilmArray
+- Illumina MiSeq
+- ONT Flongle
