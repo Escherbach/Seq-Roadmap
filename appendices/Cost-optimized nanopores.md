@@ -1,4 +1,4 @@
-# Cost-optimized nanopore array fabrication
+# cost-optimized nanopore array fabrication
 
 As previously noted, Oxford Nanopore's lower-end nanopore sequencer, the Flongle, may be the closet device from those currently available to meeting our specifications. It comfortably meets the throughput and time to answer requirements. Sample preparation is still complex but there do not appear to be any reasons why a nanopore sequencer could not be coupled with a low-cost reagent cartridge along the lines we propose. However, its COGS (~$90) of the Flongle is still at least and order of magnitude higher than our goal of less than $10.
 
