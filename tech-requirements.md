@@ -2,7 +2,7 @@
 
 In the [previous section](early-detection), we have laid out the need for ubiquitous metagenomic sequencing at the point of care. In this chapter, we focus on the concrete requirements for a clinically viable sequencing device.
 
-## Changing the culture of infectious disease diagnostics
+## Most infectious disease cases are not linked to causative pathogen
 
 As previously noted, widespread MGS has a clear value for pandemic prevention. However, in the absence of (justified) large-scale investment in a pandemic monitoring networks at the point of care, this technology has to be practical for the clinician in order to become widely used.
 
@@ -30,6 +30,8 @@ There are a number of reasons for this which we summarize in the table below:
 
 Unless these issues are addressed, metagenomic sequencing-based approaches are unlikely to gain widespread adoption.
 
+### qPCR tests are the golden standard
+
 ### High cost per sample necessitates multiplexing
 
 ```mermaid
@@ -47,7 +49,7 @@ Another downside of multiplexing onto a single chip is the significant reduction
 
 Therefore, the high single-run cost for current instruments makes them a poor fit for diagnostic applications. This is the case even if we look at the COGS (Illumina \$50 to \$100s, Oxford Nanopore \$50 to \$450 based on stated margins^([1](https://www.zotero.org/google-docs/?uZfJ69) [12](https://www.zotero.org/google-docs/?tljpmF)). Cheaper options could make running single-sample tests economically viable.
 
-### Automation
+### Complex worfklows limit use
 
 Sequencing-based assays are complex and typically require multiple hours of skilled labor to execute (both in the wet lab and data analysis).
 
@@ -55,10 +57,10 @@ A pushbutton “sample-to-answer” sequencing platform could allow minimally-tr
 
 Efforts have been made to automate parts of the sample preparation and library preparation process workflows, but these have largely addressed research applications or users who are comfortable investing effort in developing automation systems to process large numbers of samples in centralized labs. No low-cost fixed protocol suitable for use in a clinical context is available.
 
-### Time to Answer
+### Long time to answer disqualifies sequencing in for infectious disease diagnosis
 
-We previously discussed how the requirement of multiplexing can increase diagnostic turnaround time by days to weeks. Sending samples to a centralized lab followed by the execution of complex workflows by trained personnel also adds significantly to the time to answer. Indeed, current metagenomic-based pathogen tests often have a 2-4 week turnaround time[¹³](https://www.zotero.org/google-docs/?7jVZxG).
+We previously discussed how the requirement of multiplexing can increase diagnostic turnaround time by days to weeks. Sending samples to a centralized lab followed by the execution of complex workflows by trained personnel also adds significantly to the time to answer. Indeed, current metagenomic-based pathogen tests often have a turnaround time of more than two weeks [¹³](https://www.zotero.org/google-docs/?7jVZxG).
 
-On the sequencing technology front, Illumina’s fastest sequencing runs are \~4 hours[¹⁴](https://www.zotero.org/google-docs/?RCkl9s), though their runs typically fall between 24-48 hours. In combination with the factors discussed above, we believe this is too slow to provide valuable clinical feedback to patients in many cases. However, nanopore and single-molecule approaches can currently provide sequencing data in a \<1-hour timeframe.
+On the sequencing technology front, Illumina’s runs typically fall between 24-48 hours, while their fastest runs are \~4 hours[¹⁴](https://www.zotero.org/google-docs/?RCkl9s),. While this may be sufficient for some use cases, it is hard to see how a truly ubiquitous technology base could be built on this base. However, nanopore and single-molecule approaches can currently provide sequencing data in a \<1-hour timeframe.
 
-[Sample and library preparation](https://sequencing-roadmap.org/sample-prep) are also significant bottlenecks here. This is strongly dependent on the sequencing technology being used. Standard protocols typically take \>2 hours. In later sections, we discuss approaches which can provide sequencing-ready DNA in \~10 minutes[¹⁵](https://www.zotero.org/google-docs/?gUoxVG).
+[Sample and library preparation](https://sequencing-roadmap.org/sample-prep) are also significant bottlenecks here. This is strongly dependent on the sequencing technology being used but tandard protocols typically take more than 2 hours. In later sections, we discuss approaches which can provide sequencing-ready DNA in \~10 minutes[¹⁵](https://www.zotero.org/google-docs/?gUoxVG).
