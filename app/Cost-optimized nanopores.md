@@ -1,8 +1,10 @@
 # cost-optimized nanopore array fabrication
 
-As previously noted, Oxford Nanopore's lower-end nanopore sequencer, the Flongle, may be the closet device from those currently available to meeting our specifications. It comfortably meets the throughput and time to answer requirements. Sample preparation is still complex but there do not appear to be any reasons why a nanopore sequencer could not be coupled with a low-cost reagent cartridge along the lines we propose. However, its COGS (~$90) of the Flongle is still at least and order of magnitude higher than our goal of less than $10.
+As previously noted, Oxford Nanopore's lower-end nanopore sequencer, the Flongle, may be the closesr device from those currently available to meeting our product progile specifications. It comfortably meets the throughput and time to answer requirements. Sample preparation is still complex but there do not appear to be any reasons why a nanopore sequencer could not be coupled with a low-cost reagent cartridge along the lines we propose. However, its COGS (~$90) of the Flongle is still at least and order of magnitude higher than our goal of less than $10.
 
-This prompted a few interesting conversations, and I thought in this post it would be fun to review a [patent from Oxford Nanopore](https://patents.google.com/patent/US20220023819A1), covering array fabrication approaches.
+To our knowledge, there is no publicly available information on the manufacturing process that would aid a more grounded estimate of the cost of nanopre fabrication. In an appendix, we review a [patent from Oxford Nanopore](https://patents.google.com/patent/US20220023819A1) covering array fabrication approaches and use it to estimate how cheap a Flongle-type device could be if manufactured at scale.
+
+
 
 ### Electrodes
 
@@ -36,17 +38,11 @@ The patents notes that the experiment/pore lifetime is related to the volume of 
 
 ![7849f58d-e6d6-44be-8eb9-9f4fd92400d9_638x453.jpeg](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F7849f58d-e6d6-44be-8eb9-9f4fd92400d9_638x453.png)
 
-It also suggests that if you try and cram more pores onto a chip, and in doing so reduce droplet size, flow cell lifetime will decrease. This may limit options in terms of increasing pore density to push throughput.
+It also suggests that if you try to fit more pores onto a chip, and in doing so reduce droplet size, flow cell lifetime will decrease. This may limit options in terms of increasing pore density to push throughput.
 
 ### How Much does this all cost?
 
-To our knowledge, there is no publicly available information on the manufacturing process that would aid a more grounded estimate of the cost of nanopre fabrication
-
-Below, we attempt an estimate of how cheap a Flongle type device could be manufactured at scale.
-
-The [Flongle array looks](https://www.flickr.com/photos/theworldfishcenter/49714974428/in/photostream/) to be somewhere in the region of 10mm square, this may be somewhat limited by mechanical constraints, as it seems like 126 wells should fit on a substrate less than a quarter of this size easily.
-
----
+The [Flongle array appears](https://www.flickr.com/photos/theworldfishcenter/49714974428/in/photostream/) to be somewhere in the region of 10mm square. This may be somewhat limited by mechanical constraints, as it seems like 126 wells should fit on a substrate less than a quarter of this size easily.
 
 Existing MEMS fabrication capacity for the processes used (from [pureplay MEMS fab](https://silexmicrosystems.com)s) is probably somewhat limited. This limited supply likely contributes significantly to this $20 cost per device.
 
