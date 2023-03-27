@@ -4,9 +4,9 @@ COVID-19 has clearly demonstrated that our ability to detect and contain new pat
 
 Metagenomic sequencing (MGS) was previously identified as a technology that could accomplish this goal. However, in COVID-19, we have seen that sequencing has had a limited relative to its huge potential: while it has aided initial sequence identification and variant tracking, a number of bottlenecks prevent its widespread adoption at the point of need.
 
-In this report, we look at these bottlenecks and attempt a first-principles analysis of what it would take to make technology for metagenomic sequencing truly ubiquitous, fit for developed and low-income countries alike.
+In this report, we look at these bottlenecks and attempt a first-principles analysis of what it would take to make technology for metagenomic sequencing truly ubiquitous, fit for developed and low-income countries alike. Given the urgency of the issue, we look for solutions involving low technical risk and are can substantially enable our preparedness for potential new pandemics in a 5-year timeframe.
 
-|                           | Current state                                                | Target                                                       | Realistic approaches (5-10y)                                 |
+|                           | Current state<br />[Chapter](./ch/current-state)             | Target<br />[Chapter](./ch/target)                           | Realistic approaches (5-10y)<br />[Chapter](./ch/roadmap)    |
 | ------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | **Pandemic preparedness** | World vulnerable to novel pathogens; majority of infectious disease undiagnosed. | Routine pathogen-agnostic testing for severe respirarory disease. | Metagenomic sequencing widespread in the clinic and point of need. |
 | **Sequencing technology** | ~30,000 sequencers, mostly in centralized laboratories.      | Millions of devices at the point of need.                    | Integrated low-cost sample-to-answer devices.                |
