@@ -20,4 +20,4 @@ In this report, we look at these bottlenecks and attempt a first-principles anal
 
 
 
-\> Ubiquitous metagenomic sequencing could dramatically compress the timeline to detection of a new pathogen and at the same time provide an immediate mass testing capacity.
+> Ubiquitous metagenomic sequencing could dramatically compress the timeline to detection of a new pathogen and at the same time provide an immediate mass testing capacity.
