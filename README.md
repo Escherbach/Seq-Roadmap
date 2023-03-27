@@ -13,8 +13,7 @@ In this roadmap, we work backward from the vision of ubiquitous metagenomic sequ
 - For clinical viability, any platform will need to be integrated into a dramatically simplified sample-to-answer system. While the exact design of these devices will have to be adapted for particular platform of choice, we conclude design of a simple, low-cost sample prep cartridge can be quite straightforwardly adapted from qPCR sample-to-answer systems. See chapter on [sample preparation](http://sequencing-roadmap.org/sample-prep).
 
 ## Chapters
-
-1. [Clinical MGS and Early Detection](http://sequencing-roadmap.org/early-detection)
+1. [Clinical MGS and Early Detection](ch/early-detection.md)
 2. [Sensitivity and Platform Requirements](http://sequencing-roadmap.org/sensitivity)
 3. [Sample Preparation](http://sequencing-roadmap.org/sample-prep)
 4. [Sequencing Platforms](http://sequencing-roadmap.org/platforms)
