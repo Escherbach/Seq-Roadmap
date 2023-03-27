@@ -1,4 +1,4 @@
-# Technical requirements and Bottlenecks in current approaches
+# Bottlenecks in current approaches
 
 In the [previous section](early-detection), we have laid out the need for ubiquitous metagenomic sequencing at the point of care. In this chapter, we focus on the concrete requirements for a clinically viable sequencing device.
 
