@@ -1,6 +1,0 @@
-markdown: kramdown
-
-collections:
-  chapters:
-    output: true
-    permalink: /ch/:name/
