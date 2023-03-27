@@ -4,7 +4,7 @@ In the [previous section](early-detection), we have laid out the need for ubiqui
 
 ## Most infectious disease cases are not linked to causative pathogen
 
-As previously noted, widespread MGS has a clear value for pandemic prevention. However, in the absence of (justified) large-scale investment in a pandemic monitoring networks at the point of care, this technology has to be practical for the clinician in order to become widely used.
+As previously noted, widespread MGS has a clear value for pandemic prevention. However, in the absence of (justified) large-scale investment in pandemic monitoring networks at the point of care, this technology has to be practical for the clinician in order to become widely used.
 
 In the absence of formal surveys, anecdotal evidence suggests that there is latent demand for a universal diagnostic for respiratory infectious disease. Individuals showing symptoms (fever and or flu-like symptoms) may already be inclined to seek medical assistance. Reports suggest that patients increasingly want to receive a diagnosis rather than “non-specific upper respiratory infection”, the majority diagnosis in ambulatory care visits for respiratory issues.
 
