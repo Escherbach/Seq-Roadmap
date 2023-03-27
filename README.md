@@ -26,6 +26,17 @@ In this report, we look at these bottlenecks and attempt a first-principles anal
 
 ### qPCR tests are the gold standard
 
+### Sequencing technologies have been optimized for accuracy, read length and cost per base
+<img width="1000" alt="seqapproaches" src="https://user-images.githubusercontent.com/106965942/226617729-c9743f37-c873-422d-abbd-6f0ea8af98dd.png">
+
+
+Next-generation sequencing platforms are currently offered by Illumina, MGI, Oxford Nanopore, Pacific Biosciences, SeqLL, GenoMind, Qitan Technology and Thermo (Ion Torrent). A number of other players are also poised to enter the market (Element Biosciences, Singular Genomics, Ultima Genomics). For the most part, however, these players use expired Illlumina intellectual property. Approaches in this category therefore in most cases have similar cost-of-goods-sold (COGS) and performance characteristics as Illumina, and we will not address them here separately.
+
+In terms of run time, only Oxford Nanopore and Pacific Biosciences platforms currently provide results within an hour (required to provide results within an ambulatory care visit, and comparable to current qPCR platforms).
+
+![img](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F04ac909d-664e-4ba7-8027-eddef4ae3d6c_671x465.png)
+
+
 ### High cost per sample necessitates multiplexing
 
 ```mermaid
