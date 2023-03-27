@@ -1,6 +1,6 @@
 # Platform Requirements
 
-## Sensitivity
+### qPCR-level sensitivity implies modest requirements for a sequencing platform
 
 What does the requreirement of qPCR-level sensitivity imply for actual sequencing instrumentation? Below, we attempt to answer this question for the baseline task of detecting known viruses. Acquired sequence data may be processed in a number of ways, most commonly through alignment of reads to a reference of known viruses.
 
