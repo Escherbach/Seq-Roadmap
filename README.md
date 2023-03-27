@@ -72,5 +72,32 @@ On the sequencing technology front, Illumina’s runs typically fall between 24-
 
 
 ## Target
+### Pandemic-proof seqeuncers should be evaluated on sensitivity, cost and time to answer
+In this section, we evaluate the current landscape of sequencing platforms against the technical requirements we have previously established:
+
+1. Platforms should process single samples.
+2. Time to answer should be less than 1 hour.
+3. The COGS should be comparable to qPCR (<$10).
+4. Sensitivity should be comparable to qPCR.
+
+
+### qPCR-level sensitivity implies modest requirements for a sequencing platform
+
+What does the requreirement of qPCR-level sensitivity imply for actual sequencing instrumentation? Below, we attempt to answer this question for the baseline task of detecting known viruses. Acquired sequence data may be processed in a number of ways, most commonly through alignment of reads to a reference of known viruses.
+
+In order to assess the read length and accuracy requirements of our sequencing platform we simulated SARS-CoV-2 reads of varying lengths and accuracy. These reads were then aligned to the complete human genome, all NCBI Viruses, and the SARS-CoV-2 reference. The figure below shows the percentage of reads that correctly aligned to the SARS-CoV-2 reference. This plot suggests that **the majority of simulated reads are alignable at 20 bp, with an error rate as high at 5%.**
+
+<img src="https://lh6.googleusercontent.com/_gt7HtPp-hr1pLQ5G2EOB8c5iKvB2T0hdnOiX5uQu2nZ0QKMJ213-B0lMKNBnm16OhbUrh1Jm2Efui_ZuAVSbYVePCOBqVepE5Xu4eP10i_0JfUU65JNo9IA0EUbsJkAuuzHLQQ62iQl7tmS6z6MD6c" alt="img" style="zoom:25%;" />
+
+We can also simulate human reads of this length and error rate, then align them back to the human genome and SARS-CoV-2. If errored human material were to align to the SARS-CoV-2 reference, this could result in a false positive. In this simulation, however, we have not been able to generate any such reads (after generating 100,000 reads).
+
+Using this data, we can calculate the false negative and positive rates from these simulated reads. These compare favorably to known rates for qPCR:
+
+|                     | qPCR | 20bp, 5% error |
+|---------------------|------|----------------|
+| False Negative Rate | 1%   | 0.01%          |
+| False Positive Rate | 1.1% | 0%             |
+
+While we would ideally seek to exceed these specifications, building a platform which fits all our requirements requires compromise. In the next section we shall see that current instrumentation has been designed around the requirements of different applications and is a poor fit for point-of-care diagnostics.
 
 ## How to Get There
