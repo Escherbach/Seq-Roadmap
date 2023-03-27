@@ -54,7 +54,7 @@ Another downside of multiplexing onto a single chip is the significant reduction
 
 Therefore, the high single-run cost for current instruments makes them a poor fit for diagnostic applications. This is the case even if we look at the COGS (Illumina \$50 to \$100s, Oxford Nanopore \$50 to \$450 based on stated margins^([1](https://www.zotero.org/google-docs/?uZfJ69) [12](https://www.zotero.org/google-docs/?tljpmF)). Cheaper options could make running single-sample tests economically viable.
 
-### Complex worfklows limit use
+### Complex worfklows limit use to specialized labs
 
 Sequencing-based assays are complex and typically require multiple hours of skilled labor to execute (both in the wet lab and data analysis).
 
