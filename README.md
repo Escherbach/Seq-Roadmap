@@ -37,7 +37,7 @@ In terms of run time, only Oxford Nanopore and Pacific Biosciences platforms cur
 ![img](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F04ac909d-664e-4ba7-8027-eddef4ae3d6c_671x465.png)
 
 
-### High cost per sample necessitates multiplexing
+### High cost per sample necessitates sample pooling
 
 ```mermaid
 graph LR
