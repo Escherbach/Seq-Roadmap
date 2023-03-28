@@ -22,31 +22,15 @@ In this report, we look at these bottlenecks and attempt a first-principles anal
 
 > Ubiquitous metagenomic sequencing could dramatically compress the timeline to detection of a new pathogen and at the same time provide an immediate mass testing capacity
 
-```toc
-```
-## Where We Are
-### Identification of novel pathogens and transition to mass testing take too long
-Current genomic estimates suggest that the first COVID-19 infection occured in mid-October to mid-November of 2019, at least six weeks earlier than the Wuhan cluster of infections was identified in late December 2019.[^1] The SARS-CoV-2 genome was only made publicly available in January 2020, more than two months after the first human transmission.[^2] 
+## Current State
 
-This delay is not surprising when we consider the diagnostic technology at our disposal. Typical diagnostic tests (qPCR, antigen, culture) are designed for a single known pathogen (or a small set thereof). Therefore, by definition, they cannot identify unknown emerging pathogens. In the absence of a truly universal diagnostic, our ability to respond to pandemics relies on physicians to notice an unusual set of symptoms and sending a given sample for lab-based tests. Given the similarity of symptoms shared by respiratory pathogens (pneumonias, flu-like symptoms), this approach is of course heavily unreliable.
-
-In addition, each new virus requires a new test to be developed, approved, and deployed. When potentially hundreds of millions of tests are required, this is a huge logistical issue. In the case of COVID-19, it took more than 4 months for 1 million tests to be performed in the US and 9 months to deploy 100 million tests.[^3] Logistical and regulatory issues, therefore, limit our ability to engage in “track and trace” operations, allowing the pandemic to proceed largely unmonitored.
-
-### qPCR tests are the gold standard for infectious disease testing
-PCR testing is correctly thought of as the gold standard because of its high sensitivity for known pathogens. Furthermore, we have experience with scaling PCR-based testing and sample-to-answer devices with relatively simple workflows have become widespread in clinics around the world.
-
-While the majority of PCR tests target a single pathogen, PCR testing is scalable for high-throughput analysis and can run multiplexed panels of over 40 targets with run times under 60 minutes. New approaches to DNA synthesis (enzymatic approaches) could potentially help ramp up and distribute the production of qPCR kits once a novel threat has been identified.
-
-### PCR systems are far more widespread than sequencing devices
-
-
+### qPCR tests are the gold standard
 Limit of detection.
 Sample-to-answer workflows.
 Cost.
 Time to answer. qPCR dominates the majority of current sequencing approaches in terms of time to answer. While nanopore sequencers can achieve a sequencing run of less than an hour, complex sample prep and pooling necessitated by high single sample costs imply a much longer de facto sample-to-answer time.
 
 ### MGS has not yet been adopted as a diagnostic
-
 
 ### Sequencing technologies have been optimized for accuracy, read length and cost per base
 <img width="1000" alt="seqapproaches" src="https://user-images.githubusercontent.com/106965942/226617729-c9743f37-c873-422d-abbd-6f0ea8af98dd.png">
@@ -58,7 +42,7 @@ In terms of run time, only Oxford Nanopore and Pacific Biosciences platforms cur
 
 ### There were about 30,000 sequencers in the world in 2022
 
-![](images/seq_capacity.png)
+![img](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F04ac909d-664e-4ba7-8027-eddef4ae3d6c_671x465.png)
 
 
 ### High cost per sample necessitates sample pooling
@@ -80,12 +64,11 @@ Therefore, the high single-run cost for current instruments makes them a poor fi
 
 ### Complex worfklows limit use to specialized labs
 
-Sequencing-based assays are complex and typically require multiple hours of skilled labor (wet lab and data analysis) to execute. A pushbutton “sample-to-answer” sequencing platform could allow minimally-trained personnel to load a sample and walk away from the device. Such a platform could have a major impact on the ease of implementation of sequencing-based diagnostics. Yet, no sample-to-answer sequencing platform currently exists.
+Sequencing-based assays are complex and typically require multiple hours of skilled labor to execute (both in the wet lab and data analysis).
+
+A pushbutton “sample-to-answer” sequencing platform could allow minimally-trained personnel to load a sample and walk away from the device. Such a platform could have a major impact on the ease of implementation of sequencing-based diagnostics. Yet, no sample-to-answer sequencing platform currently exists.
 
 Efforts have been made to automate parts of the sample preparation and library preparation process workflows, but these have largely addressed research applications or users who are comfortable investing effort in developing automation systems to process large numbers of samples in centralized labs. No low-cost fixed protocol suitable for use in a clinical context is available.
-
-### Sample and library preparation complexity varies among platforms
-
 
 ### Long time to answer disqualifies sequencing in for infectious disease diagnosis
 
@@ -97,8 +80,7 @@ On the sequencing technology front, Illumina’s runs typically fall between 24-
 
 
 ## Target
-### Pandemic-proof seqeuncers should be evaluated on sensitivity, cost and time to answer for key respiratory sample types
-
+### Pandemic-proof seqeuncers should be evaluated on sensitivity, cost and time to answer
 In this section, we evaluate the current landscape of sequencing platforms against the technical requirements we have previously established:
 
 1. Platforms should process single samples.
@@ -117,13 +99,13 @@ Based on the available literature, our best avaialble understanding is as follow
 	- To our knowledge, no such SARS-CoV-2 metagenomic sequencing studies have been performed on **saliva**, so we can assume ~0.001% of total RNA in the sample. 
 
 
-### qPCR-level sensitivity implies modest requirements for read length and error rate
+### qPCR-level sensitivity implies modest requirements for a sequencing platform
 
 What does the requreirement of qPCR-level sensitivity imply for actual sequencing instrumentation? Below, we attempt to answer this question for the baseline task of detecting known viruses. Acquired sequence data may be processed in a number of ways, most commonly through alignment of reads to a reference of known viruses.
 
 In order to assess the read length and accuracy requirements of our sequencing platform we simulated SARS-CoV-2 reads of varying lengths and accuracy. These reads were then aligned to the complete human genome, all NCBI Viruses, and the SARS-CoV-2 reference. The figure below shows the percentage of reads that correctly aligned to the SARS-CoV-2 reference. This plot suggests that **the majority of simulated reads are alignable at 20 bp, with an error rate as high at 5%.**
 
-<img src="https://lh6.googleusercontent.com/_gt7HtPp-hr1pLQ5G2EOB8c5iKvB2T0hdnOiX5uQu2nZ0QKMJ213-B0lMKNBnm16OhbUrh1Jm2Efui_ZuAVSbYVePCOBqVepE5Xu4eP10i_0JfUU65JNo9IA0EUbsJkAuuzHLQQ62iQl7tmS6z6MD6c" alt="img" style="zoom:25%;" />
+<img src="images/image10.png" alt="image25" width="400">
 
 We can also simulate human reads of this length and error rate, then align them back to the human genome and SARS-CoV-2. If errored human material were to align to the SARS-CoV-2 reference, this could result in a false positive. In this simulation, however, we have not been able to generate any such reads (after generating 100,000 reads).
 
@@ -140,9 +122,5 @@ While we would ideally seek to exceed these specifications, building a platform 
 
 ### Simple low-cost sample preparation instruments will be necessary for any platform
 
-![image25](images/image25.png)
+<img src="images/image25.png" alt="image25" width="400">
 *A Cepheid sample-to-answer cartridge. Cepheid ship ~36 million units a year.*
-
-[^1]: 
-[^2]: 
-[^3]: 
