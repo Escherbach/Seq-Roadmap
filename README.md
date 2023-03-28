@@ -119,3 +119,8 @@ Using this data, we can calculate the false negative and positive rates from the
 While we would ideally seek to exceed these specifications, building a platform which fits all our requirements requires compromise. In the next section we shall see that current instrumentation has been designed around the requirements of different applications and is a poor fit for point-of-care diagnostics.
 
 ## How to Get There
+
+### Simple low-cost sample preparation instruments will be necessary for any platform
+
+![image25](images/image25.png)
+*A Cepheid sample-to-answer cartridge. Cepheid ship ~36 million units a year.*
