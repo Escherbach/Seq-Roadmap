@@ -122,5 +122,5 @@ While we would ideally seek to exceed these specifications, building a platform 
 
 ### Simple low-cost sample preparation instruments will be necessary for any platform
 
-![image25](images/image25.png)
+![image25](images/image25.png | width = 200)
 *A Cepheid sample-to-answer cartridge. Cepheid ship ~36 million units a year.*
