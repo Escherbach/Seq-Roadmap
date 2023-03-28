@@ -25,14 +25,22 @@ In this report, we look at these bottlenecks and attempt a first-principles anal
 ## Current State
 
 ### qPCR tests are the gold standard
+Limit of detection.
+Sample-to-answer workflows.
+Cost.
+Time to answer. qPCR dominates the majority of current sequencing approaches in terms of time to answer. While nanopore sequencers can achieve a sequencing run of less than an hour, complex sample prep and pooling necessitated by high single sample costs imply a much longer de facto sample-to-answer time.
+
+### MGS has not yet been adopted as a diagnostic
 
 ### Sequencing technologies have been optimized for accuracy, read length and cost per base
 <img width="1000" alt="seqapproaches" src="https://user-images.githubusercontent.com/106965942/226617729-c9743f37-c873-422d-abbd-6f0ea8af98dd.png">
 
 
-Next-generation sequencing platforms are currently offered by Illumina, MGI, Oxford Nanopore, Pacific Biosciences, SeqLL, GenoMind, Qitan Technology and Thermo (Ion Torrent). A number of other players are also poised to enter the market (Element Biosciences, Singular Genomics, Ultima Genomics). For the most part, however, these players use expired Illlumina intellectual property. Approaches in this category therefore in most cases have similar cost-of-goods-sold (COGS) and performance characteristics as Illumina, and we will not address them here separately.
+Next-generation sequencing platforms are currently offered by a range of players: Illumina, MGI, Oxford Nanopore, Pacific Biosciences, SeqLL, GenoMind, Qitan Technology and Thermo (Ion Torrent). A number of other players are also poised to enter the market (Element Biosciences, Singular Genomics, Ultima Genomics). For the most part, however, these players use expired Illlumina intellectual property. Approaches in this category therefore in most cases have similar cost-of-goods-sold (COGS) and performance characteristics as Illumina, and we will not address them here separately.
 
 In terms of run time, only Oxford Nanopore and Pacific Biosciences platforms currently provide results within an hour (required to provide results within an ambulatory care visit, and comparable to current qPCR platforms).
+
+### There were about 30,000 sequencers in the world in 2022
 
 ![img](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F04ac909d-664e-4ba7-8027-eddef4ae3d6c_671x465.png)
 
