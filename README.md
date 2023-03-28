@@ -105,7 +105,7 @@ What does the requreirement of qPCR-level sensitivity imply for actual sequencin
 
 In order to assess the read length and accuracy requirements of our sequencing platform we simulated SARS-CoV-2 reads of varying lengths and accuracy. These reads were then aligned to the complete human genome, all NCBI Viruses, and the SARS-CoV-2 reference. The figure below shows the percentage of reads that correctly aligned to the SARS-CoV-2 reference. This plot suggests that **the majority of simulated reads are alignable at 20 bp, with an error rate as high at 5%.**
 
-<img src="https://lh6.googleusercontent.com/_gt7HtPp-hr1pLQ5G2EOB8c5iKvB2T0hdnOiX5uQu2nZ0QKMJ213-B0lMKNBnm16OhbUrh1Jm2Efui_ZuAVSbYVePCOBqVepE5Xu4eP10i_0JfUU65JNo9IA0EUbsJkAuuzHLQQ62iQl7tmS6z6MD6c" alt="img" style="zoom:25%;" />
+<img src="images/image10.png" alt="image25" width="400">
 
 We can also simulate human reads of this length and error rate, then align them back to the human genome and SARS-CoV-2. If errored human material were to align to the SARS-CoV-2 reference, this could result in a false positive. In this simulation, however, we have not been able to generate any such reads (after generating 100,000 reads).
 
@@ -122,5 +122,5 @@ While we would ideally seek to exceed these specifications, building a platform 
 
 ### Simple low-cost sample preparation instruments will be necessary for any platform
 
-<img src="images/image25.png" alt="image25" width="200">
+<img src="images/image25.png" alt="image25" width="400">
 *A Cepheid sample-to-answer cartridge. Cepheid ship ~36 million units a year.*
