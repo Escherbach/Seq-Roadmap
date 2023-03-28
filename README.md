@@ -88,6 +88,16 @@ In this section, we evaluate the current landscape of sequencing platforms again
 3. The COGS should be comparable to qPCR (<$10).
 4. Sensitivity should be comparable to qPCR.
 
+### A better understanding of respiratory sample characteristics is needed for more confident engineering specifications
+
+Based on the available literature, our best avaialble understanding is as follows:
+- **Sample types.** Anterior nasal swabs, nasopharyngeal swabs, saliva, urine, and blood samples have all been studied in the context of SARS-CoV-2 diagnostics. Generally, we can expect anterior nasal and nasopharyngeal swabs to contain approximately 10 times the viral copies present in saliva. Blood, urine, and stool samples may also contain detectable levels of SARS-CoV-2, though at an order of magnitude lower than other sample types.
+- **Integrity of viral material.** The majority of its material is fragmented and <1,000bp in size and largely cell-free.
+- **Integrity of human NA.** Human naterial is likewise of similar size and and largely cell-free.
+- **Viral fraction.** Estimates of the fraction of viral material (of total RNA) present in samples vary widely across sample types, individuals and sample types. 
+	- In **nasopharyngeal samples**, viral RNA represents ~0.01% of total RNA, which can be increased to ~1% with rRNA depletion, or to ~35% with broad spectrum viral enrichment. 
+	- To our knowledge, no such SARS-CoV-2 metagenomic sequencing studies have been performed on **saliva**, so we can assume ~0.001% of total RNA in the sample. 
+
 
 ### qPCR-level sensitivity implies modest requirements for a sequencing platform
 
