@@ -4,6 +4,14 @@ As previously noted, Oxford Nanopore's lower-end nanopore sequencer, the Flongle
 
 To our knowledge, there is no publicly available information on the manufacturing process that would aid a more grounded estimate of the cost of nanopre fabrication. In an appendix, we review a [patent from Oxford Nanopore](https://patents.google.com/patent/US20220023819A1) covering array fabrication approaches and use it to estimate how cheap a Flongle-type device could be if manufactured at scale.
 
+Based on our analysis, it appears that nanopore fabrication could be made substantially cheaper by (a) optimizing the density of wells per device and (b) 
+
+The [Flongle array appears](https://www.flickr.com/photos/theworldfishcenter/49714974428/in/photostream/) to be somewhere in the region of 10mm square. This may be somewhat limited by mechanical constraints, as it seems like 126 wells should fit on a substrate less than a quarter of this size easily.
+
+Existing MEMS fabrication capacity for the processes used (from [pureplay MEMS fab](https://silexmicrosystems.com)s) is probably somewhat limited. This limited supply likely contributes significantly to this $20 cost per device.
+
+One route to a low cost per device could therefore be to build out specialized fab capacity. For the kinds of point-of-care devices we have analyzed in the report we would be looking at >1M units a month. Building out such a fab would likely be very expensive: at least $200M, likely closer to $1B But with such a facility, it seems at least plausible that you one could reach a single digit dollar COGS, possibly as low as $1-2.
+
 
 
 ### Electrodes
@@ -24,7 +32,7 @@ Patents also describe an optional electrode spike, but while Silex have some coo
 
 ### Membranes and Structures
 
-The substrate described above, contains the basic electrode structure. Droplets need to added to the array into which nanopores will be inserted. These droplets need to be confined above electrode. A structure sits above the electrode to enable this.
+The substrate described above contains the basic electrode structure. Droplets need to added to the array into which nanopores will be inserted. These droplets need to be confined above electrode. A structure sits above the electrode to enable this.
 
 These structures are formed using SU-8 (Seed layer) and TMMF 2030 dry-film resist (Pillar structure):
 
