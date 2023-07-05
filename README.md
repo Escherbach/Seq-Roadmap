@@ -22,12 +22,14 @@ However, in COVID-19, we have seen that sequencing has had a limited relative to
 What is it going to take to make metagenomic sequencing ubiquitous in clinics around the world? A necessary condition is the existence of an affordable, easy-to-use technical solution. In this report, we therefore focus on how to meet this first condition.
 
 We specify the requirements as follows:
-1. Sensitivity should be comparable to qPCR.
-2. Platforms should process single samples.
-3. Time to answer should be less than 1 hour.
-4. The COGS should be comparable to qPCR (<$10).
+- Sensitivity should be comparable to qPCR.
+- Workflow should be "push-button", requiring minimal operator time and skill.
+- Time to answer should be less than 1 hour.
+- The COGS should be comparable to qPCR (<$10).
 
-### Matching the sensitivity of qPCR
+For these reasons, we assume that multiplexing, i.e. analyzing multiple samples simultaneously, will not be practical in the point-of-care context, as this step introduces both a significant delay in time to answer and may be hard to fully automate given the requirements for low cost and minimal operator time.
+
+## Matching the sensitivity of qPCR
 
 PCR tests are widely believed to be the “gold standard” in molecular diagnostic testing. In some cases, only a handful of copies of viral or bacterial nucleic acid are sufficient to detect it in a sample. PCR has a key advantage over sequencing:  because PCR targets a short, unique region of a genetic sequence, it is **insensitive to background material**. A high fraction of human material (mostly rRNA in the case of RT-qPCR) or bacterial material will have only a minor effect on the sensitivity of qPCR. In other words, the limit of detection relies on the sample's **absolute abundance of the target**. 
 
@@ -35,66 +37,21 @@ PCR tests are widely believed to be the “gold standard” in molecular diagnos
 
 In typical human clinical samples, host nucleic acids are typically orders of magnitude more abundant than those of the pathogen. A key question is therefore how many fragments of nucleic acid a sequencer needs to read in order to have a greater than 99% chance of detecting a pathogen. This question can be addressed both empirically and by modeling.
 
-Here, we review the literature on the sensitivity of MGS in the context of human clinical samples. This literature demonstrates that not only does MGS have a broader scope of applications than qPCR, allowing the detection of known and unknown viruses, but that it also has at least comparable sensitivity when adequate read depth is used. Indeed, potential false negatives were detected by sequencing, indicating a greater test sensitivity in some cases. 
-
-#### Empirical studies 
-
-We reviewed 42 publications (Appendix D) where metagenomic sequencing was used on pathogenic samples. These were collected from literature searches, extracted from review papers, and received via a public call for relevant publications.
-
-We then selected publications that met the following criteria:
-
--   More than 10 positive subjects.
--   More than 10M average reads per sample.
--   Did not use only contrived or pooled samples.    
--   Was not a targeted or semi-targeted study.
-    
-
-This ensures that studies have a sufficiently large size and number and that samples have sufficient reads to assess the sensitivity of sequencing. The result was the following 8 papers:
-
-![](https://lh6.googleusercontent.com/dbC9cBgpRMtVZbYGlGvO9fSZDJx3cBH3WOPsJXWuprzq2ydnI2WZVey-fbRxkPIZ4UhHMcFThCbrp2KjYHi_XHcOFi3F47XTYg0F-ah9-tO7fyE0s4wLn2KeZC9HVAyiD-sPDDT_kpvCde4llfsuwBk)
-
-Detailed comments on these publications can be found in Appendix E. Sensitivity was either calculated using data presented in the papers (based on agreement with qPCR, Panels, or Serology testing) or used explicit statements from these publications. Where a sensitivity estimate could be calculated against qPCR (5/8 papers), it was >96%. This is the agreement we would expect to see between these tests, a sentiment broadly in agreement with the conclusions of these publications (see Appendix E). Moreover, 4 of the 8 papers have explicit statements on qPCR false negatives stating that sequencing was able to identify likely false negatives from qPCR using sequencing (see Appendix E) and therefore showed the potential for increased sensitivity relative to qPCR.
-
-### Resulting throughput requirements
-
-As discussed above, the LoD for qPCR is very low, and the approach is insensitive to background material. However, qPCR is limited to a single region of our target pathogen. In the case of a viral target, this is typically approximately 100 bp. For SARS-CoV-2, this is 0.3% of the genome. In sequencing, any location on the genome provides information that can enable detection.
-
-If all viral fragments are fully intact at the point of detection, this distinction is irrelevant. However, *if the genome is fragmented*, qPCR will only be able to detect that fraction of fragments that contain the amplification region. We show in Appendix H that studies suggest that SARS-CoV-2 (and other viral genomes) is likely fragmented either at collection or at point of analysis.
-
-Moreover, because qPCR uses primer sequences to enable detection, mutations in the primer region will cause issues for qPCR (see Appendix H). While this has not been a significant issue during COVID-19, it is worth noting.
-
-#### Model
-
-In order to more completely explore the specifications of a metagenomic sequencing based diagnostic we have created a simple model. In the first instance, we parameterize this model estimating our parameters from the JumpCode dataset mentioned in the review above: 
-
--   **Total RNA:** 10ng
-    
--   **Genome Size:** 30Kb
-    
--   **rRNA fraction:** 60%
-    
--   **qPCR Target Region:** 90nt
-    
--   **Fragment Size:** 1000nt
-    
--   **Read Count:** 40M
-
-
-The model then calculated the number of reads generated, and “on target fragments” which can be used to estimate Ct values from standard curves.
-
-![](https://lh6.googleusercontent.com/qjy568MhIsKtK70_KOFLLzolcjQAUHLD2a1wIQ1RDaXQVs3lyOHE0a5Z3hwMnhp-P_h8NcGiLt4BoheB3UfMAm7jx-cDDLiCfmpVsBE95OF1_CxVMOVikHnDOPL_oYRB-5v4mcwbpeCC1Ua4molgnvs)
-
-The model suggests that using the inputs above, **we should expect to achieve a Ct of 35 with sequencing**, which is also roughly the conclusion the JumpCode paper comes to. The model output is in relatively close agreement with a dataset produced by Jumpcode:
-
-<img src="https://lh6.googleusercontent.com/n4vyC1rqYGc0McmkKkAmGRPCpCnrqgDVmekfS8h1WEWr4igQK89ZoVXKlBPwCwwT5ded4-cbmGqJdN8sIkZbPBrESEHXaiAPmRYm4KzYAQsCticL9MvBy9qTDc79ADpL5Ixs5XNAvhNxKBjqzKSECag" style="zoom: 70%;" />
-
-While the model above shows the “expected number of reads” this is not the ideal metric for assessing a sequencing based diagnostic. As the distribution of read counts between samples will follow a Poisson distribution we are more interested in the probability of seeing “at least one read”. To maintain a < 1 in 1000 false negative rate this should be 0.999.
+Given that the sensitivity of sequencing is determined by the relative amount of nucleic acid material, a key empirical question is what the typical fraction of the target is in relevant clinical samples. The literature on SARS-CoV-2 reported relatively wide ranges on this variable, but the typical abundance in samples of interest such as upper nasal, nasopharyngeal and saliva was between 0.01% (or one fragment in 10,000) and 0.001% (one in 100,000).
 
 We can determine the approximate number of reads required for a given target fraction. For example, to have a probability of seeing at least one read > 0.999 we will require > 3.5M reads without rRNA depletion. Below, we see the same plot with target fraction used to calculate expected Ct values from a qPCR test assuming 10ng of total material (and parameters others similar to the simulation shown above):  
 
 <img src="https://lh4.googleusercontent.com/Cp_pOT9M-XlZKXdG4uzo6l3vzfK5ubauwzAMtLXIIuwJOAuukXWvvCUPKDL_NAr52syC3coTVcwnGmBUZJX36ZrJ7POuPox2uadYMB-bJQ073jP6yPJCJ-df2QSesSl922l7Qhj_yigMcqE0I88Ys2c" style="zoom:33%;" />
 
-We can see that 300,000 reads are sufficient to reach a Ct of 30 and 1M reads correspond to a Ct of 33. Based on this analysis we believe that, as a lower limit, 1 to 10M reads is sufficient throughput for our metagenomic sequencing platform. Therefore, platforms that exhibit significant sample to sample variability will be at a disadvantage.
+We can see that 300,000 reads are sufficient to reach a Ct of 30 and 1M reads correspond to a Ct of 33. Based on this analysis we believe that, as a lower limit, 1 to 10M reads is sufficient throughput for our metagenomic sequencing platform.
+
+### Empirical studies 
+
+Another way to approach the question is to directly review the studies where MGS was used on pathogenic samples. We reviewed 42 such publications, of which 8 met our inclusion criteria (see Figure).
+
+![](https://lh6.googleusercontent.com/dbC9cBgpRMtVZbYGlGvO9fSZDJx3cBH3WOPsJXWuprzq2ydnI2WZVey-fbRxkPIZ4UhHMcFThCbrp2KjYHi_XHcOFi3F47XTYg0F-ah9-tO7fyE0s4wLn2KeZC9HVAyiD-sPDDT_kpvCde4llfsuwBk)
+
+Sensitivity was either calculated using data presented in the papers (based on agreement with qPCR, Panels, or Serology testing) or used explicit statements from these publications. Where a sensitivity estimate could be calculated against qPCR (5/8 papers), it was >96%, which is sufficient for the vast majority of clinical contexts.
 
 ### Read length and accuracy requirements
 
