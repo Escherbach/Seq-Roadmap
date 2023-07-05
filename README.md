@@ -1,7 +1,12 @@
 # A roadmap towards ubiquitous metagenomic sequencing
-The first COVID-19 infection occured in mid-October to mid-November of 2019, at least six weeks earlier than the Wuhan cluster of infections was identified in late December 2019.[^1] The SARS-CoV-2 genome was only made publicly available in January 2020, more than two months after the first human transmission.[^2] This delay resulted in millions of deaths and trillions of dollars in economic costs.
+Imagine a world in which every clinician around the world had access to a simple device capable of detecting any virus or bacterium causing disease in a symptomatic patient. Such a world would be much better positioned to diagnose and treat infectious disease and to detect novel emerging pathogens before they cause a devastating pandemic. Metagenomic sequencing (MGS) has the potential to become such a universal diagnostic. However, it is not yet ready for prime time: complex workflows and high costs prevent widespread adoption. 
 
-COVID-19 - far from the worst pandemic we could face within our lifetimes - has clearly demonstrated that our ability to detect and contain new pathogens capable of causing a pandemic are nowhere near where they should be. The diagnostic technologies we use for infections at the point of care are adapted to a small set of known pathogens and in princile incapable of recognizing the outbreak of an unsuspected or unknown pathogen.
+In this report, we ask how MGS could become widely available. The technical answer we arrive at is that a device capable of performing 10 million RNA reads in less than an hour with minimal sample preparation would have sufficient sensitivity to deliver on this goal. We then review the current technological landscape and conclude that at least two approaches, single-molecule optical and nanopore sequencing, could be adapted to meet these specifications
+
+## Motivation
+The first COVID-19 infection occured in mid-October to mid-November of 2019, at least six weeks earlier than the Wuhan cluster of infections was identified in late December 2019. The SARS-CoV-2 genome was only made publicly available in January 2020, more than two months after the first human transmission. This delay resulted in millions of deaths and trillions of dollars in economic costs.
+
+COVID-19 - far from the worst pandemic we could face within our lifetimes - has clearly demonstrated that our ability to detect and contain new pathogens is inadequate. The diagnostic technologies we use for infections at the point of care are designed for a small set of known pathogens and in princile incapable of recognizing the outbreak of an unsuspected or unknown pathogen.
 
 There is therefore a pressing need for a universal diagnostic to enable fast detection of all pathogens and their early containment. We need an early warning system that can detect the emergence of a new pathogen in humans as early as possible, without any assumptions about what the pathogen might be. This system should also be able to characterize any pathogen in a human sample with sufficient information to triage the threat.
 
@@ -13,34 +18,22 @@ Such a device would allow the care provider to place a liquid sample from a pati
 
 However, in COVID-19, we have seen that sequencing has had a limited relative to its huge potential: while it has aided initial sequence identification and variant tracking, a number of bottlenecks prevent its widespread adoption at the point of need. In this report, we analyze these bottlenecks and ask what it would take to **make the technology for metagenomic sequencing truly ubiquitous**, fit for developed and low-income countries alike in a 10-year timeframe.
 
-
-|                           | Current state<br />[Chapter 1](./ch/current-state)           | Target<br />[Chapter 2](./ch/target)                         | Realistic approaches (5-10y)<br />[Chapter 3](./ch/roadmap)  |
-| ------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **Pandemic preparedness** | World vulnerable to novel pathogens; majority of infectious disease undiagnosed. | Routine pathogen-agnostic testing for severe respirarory disease. | Metagenomic sequencing widespread in the clinic and point of need. |
-| **Sequencing technology** | ~30,000 sequencers, mostly in centralized laboratories.      | Millions of devices at the point of need.                    | Integrated low-cost sample-to-answer devices.                |
-| **Sample preparation**    | Complex workflows, lack of standardization, contamination issues. | Low-cost automated qPCR-style sample preparation             | Standardized injection-molded reagent cartridges.            |
-| **Sequencing platforms**  | - Cost of goods >$100. <br />- Pooling necessary<br />- Time to answer >24h. | - COG <<$10<br />- single sample analysis<br />- <1h to answer. | Low-cost mass-produced nanopore and/or single-molecule optical sequencers. |
-
 ## Requirements
-What is it going to take to make metagenomic sequencing ubiquitous in clinics around the world? There are many aspects to the problem, including a complex regulatory landscape or changing the culture of diagnosis from hypothesis-driven to pathogen-agnostic. However, a necessary condition for these is the existence of an affordable, easy-to-use technical solution. In this report, we therefore focus on how to meet this first condition.
+What is it going to take to make metagenomic sequencing ubiquitous in clinics around the world? A necessary condition is the existence of an affordable, easy-to-use technical solution. In this report, we therefore focus on how to meet this first condition.
 
 We specify the requirements as follows:
-1. Platforms should process single samples.
-2. Time to answer should be less than 1 hour.
-3. The COGS should be comparable to qPCR (<$10).
-4. Sensitivity should be comparable to qPCR.
+1. Sensitivity should be comparable to qPCR.
+2. Platforms should process single samples.
+3. Time to answer should be less than 1 hour.
+4. The COGS should be comparable to qPCR (<$10).
 
 ### Matching the sensitivity of qPCR
 
-qPCR is widely believed to be the “gold standard” in molecular diagnostic testing. qPCR has a very low  limit of detection (LoD). In some cases, a handful of copies can be detected in a sample. This is generally assessed using synthetic material spiked into a sample to create standard curves like the following:
+PCR tests are widely believed to be the “gold standard” in molecular diagnostic testing. In some cases, only a handful of copies of viral or bacterial nucleic acid are sufficient to detect it in a sample. PCR has a key advantage over sequencing:  because PCR targets a short, unique region of a genetic sequence, it is **insensitive to background material**. A high fraction of human material (mostly rRNA in the case of RT-qPCR) or bacterial material will have only a minor effect on the sensitivity of qPCR. In other words, the limit of detection relies on the sample's **absolute abundance of the target**. 
 
-![](https://lh3.googleusercontent.com/45LCmGVIxaMMDK7f8jl2RiZNuIVEIuEclahtz6uLr3JEwCMaTThtwrw22ncYAjGE1Pr8hiHy2y_hM6zQozDO9BG_vlKGpmbrbq9xuh7tYmeQzkWmCDMMKSKE3rtWpskeMjY4YgE30T1fT30Oyrv2W4Y)
+**Metagenomic sequencing**, however, is **sensitive to background material**. To ensure that the target of interest is detected, one must also sequence through background fragments until the target is reached. Thus, the sensitivity of MGS relies on the **relative abundance** of the target among the other nucleic acid in the sample.
 
-Standard curve generated for N1 and N2 of SARS-CoV-2. Source: [Kudo et al. (2020)](https://www.researchgate.net/publication/342273491_Detection_of_SARS-CoV-2_RNA_by_multiplex_RT-qPCR)
-
-Because qPCR targets a primer-delimited region (the amplification region), it is **insensitive to background material**. A high fraction of human material (mostly rRNA in the case of RT-qPCR) or bacterial material will have only a minor effect on the sensitivity of qPCR. In other words, the LoD relies on the sample's **absolute abundance of the target**. 
-
-**Metagenomic sequencing**, however, is **sensitive to background material**. To ensure that your target(s) of interest is detected, you must also sequence through background fragments until your target is reached. Thus, metagenomic’s LoD relies on the relative abundance of the target among the other nucleic acid in the sample.
+In typical human clinical samples, host nucleic acids are typically orders of magnitude more abundant than those of the pathogen. A key question is therefore how many fragments of nucleic acid a sequencer needs to read in order to have a greater than 99% chance of detecting a pathogen. This question can be addressed both empirically and by modeling.
 
 Here, we review the literature on the sensitivity of MGS in the context of human clinical samples. This literature demonstrates that not only does MGS have a broader scope of applications than qPCR, allowing the detection of known and unknown viruses, but that it also has at least comparable sensitivity when adequate read depth is used. Indeed, potential false negatives were detected by sequencing, indicating a greater test sensitivity in some cases. 
 
