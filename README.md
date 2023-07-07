@@ -25,17 +25,19 @@ A natural success story to draw on is that of point-of-care polymerase chain rea
 
 A concrete example of this success is the [Cepheid GeneXpert](https://www.cepheid.com/en-US/systems/genexpert-family-of-systems/genexpert-system.html) device. Originally developed for the detection of anthrax, it has been adapted to many other infectious diseases following collaboration between Cepheid and international organizations and philanthropic bodies. Through successive rounds of cost-optimization, the device got to a point where it became practical even in developing countries for testing diseases such as tuberculosis or HIV. This resulted in an overall install base of some 20,000 devices even prior to the COVID pandemic. This enabled relatively rapid development of primers for testing the presence of SARS-CoV-2 in clinical samples without the need for developing novel infrastructure.
 
-PCR devices can also test for multiple pathogens or genes (such as those conferring antimicrobial resistance) in parallel.
+PCR devices can also test for multiple pathogens or genes (such as those conferring antimicrobial resistance) in parallel. The [BioFire FilmArray](https://www.biofiredx.com/products/the-filmarray-panels/), for instance, offers simultaneous sensitive detection of 20-40 targets in samples including repiratory (sputum, bronchoalveolar lavage), blood culture, cerebrospinal fluid or gastrointestinal.
 
-Microfluidic technologies have enabled miniaturization of PCR processes onto a chip device with potential benefits including speed, cost, portability, throughput and automation, thereby rendering PCR as a POC test. In the developing countries where high infectious disease burden is compounded by diagnostic challenges due to poor clinical laboratory infrastructure and cost constraints, the potential utility of PCR for POC testing is even greater.
+However, PCR cannot in principle detect unknown or changing targets. For example, a novel gene conferring drug resistance, or a novel virus strain, require the design of novel primers. Perhaps more importantly, the emergence of a completely novel pathogen (in recent decades, consider, SARS-CoV-1 and 2, HIV, Ebola and Marburg virus, for instance) would go completely undetected.
 
-In this report, we therefore focus on how to meet this first condition.
+In principle, then, MGS has a clear advantage, as it can detect any pathogen, whether bacterial, viral, fungal or otherwise. Despite this advantage, however, it is difficult to imagine that MGS might become truly ubiquitous without being being close to matching PCR on the set of requirements that made it successful.
 
-We specify the requirements as follows:
-- Sensitivity should be comparable to qPCR.
-- Workflow should be "push-button", requiring minimal operator time and skill.
+In particular, MGS assays should aspire to meet these requirements
+- Sensitivity comparable to qPCR (matching a cycle threshold of 35)
+- Workflow should be "push-button", requiring minimal operator time and skill (<5 minutes).
 - Time to answer should be less than 1 hour.
-- The COGS should be comparable to qPCR (<$10).
+- The cost of a single test (COGS) should be comparable to qPCR ($10).
+- The device itself should be affordable (<$30,000) and compact, ideally portable.
+- Supply chains should not be overly complex.
 
 For these reasons, we assume that multiplexing, i.e. analyzing multiple samples simultaneously, will not be practical in the point-of-care context, as this step introduces both a significant delay in time to answer and may be hard to fully automate given the requirements for low cost and minimal operator time.
 
