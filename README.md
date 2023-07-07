@@ -56,7 +56,13 @@ In the rest of this report, what requirements a sequencing device has to meet in
 - What does this imply for research, development and policy priorities?
 
 ## From sample to answer
+- Time to answer of hours or days is not a limiting factor in many research contexts.
+- Market demand creates push to optimize for high single-base accuracies.
+- Likewise, read length is a highly desirable features
+- Sequencing companies generate the greatest profit in high-end
+- While the "low-end" market is potentially large in volume, there is presently no clear demand signal that would justify the relatively large investments (at least tens of millions of dollars for a working product) necessary.
 
+A reason to be optimistic is that MGS potentially provides a natural beachhead market for 
 
 ## Matching the sensitivity of qPCR
 
