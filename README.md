@@ -21,7 +21,7 @@ However, in COVID-19, we have seen that sequencing has had a limited relative to
 ## Requirements: taking inspiration from PCR
 What is it going to take to make metagenomic sequencing ubiquitous in clinics around the world? A necessary condition is the existence of an affordable, easy-to-use technical solution. 
 
-A natural success story to draw on is that of point-of-care polymerase chain reactions (PCR) machines. Through long-term development, PCR devices were adapted from machines that took several hours to run and were confined to specialized laboratories to affordable, compact, "push-button" objects that deliver results within an hour directly at the point of care, without the need for specialized labor {:fn}.
+A natural success story to draw on is that of point-of-care polymerase chain reactions (PCR) machines. Through long-term development, PCR devices were adapted from machines that took several hours to run and were confined to specialized laboratories to affordable, compact, "push-button" objects that deliver results within an hour directly at the point of care, without the need for specialized labor [^2].
 
 The use of PCR in molecular diagnostics has increased to the point where it is now accepted as the gold standard for detecting nucleic acids from a number of origins and it has become an essential tool in the research laboratory. Real-time PCR has engendered wider acceptance of the PCR due to its improved rapidity, sensitivity, reproducibility and the reduced risk of carry-over contamination.
 Point-of-care (POC) testing is defined as analytical testing performed outside the central laboratory using devices that can be easily transported to the vicinity of the patient. Microfluidic technologies have enabled miniaturization of PCR processes onto a chip device with potential benefits including speed, cost, portability, throughput and automation, thereby rendering PCR as a POC test. In the developing countries where high infectious disease burden is compounded by diagnostic challenges due to poor clinical laboratory infrastructure and cost constraints, the potential utility of PCR for POC testing is even greater.
@@ -207,4 +207,4 @@ Both these approaches could be implemented without unduly increasing the complex
 
 Beyond this, it is possible that **surface amplification** (Illumina - bridge amplification) and **cyclic sequencing** could be integrated into the sequencing cartridge (as in the iSeq). However, as discussed in our chapter on , this may result in a platform that no longer meets our time-to-answer a cost requirements.
 
-{:fn}
+[^2] See [this 2016 WHO report]([url](https://apps.who.int/iris/rest/bitstreams/1060638/retrieve)https://apps.who.int/iris/rest/bitstreams/1060638/retrieve)
