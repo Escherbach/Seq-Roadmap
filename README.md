@@ -18,8 +18,15 @@ Such a device would allow the care provider to place a liquid sample from a pati
 
 However, in COVID-19, we have seen that sequencing has had a limited relative to its huge potential: while it has aided initial sequence identification and variant tracking, a number of bottlenecks prevent its widespread adoption at the point of need. In this report, we analyze these bottlenecks and ask what it would take to **make the technology for metagenomic sequencing truly ubiquitous**, fit for developed and low-income countries alike in a 10-year timeframe.
 
-## Requirements
-What is it going to take to make metagenomic sequencing ubiquitous in clinics around the world? A necessary condition is the existence of an affordable, easy-to-use technical solution. In this report, we therefore focus on how to meet this first condition.
+## Requirements: taking inspiration from PCR
+What is it going to take to make metagenomic sequencing ubiquitous in clinics around the world? A necessary condition is the existence of an affordable, easy-to-use technical solution. 
+
+A natural success story to draw on is that of point-of-care polymerase chain reactions (PCR) machines. Through long-term development, PCR devices were adapted from machines that took several hours to run and were confined to specialized laboratories to affordable, compact, "push-button" objects that deliver results within an hour directly at the point of care, without the need for specialized labor {:fn}.
+
+The use of PCR in molecular diagnostics has increased to the point where it is now accepted as the gold standard for detecting nucleic acids from a number of origins and it has become an essential tool in the research laboratory. Real-time PCR has engendered wider acceptance of the PCR due to its improved rapidity, sensitivity, reproducibility and the reduced risk of carry-over contamination.
+Point-of-care (POC) testing is defined as analytical testing performed outside the central laboratory using devices that can be easily transported to the vicinity of the patient. Microfluidic technologies have enabled miniaturization of PCR processes onto a chip device with potential benefits including speed, cost, portability, throughput and automation, thereby rendering PCR as a POC test. In the developing countries where high infectious disease burden is compounded by diagnostic challenges due to poor clinical laboratory infrastructure and cost constraints, the potential utility of PCR for POC testing is even greater.
+
+In this report, we therefore focus on how to meet this first condition.
 
 We specify the requirements as follows:
 - Sensitivity should be comparable to qPCR.
@@ -28,6 +35,9 @@ We specify the requirements as follows:
 - The COGS should be comparable to qPCR (<$10).
 
 For these reasons, we assume that multiplexing, i.e. analyzing multiple samples simultaneously, will not be practical in the point-of-care context, as this step introduces both a significant delay in time to answer and may be hard to fully automate given the requirements for low cost and minimal operator time.
+
+## Matching the ease of use of qPCR
+
 
 ## Matching the sensitivity of qPCR
 
@@ -189,10 +199,12 @@ These tools integrate both sample preparation and molecular diagnostics platform
 
 **Digital fluidic platforms** tend to be more expensive, with the Genmark test sold at \$157[⁶²](https://www.zotero.org/google-docs/?Zs1EnC), and aimed at a larger number of targets.
 
-**Traditional fluidic approaches** (Cepheid Genexpert, DNANudge) have an estimated manufacturing cost of \$3[⁶³](https://www.zotero.org/google-docs/?nqu5ni), and are typically sold for \~\$20. These platforms incorporate the necessary reagents to lyse and extract RNA from a sample. As noted above, for some single-molecule platforms (Helicos-like single molecule direct RNA sequencing), this provides sufficient sample preparation to proceed to sequencing.
+**Traditional fluidic approaches** (Cepheid Genexpert, DNANudge) have an estimated manufacturing cost of \$3, and are typically sold for \~\$20. These platforms incorporate the necessary reagents to lyse and extract RNA from a sample. As noted above, for some single-molecule platforms (Helicos-like single molecule direct RNA sequencing), this provides sufficient sample preparation to proceed to sequencing.
 
 In the DNANudge post-clean up phase, cDNA is eluted into an imaging region. This could be replaced with a single-molecule imaging region using a non-cyclic chemistry. Alternatively, additional reagents could be added to enable adapter ligation or transposon=based adapter addition. In this case the imaging window could be replaced with a nanopore array.
 
 Both these approaches could be implemented without unduly increasing the complexity beyond that of the DNANudge device (manufactured and developed by TTP). We can therefore expect such an integrated sample prep and sequencing instrument to have a **COGS comparable to the DNANudge and other sample-to-answer platforms such as the Genexpert (~$3)**.
 
 Beyond this, it is possible that **surface amplification** (Illumina - bridge amplification) and **cyclic sequencing** could be integrated into the sequencing cartridge (as in the iSeq). However, as discussed in our chapter on , this may result in a platform that no longer meets our time-to-answer a cost requirements.
+
+{:fn}
