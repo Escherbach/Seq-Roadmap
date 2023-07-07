@@ -39,9 +39,23 @@ In particular, MGS assays should aspire to meet these requirements
 - The device itself should be affordable (<$30,000) and compact, ideally portable.
 - Supply chains should not be overly complex.
 
-For these reasons, we assume that multiplexing, i.e. analyzing multiple samples simultaneously, will not be practical in the point-of-care context, as this step introduces both a significant delay in time to answer and may be hard to fully automate given the requirements for low cost and minimal operator time.
+In contrast, while sequencing technologies are based on a wide array of approaches with different advantages and disadvantages, none of them currently comes close to matching PCR on all of these characteristics.
+- Sensitivity is achievable with sufficient sequencing depth but incompatible with the other requirements of cost and time to answer.
+- Workflows involve complex sequential steps in sample and library preparation and typically require hours of work by trained experts. Automated and integrated solutions are only available at high costs for specialized laboratories.
+- Optimized workflows utilizing real-time sequencing can achieve a time to answer of 6 hours (driven primarily by sample and library preparation). Cost reduction is achieved by multiplexing which typically results in time to answer of >24 hours, often more.
+- Cost per sample can be reduced below $10 only by sequencing many samples in parallel. Consumables for a single sequencing run typically cost more than $100, with the Oxford Nanopore's Flongle being the cheapest alternative on the market at $50.
+- Devices range in fixed cost requirements, with some as cheap as $1000 (ONT MinIon) but many above $100,000
+- Workflows require a complex set of reagents and kits.
 
-## Matching the ease of use of qPCR
+Given these requirements, we assume that multiplexing, i.e. analyzing multiple samples simultaneously, will not be practical in the point-of-care context, as this step introduces both a significant delay in time to answer and may be hard to fully automate given the requirements for low cost and minimal operator time.
+
+In the rest of this report, what requirements a sequencing device has to meet in order to match all of the above criteria. In particular, we ask:
+- How does clinical sensitivity translate into sequencing device specifications?
+- How could the sample and library preparation workflows be automated to meet the cost and time to answer requirements?
+- Which sequencing platforms are the best candidates for meeting these criteria?
+- What does this imply for research, development and policy priorities?
+
+## From sample to answer
 
 
 ## Matching the sensitivity of qPCR
