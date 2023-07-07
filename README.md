@@ -69,13 +69,21 @@ Given these considerations, the hypothesis that stimulating development of devic
 ## Matching the sensitivity of PCR in human respiratory samples
 The most important question any candidate test for infectious disease has to address is whether its sensitivity of detection is sufficient. Sequencing a human clinical sample can obviously achieve very high levels of sensitivity: a sequencing run of Terabases on a single sample should comfortably detect even pathogens that are very low in abundance. However, when the requirements of cost and time to answer are added, practical sensitivity of sequencing is a question that has to be determined.
 
+Our main focus here is:
+- **RNA detection.** RNA sequencing holds a greater promise for a near-universal diagnostic, as it should be capable of both RNA viruses and the transcripts of DNA viruses and bacteria.
+- **Viral RNA.** Studies suggest that bacterial transcripts in respiratory samples are two orders of magnitude higher than viral fractions. We therefore assume that a device that is sensitive for low-abundance viruses should be even more sensitive for bacterial pathogens. This assumption likely holds for the majority but not for all bacterial species.
+- **Respiratory samples.** Previous analysis points to respiratory pathogens as the greatest source of future pandemic risk.
+
+Large bacterial pathogen detection studies using metagenomic sequencing of DNA are somewhat absent from the literature however. Further studies in this area would provide a better understanding of the ability of a metagenomic sequencing based diagnostic platform to detect microbial pathogens through RNA alone.
+
+
 PCR tests are characterized by a very high sensitivity, or very low limit of detection (LoD): in principle, they can detect the presence of a target fragment with only a handful of copies present in a sample. The sensitivity of detection is then determined of how many cycles of amplification are applied to the sample, quantified as the "cycle threshold", or Ct.
 
 In the context of PCR, therefore, it is sufficient to think of the absolute number of copies per unit of volume (e.g. mL). For instance, [HIV in blood is present at relatively low copy numbers ranging from <0.2 to 40 copies/ml](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7646261/). SARS-CoV-2 viral load has been found to [span some 8 orders of magnitude](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7302192/figure/F2/), with loads as low as tens of copies/mL found in more than 1% of cases.
 
 PCR has a key advantage over sequencing:  because PCR targets a short, unique region of a genetic sequence, it is **insensitive to background material**. A high fraction of human material (mostly rRNA in the case of RT-qPCR) or bacterial material will have only a minor effect on the sensitivity of qPCR. In other words, the limit of detection relies on the sample's **absolute abundance of the target**. **Metagenomic sequencing**, however, is **sensitive to background material**. To ensure that the target of interest is detected, one must also sequence through background fragments until the target is reached. Thus, the sensitivity of MGS relies on the **relative abundance** of the target among the other nucleic acid in the sample.
 
-We therefore care not only about the number of pathogen genome copies per unit volume, but also about the number of human (and non-pathogenic microbe) RNA in a sample.
+We therefore care not only about the number of pathogen genome copies per unit volume, but also about the number of human (and non-pathogenic microbial) RNA in a sample.
 
 In typical human clinical samples, host nucleic acids are typically orders of magnitude more abundant than those of the pathogen. A key question is therefore how many fragments of nucleic acid a sequencer needs to read in order to have a greater than 99% chance of detecting a pathogen. This question can be addressed both empirically and by modeling.
 
