@@ -55,16 +55,18 @@ In the rest of this report, what requirements a sequencing device has to meet in
 - Which sequencing platforms are the best candidates for meeting these criteria?
 - What does this imply for research, development and policy priorities?
 
-## From sample to answer
-- Time to answer of hours or days is not a limiting factor in many research contexts.
-- Market demand creates push to optimize for high single-base accuracies.
-- Likewise, read length is a highly desirable features
-- Sequencing companies generate the greatest profit in high-end
+## Is there room for improvement?
+Before engaging with further analysis, it is important to answer a natural question: is there a need for a roadmap? If it is possible to develop a device that meets the above criteria for PoC MGS, why would this need not be addressed by the market? After all, sequencing is attracting large amounts of private investments and the prospect of millions of tests per year should be sufficient to stimulate development. Conversely, the fact that sequencing companies have not developed such a device should be taken as evidence that there may be some fundamental roadblock preventing its development.
+
+While this "efficient market assumption" is a reasonable starting point, there are also reasons to believe that there is significant room for improvement. A number of observations, informed largely by the authors' experience with the sequencing landscape, as well as conversations with experts, push in this direction:
+- Development is driven by customer demand. The primary market for sequencing instruments is in research, relatively high-end diagnostics (e.g. cancer). In these contexts, the primary consideration is often extraordinarily high accuracy, as the correct identification of every single base is potentially informative. The task of correctly classifying a pathogen of interest or detecting an anomaly does not require such high single-base accuracies, as we justify later. Similarly, the requirements for read length, as well as sequencing depth, are much lower.
+- Time to answer of hours or days is not a limiting factor in many research contexts. Typical workflows are structured around large runs, often counted in billions of bases. Researchers typically care about a low cost per base for these large runs. Large, high-end instruments can minimize this cost per base.
+- The sequencing market is still comparatively small, dominated by a few players with relatively enforceable intellectual property.
 - While the "low-end" market is potentially large in volume, there is presently no clear demand signal that would justify the relatively large investments (at least tens of millions of dollars for a working product) necessary.
 
-A reason to be optimistic is that MGS potentially provides a natural beachhead market for 
+Given these considerations, the hypothesis that stimulating development of devices that replicate the success of PCR tests appears worth exploring.
 
-## Matching the sensitivity of qPCR
+## Matching the sensitivity of PCR in human respiratory samples
 
 PCR tests are widely believed to be the “gold standard” in molecular diagnostic testing. In some cases, only a handful of copies of viral or bacterial nucleic acid are sufficient to detect it in a sample. PCR has a key advantage over sequencing:  because PCR targets a short, unique region of a genetic sequence, it is **insensitive to background material**. A high fraction of human material (mostly rRNA in the case of RT-qPCR) or bacterial material will have only a minor effect on the sensitivity of qPCR. In other words, the limit of detection relies on the sample's **absolute abundance of the target**. 
 
@@ -74,7 +76,7 @@ In typical human clinical samples, host nucleic acids are typically orders of ma
 
 Given that the sensitivity of sequencing is determined by the relative amount of nucleic acid material, a key empirical question is what the typical fraction of the target is in relevant clinical samples. The literature on SARS-CoV-2 reported relatively wide ranges on this variable, but the typical abundance in samples of interest such as upper nasal, nasopharyngeal and saliva was between 0.01% (or one fragment in 10,000) and 0.001% (one in 100,000).
 
-We can determine the approximate number of reads required for a given target fraction. For example, to have a probability of seeing at least one read > 0.999 we will require > 3.5M reads without rRNA depletion. Below, we see the same plot with target fraction used to calculate expected Ct values from a qPCR test assuming 10ng of total material (and parameters others similar to the simulation shown above):  
+We can determine the approximate number of reads required for a given target fraction. For example, to have a probability of 99.9% of detecting at least one read > 0.999 we will require > 3.5M reads without rRNA depletion. Below, we see the same plot with target fraction used to calculate expected Ct values from a qPCR test assuming 10ng of total material (and parameters others similar to the simulation shown above):  
 
 <img src="https://lh4.googleusercontent.com/Cp_pOT9M-XlZKXdG4uzo6l3vzfK5ubauwzAMtLXIIuwJOAuukXWvvCUPKDL_NAr52syC3coTVcwnGmBUZJX36ZrJ7POuPox2uadYMB-bJQ073jP6yPJCJ-df2QSesSl922l7Qhj_yigMcqE0I88Ys2c" style="zoom:33%;" />
 
