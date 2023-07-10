@@ -4,9 +4,9 @@ Imagine a world in which every clinician and patient around the world had access
 In this report, we ask how MGS could become widely available, at least as much as diagnostic PCR machines are today. The technical answer we arrive at is that a device capable of performing 10 million RNA reads in less than an hour with minimal sample preparation would have sufficient sensitivity to deliver on this goal. We then review the current technological landscape and conclude that at least two approaches, single-molecule optical and nanopore sequencing, could be adapted to meet these specifications.
 
 ## Motivation
-The first COVID-19 infection occured in mid-October to mid-November of 2019, at least six weeks earlier than the Wuhan cluster of infections was identified in late December 2019. The SARS-CoV-2 genome was only made publicly available in January 2020, more than two months after the first human transmission. This delay resulted in millions of deaths and trillions of dollars in economic costs.
+The first COVID-19 infection occured in mid-October to mid-November of 2019, [at least six weeks earlier than the Wuhan cluster of infections was identified in late December 2019](https://www.science.org/doi/10.1126/science.abf8003). The SARS-CoV-2 genome was only made publicly available in January 2020, more than two months after the first human transmission. This delay resulted in millions of deaths and trillions of dollars in economic costs.
 
-COVID-19 - far from the worst pandemic we could face within our lifetimes - has clearly demonstrated that our ability to detect and contain new pathogens is inadequate. The diagnostic technologies we use for infections at the point of care are designed for a small set of known pathogens and in princile incapable of recognizing the outbreak of an unsuspected or unknown pathogen.
+COVID-19 - far from the worst pandemic we could face within our lifetimes - has clearly demonstrated that our ability to detect and contain new pathogens is inadequate. The diagnostic technologies we use for infections at the point of care are designed for a small set of known pathogens and in principle incapable of recognizing the outbreak of an unsuspected or unknown pathogen.
 
 There is therefore a pressing need for a universal diagnostic to enable fast detection of all pathogens and their early containment. We need an early warning system that can detect the emergence of a new pathogen in humans as early as possible, without any assumptions about what the pathogen might be. This system should also be able to characterize any pathogen in a human sample with sufficient information to triage the threat.
 
@@ -14,9 +14,24 @@ Such an early warning system would provide a one-to-one correspondence between a
 
 Such a device would allow the care provider to place a liquid sample from a patient in the device, then simply press a button and wait an hour for the list of all pathogens present in that sample. It would also allow for many samples to be run in parallel while still maintaining a one-to-one correspondence between the sample and the patient, so that each patient can be tested as they come through the clinic’s doors.
 
-**Metagenomic sequencing (MGS)** was previously identified as a technology that could accomplish this goal. In this roadmap, we are exploring the vision of a device that performs fully-automated, end-to-end sample preparation and sequencing available at every hospital and care provider’s office throughout the world.
+There is a clear candidate technology, the one that [uncovered SARS-CoV-2](https://www.nejm.org/doi/10.1056/NEJMoa2001017) where others failed: metagenomic sequencing. In this roadmap, we are exploring the vision of a device that performs fully-automated, end-to-end sample preparation and sequencing available at every hospital and care provider’s office throughout the world.
 
 However, in COVID-19, we have seen that sequencing has had a limited relative to its huge potential: while it has aided initial sequence identification and variant tracking, a number of bottlenecks prevent its widespread adoption at the point of need. In this report, we analyze these bottlenecks and ask what it would take to **make the technology for metagenomic sequencing truly ubiquitous**, fit for developed and low-income countries alike in a 10-year timeframe.
+
+## Is there room for improvement?
+Before engaging with further analysis, it is important to answer a natural question: is there a need for a roadmap? If it is possible to develop a device that meets the above criteria for PoC MGS, why would this need not be addressed by the market? After all, sequencing is attracting large amounts of private investments and the prospect of millions of tests per year should be sufficient to stimulate development. Conversely, the fact that sequencing companies have not developed such a device should be taken as evidence that there may be some fundamental roadblock preventing its development.
+
+While this "efficient market assumption" is a reasonable starting point, there are also reasons to believe that there is significant room for improvement. A number of observations, informed largely by the authors' experience with the sequencing landscape, as well as conversations with experts, push in this direction:
+- Development is driven by customer demand. The primary market for sequencing instruments is in research, relatively high-end diagnostics (e.g. cancer). In these contexts, the primary consideration is often extraordinarily high accuracy, as the correct identification of every single base is potentially informative. The task of correctly classifying a pathogen of interest or detecting an anomaly does not require such high single-base accuracies, as we justify later. Similarly, the requirements for read length, as well as sequencing depth, are much lower.
+- Time to answer of hours or days is not a limiting factor in many research contexts. Typical workflows are structured around large runs, often counted in thousands of billions of bases (e.g. ONT PromethIon, Illumina Novaseq). Researchers typically care about a low cost per base for these large runs. Large, high-end instruments can minimize this cost per base.
+- The sequencing market is still comparatively small, dominated by a few players with relatively enforceable intellectual property.
+- While the "low-end" market is potentially large in volume, there is presently no clear demand signal that would justify the relatively large investments (at least tens of millions of dollars for a working product) necessary.
+
+By our estimates, more than half of global sequencing capacity in terms of number of bases sequenced annually is accounted for by Illumina NovaSeq alone. Novaseq is a $1 million instrument that yields up to 6 Tb of data per run with an error rate on the order of 0.1%. A single run can cost more than $5,000. This large share of sequencing capacity is accounted for by only some 1500 instruments in large laboratories.
+
+Another key player, Oxford Nanopore, is known for its relatively affordable, miniaturized devices such as the MinIon or Flongle. However, fully half of ONT's revenue was generated by its 67 PromethIon instruments, each of which can generate up to 12 Tb of data. The cost of a PromethION ranges from $225,000 to $450,000.
+
+Given these considerations, the hypothesis that stimulating development of devices that replicate the success of PCR tests appears worth exploring.
 
 ## Requirements: taking inspiration from PCR
 What is it going to take to make metagenomic sequencing ubiquitous in clinics around the world? A necessary condition is the existence of an affordable, easy-to-use technical solution. 
@@ -55,23 +70,12 @@ In the rest of this report, what requirements a sequencing device has to meet in
 - Which sequencing platforms are the best candidates for meeting these criteria?
 - What does this imply for research, development and policy priorities?
 
-## Is there room for improvement?
-Before engaging with further analysis, it is important to answer a natural question: is there a need for a roadmap? If it is possible to develop a device that meets the above criteria for PoC MGS, why would this need not be addressed by the market? After all, sequencing is attracting large amounts of private investments and the prospect of millions of tests per year should be sufficient to stimulate development. Conversely, the fact that sequencing companies have not developed such a device should be taken as evidence that there may be some fundamental roadblock preventing its development.
-
-While this "efficient market assumption" is a reasonable starting point, there are also reasons to believe that there is significant room for improvement. A number of observations, informed largely by the authors' experience with the sequencing landscape, as well as conversations with experts, push in this direction:
-- Development is driven by customer demand. The primary market for sequencing instruments is in research, relatively high-end diagnostics (e.g. cancer). In these contexts, the primary consideration is often extraordinarily high accuracy, as the correct identification of every single base is potentially informative. The task of correctly classifying a pathogen of interest or detecting an anomaly does not require such high single-base accuracies, as we justify later. Similarly, the requirements for read length, as well as sequencing depth, are much lower.
-- Time to answer of hours or days is not a limiting factor in many research contexts. Typical workflows are structured around large runs, often counted in thousands of billions of bases (e.g. ONT PromethIon, Illumina Novaseq). Researchers typically care about a low cost per base for these large runs. Large, high-end instruments can minimize this cost per base.
-- The sequencing market is still comparatively small, dominated by a few players with relatively enforceable intellectual property.
-- While the "low-end" market is potentially large in volume, there is presently no clear demand signal that would justify the relatively large investments (at least tens of millions of dollars for a working product) necessary.
-
-By our estimates, more than half of global sequencing capacity in terms of number of bases sequenced annually is accounted for by Illumina NovaSeq alone. Novaseq is a $1 million instrument that yields up to 6 Tb of data per run with an error rate on the order of 0.1%. A single run can cost more than $5,000. This large share of sequencing capacity is accounted for by only some 1500 instruments in large laboratories.
-
-Another key player, Oxford Nanopore, is known for its relatively affordable, miniaturized devices such as the MinIon or Flongle. However, fully half of ONT's revenue was generated by its 67 PromethIon instruments, each of which can generate up to 12 Tb of data. The cost of a PromethION ranges from $225,000 to $450,000.
-
-Given these considerations, the hypothesis that stimulating development of devices that replicate the success of PCR tests appears worth exploring.
-
-
 ## Towards a sample-to-answer system
+Our main focus here is:
+- **RNA detection.** RNA sequencing holds a greater promise for a near-universal diagnostic, as it should be capable of both RNA viruses and the transcripts of DNA viruses and bacteria[^3].
+- **Viral RNA.** Studies suggest that bacterial transcripts in respiratory samples are two orders of magnitude higher than viral fractions. We therefore assume that a device that is sensitive for low-abundance viruses should be even more sensitive for bacterial pathogens. This assumption likely holds for the majority but not for all bacterial species.
+- **Respiratory samples.** Previous analysis points to respiratory pathogens as the greatest source of future pandemic risk.
+
 
 The process for many of Cepheid's diagnostic tests is notably straightforward. The user places the sample into a cartridge, inserts it into the device, and waits for approximately 45 minutes to obtain the result. This simplicity is currently unattainable in the sequencing world, where the standard procedure includes complex sample and library preparation workflows. 
 
@@ -91,14 +95,6 @@ The need to reduce cost and time to answer speaks for simplifying sample prepara
 
 ## Matching the sensitivity of PCR in human respiratory samples
 The most important question any candidate test for infectious disease has to address is whether its sensitivity of detection is sufficient. Sequencing a human clinical sample can obviously achieve very high levels of sensitivity: a sequencing run of Terabases on a single sample should comfortably detect even pathogens that are very low in abundance. However, when the requirements of cost and time to answer are added, practical sensitivity of sequencing is a question that has to be determined.
-
-Our main focus here is:
-- **RNA detection.** RNA sequencing holds a greater promise for a near-universal diagnostic, as it should be capable of both RNA viruses and the transcripts of DNA viruses and bacteria.
-- **Viral RNA.** Studies suggest that bacterial transcripts in respiratory samples are two orders of magnitude higher than viral fractions. We therefore assume that a device that is sensitive for low-abundance viruses should be even more sensitive for bacterial pathogens. This assumption likely holds for the majority but not for all bacterial species.
-- **Respiratory samples.** Previous analysis points to respiratory pathogens as the greatest source of future pandemic risk.
-
-Large bacterial pathogen detection studies using metagenomic sequencing of DNA are somewhat absent from the literature however. Further studies in this area would provide a better understanding of the ability of a metagenomic sequencing based diagnostic platform to detect microbial pathogens through RNA alone.
-
 
 PCR tests are characterized by a very high sensitivity, or very low limit of detection (LoD): in principle, they can detect the presence of a target fragment with only a handful of copies present in a sample. The sensitivity of detection is then determined of how many cycles of amplification are applied to the sample, quantified as the "cycle threshold", or Ct.
 
@@ -244,7 +240,7 @@ However, we can further **simplify the library preparation process if we sacrifi
 
 We can imagine an approach where flow cells are coated with different oligonucleotides, enabling other templates to be captured. For example, the surface could be coated with random hexamer oligonucleotides allowing a material to be directly captured on the flowcell. This would allow material to be captured on the flow cell without additional library preparation steps. A targeted approach could also be employed where oligonucleotides target specific known sequences (for example known viral sequence).
 
-To build an effective sample-to-answer platform we will need to automate the steps described above in a low cost platform. Such an automation system is currently unavailable for use on a single sample basis. This is largely because there is no current market for a fixed protocol metagenomic sample preparation system. However as we shall see, viable approaches have already been demonstrated for use in qPCR sample-to-answer systems. We therefore view the development of automated sample preparations systems as a low technical risk problem.
+To build an effective sample-to-answer platform we will need to automate the steps described above in a low cost platform. Such an automation system is currently unavailable for use on a single sample basis. This is largely because there is no current market for a fixed-protocol metagenomic sample preparation system. However as we shall see, viable approaches have already been demonstrated for use in qPCR sample-to-answer systems. We therefore view the development of automated sample preparations systems as a low technical risk problem.
 
 A number of integrated sample and library preparation devices are available or under development. Existing commercial approaches are largely built around pipette robots, and a number of turnkey platforms are available for use with Illumina sequencers[⁵⁶](https://www.zotero.org/google-docs/?tgNg6l). These almost exclusively are designed to process \>8 samples, to support larger labs, require skilled personnel, and are not suitable for use in a point of care context.
 
@@ -271,3 +267,4 @@ Both these approaches could be implemented without unduly increasing the complex
 Beyond this, it is possible that **surface amplification** (Illumina - bridge amplification) and **cyclic sequencing** could be integrated into the sequencing cartridge (as in the iSeq). However, as discussed in our chapter on , this may result in a platform that no longer meets our time-to-answer a cost requirements.
 
 [^1]: See [this 2016 WHO report]([url](https://apps.who.int/iris/rest/bitstreams/1060638/retrieve)https://apps.who.int/iris/rest/bitstreams/1060638/retrieve)
+[^3]: Large bacterial pathogen detection studies using metagenomic sequencing of DNA are relatively rare in the literature. Further studies in this area would provide a better understanding of the ability of a metagenomic sequencing based diagnostic platform to detect microbial pathogens through RNA alone.
