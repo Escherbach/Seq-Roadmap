@@ -70,6 +70,25 @@ Another key player, Oxford Nanopore, is known for its relatively affordable, min
 
 Given these considerations, the hypothesis that stimulating development of devices that replicate the success of PCR tests appears worth exploring.
 
+
+## Towards a sample-to-answer system
+
+The process for many of Cepheid's diagnostic tests is notably straightforward. The user places the sample into a cartridge, inserts it into the device, and waits for approximately 45 minutes to obtain the result. This simplicity is currently unattainable in the sequencing world, where the standard procedure includes complex sample and library preparation workflows. 
+
+Given the ease of use and efficacy of Cepheid's sample-to-answer quantitative PCR (qPCR) platform, it is valuable to explore whether similar principles could be applied to sequencing technologies. Can we envision a device akin to Cepheid's, but centered around sequencing instead of qPCR? This would potentially offer streamlined, rapid sequencing workflows, a significant advancement in this field.
+
+Cepheid's first and second generation instruments were incapable of processing raw samples directly. To establish a comprehensive sample-to-answer system, Cepheid tackled this limitation by incorporating sample preparation into the platform. 
+
+This was accomplished by designing a fluidic cartridge capable of processing raw samples and concurrently integrating their qPCR reaction tube. Reagents can be preloaded, with no fluidic coupling to the instrument. The instrument interfaces with the cartridge via a reagent selection valve and plunger.
+
+The cost of goods for the cartridge, including reagents, has been estimated at $10 and marketed at prices typically exceeding $20.
+
+There are many automated and integrated workflows
+
+Comitting to a single sample-to-answer workflow 
+
+The need to reduce cost and time to answer speaks for simplifying sample preparation as much as possible
+
 ## Matching the sensitivity of PCR in human respiratory samples
 The most important question any candidate test for infectious disease has to address is whether its sensitivity of detection is sufficient. Sequencing a human clinical sample can obviously achieve very high levels of sensitivity: a sequencing run of Terabases on a single sample should comfortably detect even pathogens that are very low in abundance. However, when the requirements of cost and time to answer are added, practical sensitivity of sequencing is a question that has to be determined.
 
