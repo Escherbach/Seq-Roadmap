@@ -83,31 +83,16 @@ Given the ease of use and efficacy of Cepheid's sample-to-answer qPCR platform, 
 
 Cepheid's first and second generation instruments were incapable of processing raw samples directly. To establish a comprehensive sample-to-answer system, Cepheid tackled this limitation by incorporating sample preparation into the platform.  This was accomplished by designing a fluidic cartridge capable of processing raw samples and concurrently integrating a qPCR reaction tube. Reagents can be preloaded, with no fluidic coupling to the instrument. The instrument interfaces with the cartridge via a reagent selection valve and plunger. The cost of goods for the cartridge, including reagents, [has been estimated at $10](https://msfaccess.org/sites/default/files/2019-12/2018%20COGS%20analysis%20of%20Xpert%20MTB_RIF%20Ultra%20cartridges.pdf) and marketed at prices typically exceeding $20.
 
-Is it possible to achieve a similar level of simplicity for sequencing? This may seem like a tall order, as typical workflows involve substantially more complexity than qPCR.
-
-However, it is important to note that current platforms have been designed to be versatile and serve a number of applications using the same reagent kits and flowcells.
-
-We can  simplify the library preparation process if we 
-(a) choose sequencing platforms compatible with fast and simple sample and library preparation
-(b) sacrifice this versatility. 
-
-
-For example, as discussed above, for Helicos direct RNA sequencing where naturally pre-existing polyA tails are present, no additional sample preparation is required. This is because the Helicos/SeqLL flow cells are coated with poly(dT) oligonucleotides to capture these polyA-tailed templates.
+Is it possible to achieve a similar level of simplicity for sequencing? This may seem like a tall order, as typical workflows involve substantially more complexity than qPCR. However, it is important to note that current platforms have been designed to be versatile and serve a number of applications.
 
 
 Our main focus here is:
+- **Respiratory samples.** Previous analysis points to respiratory pathogens as the greatest source of future pandemic risk.
 - **RNA detection.** RNA sequencing holds a greater promise for a near-universal diagnostic, as it should be capable of both RNA viruses and the transcripts of DNA viruses and bacteria[^3].
 - **Viral RNA.** Studies suggest that bacterial transcripts in respiratory samples are two orders of magnitude higher than viral fractions. We therefore assume that a device that is sensitive for low-abundance viruses should be even more sensitive for bacterial pathogens. This assumption likely holds for the majority but not for all bacterial species.
-- **Respiratory samples.** Previous analysis points to respiratory pathogens as the greatest source of future pandemic risk.
 
 
-There are many automated and integrated workflows
-
-Comitting to a single sample-to-answer workflow 
-
-The need to reduce cost and time to answer speaks for simplifying sample preparation as much as possible
-
-## Matching the sensitivity of PCR in human respiratory samples
+## How much sequencing do we need?
 The most important question any candidate test for infectious disease has to address is whether its sensitivity of detection is sufficient. Sequencing a human clinical sample can obviously achieve very high levels of sensitivity: a sequencing run of Terabases on a single sample should comfortably detect even pathogens that are very low in abundance. However, when the requirements of cost and time to answer are added, practical sensitivity of sequencing is a question that has to be determined.
 
 PCR tests are characterized by a very high sensitivity, or very low limit of detection (LoD): in principle, they can detect the presence of a target fragment with only a handful of copies present in a sample. The sensitivity of detection is then determined of how many cycles of amplification are applied to the sample, quantified as the "cycle threshold", or Ct.
