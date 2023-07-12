@@ -46,8 +46,9 @@ In contrast, while sequencing technologies are based on a wide array of approach
 - Cost per sample can be reduced below $10 only by sequencing many samples in parallel. Consumables for a single sequencing run typically cost more than $100, with the Oxford Nanopore's Flongle being the cheapest alternative on the market at $50.
 - Devices range in fixed cost requirements, with some as cheap as $1000 (ONT MinIon) but many above $100,000
 - Workflows require a complex set of reagents and kits.
+- Given these requirements, we assume that multiplexing, i.e. analyzing multiple samples simultaneously, will not be practical in the point-of-care context, as this step introduces both a significant delay in time to answer and may be hard to fully automate given the requirements for low cost and minimal operator time.
 
-Given these requirements, we assume that multiplexing, i.e. analyzing multiple samples simultaneously, will not be practical in the point-of-care context, as this step introduces both a significant delay in time to answer and may be hard to fully automate given the requirements for low cost and minimal operator time.
+[images/1889.jpeg]
 
 In the rest of this report, we ask what requirements a sequencing device has to meet in order to match all of the above criteria. In particular, we ask:
 - How does clinical sensitivity translate into sequencing device specifications?
