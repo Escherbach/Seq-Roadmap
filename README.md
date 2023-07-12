@@ -32,12 +32,12 @@ However, PCR cannot in principle detect unknown or changing targets. For example
 In principle, then, MGS has a clear advantage, as it can detect any pathogen, whether bacterial, viral, fungal or otherwise. Despite this advantage, however, it is difficult to imagine that MGS might become truly ubiquitous without being being close to matching PCR on the set of requirements that made it successful.
 
 In particular, MGS assays should aspire to meet these <u>requirements</u>
-- Sensitivity comparable to qPCR (matching a cycle threshold of 35)
-- Workflow should be "push-button", requiring minimal operator time and skill (<5 minutes).
-- Time to answer should be less than 1 hour.
-- The cost of a single test (COGS) should be comparable to qPCR ($10).
-- The device itself should be affordable (<$30,000) and compact, ideally portable.
-- Supply chains should not be overly complex.
+- **Sensitivity comparable to qPCR** (matching a cycle threshold of 35).
+- **Workflow should be "push-button"**, requiring minimal operator time and skill (<5 minutes).
+- **Time to answer** should be **less than 1 hour**.
+- The **cost** of a single test (COGS) should be **comparable to qPCR ($10)**.
+- The **device itself should be affordable** (<$30,000, ideally $10,000) and compact, ideally portable.
+- **Supply chains** should not be overly complex.
 
 In contrast, while sequencing technologies are based on a wide array of approaches with different advantages and disadvantages, none of them currently comes close to matching PCR on all of these characteristics.
 - Sensitivity is achievable with sufficient sequencing depth but incompatible with the other requirements of cost and time to answer.
@@ -54,25 +54,6 @@ In the rest of this report, we ask what requirements a sequencing device has to 
 - How could the sample and library preparation workflows be automated to meet the cost and time to answer requirements?
 - Which sequencing platforms are the best candidates for meeting these criteria?
 - What does this imply for research, development and policy priorities?
-
-## Is there room for improvement?
-Before engaging with further analysis, it is important to answer a natural question: is there a need for a roadmap? If it is possible to develop a device that meets the above criteria for PoC MGS, why would this need not be addressed by the market? After all, sequencing is attracting large amounts of private investments and the prospect of millions of tests per year should be sufficient to stimulate development. Conversely, the fact that sequencing companies have not developed such a device should be taken as evidence that there may be some fundamental roadblock preventing its development.
-
-While this "efficient market assumption" is a reasonable starting point, there are also reasons to believe that there is significant room for improvement. A number of observations, informed largely by the authors' experience with the sequencing landscape, as well as conversations with experts, push in this direction:
-- Development is driven by customer demand. The primary market for sequencing instruments is in research and high-end diagnostics (e.g. cancer). In these contexts, the primary consideration is often extraordinarily high accuracy, as the correct identification of every single base is potentially informative. The task of correctly classifying a pathogen of interest or detecting an anomaly does not require such high single-base accuracies, as we justify later. Similarly, the requirements for read length, as well as sequencing depth, are much lower.
-- Time to answer of hours or days is not a limiting factor in many research contexts. Typical workflows are structured around large runs, often counted in thousands of billions of bases (e.g. ONT PromethIon, Illumina Novaseq). Researchers typically care about a low cost per base for these large runs. Large, high-end instruments can minimize this cost per base.
-- The sequencing market is still comparatively small, dominated by a few players with relatively enforceable intellectual property.
-- While the "low-end" market is potentially large in volume, there is presently **no clear demand signal** that would justify the relatively large investments (at least tens of millions of dollars for a working product) necessary.
-
-By [our estimates](https://41j.com/blog/2022/09/global-sequencing-capability-notes/), more than half of global sequencing capacity in terms of number of bases sequenced annually is accounted for by Illumina NovaSeq alone. Novaseq is a $1 million instrument that yields up to 6 Tb of data per run with an error rate on the order of 0.1%. A single run can cost more than $5,000. This large share of sequencing capacity is accounted for by only some 1500 instruments in large laboratories.
-
-Another key player, Oxford Nanopore (ONT), is known for its relatively affordable, miniaturized devices such as the MinIon or Flongle. In 2021, however, fully 55.7% of ONT's revenue was generated by its 67 PromethIon instruments (see page 40 of [ONT's annual report](https://nanoporetech.com/sites/default/files/s3/investors/reports/ONT%20Annual%20Report%202021.pdf)), each of which can generate up to 12 Tb of data, with device costs ranging from $225,000 to $450,000.
-
-![img](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F04ac909d-664e-4ba7-8027-eddef4ae3d6c_671x465.png)
-
-As of 2023, the cheapest available instrument for runs on single samples is ONT's Flongle, whose consumables sells for $90 and likely costs ca. $50 to make. In principle, ONT's devices are capable of real-time sequencing. However, when all sample and library preparation steps are included, the most optimized workflows of today can deliver clinical answer in 6 hours for ca. $200 and a specialized clinical microbiology laboratory has to be involved in this process. This contrasts sharply with the alternative of qPCR, which can deliver clinical answers within 45 minutes for less than $20.
-
-Given these considerations, the hypothesis that stimulating development of devices that replicate the success of PCR tests appears worth exploring.
 
 ## Towards a sample-to-answer system
 Perhaps the greatest contrast between sequencing and PCR tests today lies in the complexity of workflows. As previously mentioned, even workflows optimized for the ICU setting require a clinical microbiology laboratory to execute. Interviews with practitioners at the forefront of clinical MGS adoption reveal that training new personnel in MGS workflows takes months and results vary significantly based on operator skill.
@@ -95,7 +76,7 @@ Our main focus here is:
 ## How much sequencing do we need?
 The most important question any candidate test for infectious disease has to address is whether its sensitivity of detection is sufficient. Sequencing a human clinical sample can obviously achieve very high levels of sensitivity: a sequencing run of Terabases on a single sample should comfortably detect even pathogens that are very low in abundance. However, when the requirements of cost and time to answer are added, practical sensitivity of sequencing is a question that has to be determined.
 
-PCR tests are characterized by a very high sensitivity, or very low limit of detection (LoD): in principle, they can detect the presence of a target fragment with only a handful of copies present in a sample. The sensitivity of detection is then determined of how many cycles of amplification are applied to the sample, quantified as the "cycle threshold", or Ct.
+PCR tests are characterized by a high sensitivity, or very low limit of detection (LoD): in principle, they can detect the presence of a target fragment with only a handful of copies present in a sample. The sensitivity of detection is then determined of how many cycles of amplification are applied to the sample, quantified as the "cycle threshold", or Ct.
 
 PCR has a key advantage over sequencing:  because PCR targets a short, unique region of a genetic sequence, it is _insensitive to background material_. A high fraction of human material (mostly rRNA in the case of RT-qPCR) or bacterial material will have only a minor effect on the sensitivity of qPCR. In other words, the limit of detection relies on the sample's _absolute abundance of the target_. MGS, however, is _sensitive to background material_. To ensure that the target of interest is detected, one must also sequence through background fragments until the target is reached. Thus, the sensitivity of MGS relies on the _relative abundance_ of the target among the other nucleic acid in a sample.
 
@@ -105,41 +86,37 @@ In qPCR, sensitivity is a function of the number of replication cycles. In seque
 
 The relative fraction of a pathogen can be increased in two ways: either by amplifying the pathogen of interest or by removing material that is not of interest, in this context human RNA. Amplification is not naturally suited for the purpose of a unbiased test, as one needs to know what pathogen to amplify. In practice, hybrid approaches where known low-abundance pathogens are amplified using PCR may employed. However, in our analysis, we assume that no amplification will be used. Depletion of human nucleic acids is typically used in state-of-the-art workflows and can increase the pathogen fraction by an order of magnitude or more, decreasing the required sequencing depth tenfold or more. However, available depletion methods also increase cost and workflow complexity. While integrating depletion into an automated workflow could be possible and desirable, we likewise assume that no depletion is applied in our sample-to-answer system.
 
-With these constraints, what sequencing depth is required in order to have a greater than 99% chance of detecting a pathogen. In the [technical appendix on sennsitivity](sensitivity.md), we approach this question both via modelling and by reviewing the empirical literature. Based on this exercise and interviews with practitioners, we conclude that a **_sequencing depth of 10 million reads should robustly achieve PCR-level sensitivity_** for the vast majority of pathogens found in respiratory samples, without depleting human nucleic acids or amplifying targets. Given our time budget of 1 hour, this requirement leads quite directly to a throughput of ca. 10M reads/hour.
-
-Sequencers also vary widely on two other variables: read length and single-base accuracy. Both of these features are highly desirable in research contexts where changes of even a single mutation are often the object of study. 
-
-We can determine the approximate number of reads required for a given target fraction. For example, to have a probability of 99.9% of detecting at least one read > 0.999 we will require > 3.5M reads without rRNA depletion. Below, we see the same plot with target fraction used to calculate expected Ct values from a qPCR test assuming 10ng of total material (and parameters others similar to the simulation shown above):  
+With these constraints, what sequencing depth is required in order to have a greater than 99% chance of detecting a pathogen. In the [technical appendix on sensitivity](sensitivity.md), we approach this question both via modelling and by reviewing the empirical literature. Based on this exercise and interviews with practitioners, we conclude that a **_sequencing depth of 10 million reads should robustly achieve PCR-level sensitivity_** for the vast majority of pathogens found in respiratory samples, without depleting human nucleic acids or amplifying targets. Given our time budget of 1 hour, this requirement leads quite directly to a throughput of ca. 10M reads/hour.
 
 <img src="https://lh4.googleusercontent.com/Cp_pOT9M-XlZKXdG4uzo6l3vzfK5ubauwzAMtLXIIuwJOAuukXWvvCUPKDL_NAr52syC3coTVcwnGmBUZJX36ZrJ7POuPox2uadYMB-bJQ073jP6yPJCJ-df2QSesSl922l7Qhj_yigMcqE0I88Ys2c" style="zoom:33%;" />
 
-We can see that 300,000 reads are sufficient to reach a Ct of 30 and 1M reads correspond to a Ct of 33. Based on this analysis we believe that, as a lower limit, 1 to 10M reads is sufficient throughput for our metagenomic sequencing platform.
-
-### Empirical studies 
-
-Another way to approach the question is to directly review the studies where MGS was used on pathogenic samples. We reviewed 42 such publications, of which 8 met our inclusion criteria (see Figure).
-
-![](https://lh6.googleusercontent.com/dbC9cBgpRMtVZbYGlGvO9fSZDJx3cBH3WOPsJXWuprzq2ydnI2WZVey-fbRxkPIZ4UhHMcFThCbrp2KjYHi_XHcOFi3F47XTYg0F-ah9-tO7fyE0s4wLn2KeZC9HVAyiD-sPDDT_kpvCde4llfsuwBk)
-
-Sensitivity was either calculated using data presented in the papers (based on agreement with qPCR, Panels, or Serology testing) or used explicit statements from these publications. Where a sensitivity estimate could be calculated against qPCR (5/8 papers), it was >96%, which is sufficient for the vast majority of clinical contexts.
-
-### Read length and accuracy requirements
-
-What does the requreirement of qPCR-level sensitivity imply for actual sequencing instrumentation? Below, we attempt to answer this question for the baseline task of detecting known viruses. Acquired sequence data may be processed in a number of ways, most commonly through alignment of reads to a reference of known viruses.
-
-In order to assess the read length and accuracy requirements of our sequencing platform we simulated SARS-CoV-2 reads of varying lengths and accuracy. These reads were then aligned to the complete human genome, all NCBI Viruses, and the SARS-CoV-2 reference. The figure below shows the percentage of reads that correctly aligned to the SARS-CoV-2 reference. This plot suggests that **the majority of simulated reads are alignable at 20 bp, with an error rate as high at 5%.**
+Sequencers also vary widely on two other variables: read length and single-base accuracy. Both of these features are highly desirable in research contexts where changes of even a single mutation are often the object of study. However, [our simulations](https://aseq.substack.com/p/what-length-reads-to-you-need-for) suggest that for the task of correctly classifying a known virus, or detecting a high abundance of unknown material, read length and accuracy requirements are comparatively modest. We estimate that read length of only 25 bp and single-base accuracy of 95% are sufficient for PCR-level sensitivity, given sufficient sequencing depth. This has important implications for technology development goals, as we discuss in the next section.
 
 <img src="https://lh6.googleusercontent.com/_gt7HtPp-hr1pLQ5G2EOB8c5iKvB2T0hdnOiX5uQu2nZ0QKMJ213-B0lMKNBnm16OhbUrh1Jm2Efui_ZuAVSbYVePCOBqVepE5Xu4eP10i_0JfUU65JNo9IA0EUbsJkAuuzHLQQ62iQl7tmS6z6MD6c" alt="img" style="zoom:25%;" />
 
-We can also simulate human reads of this length and error rate, then align them back to the human genome and SARS-CoV-2. If errored human material were to align to the SARS-CoV-2 reference, this could result in a false positive. In this simulation, however, we have not been able to generate any such reads (after generating 100,000 reads).
+| Sequencing depth        | 1-10M reads                               |
+| Read length        | >25 bp                               |
+| Single-base accuracy        | >95%                               |
 
-Using this data, we can calculate the false negative and positive rates from these simulated reads. These compare favorably to known rates for qPCR:
 
-|                     | qPCR | 20bp, 5% error |
-|---------------------|------|----------------|
-| False Negative Rate | 1%   | 0.01%          |
-| False Positive Rate | 1.1% | 0%             |
+## Is there room for improvement?
+Before engaging with further analysis, it is important to answer a natural question: is there a need for a roadmap? If it is possible to develop a device that meets the above criteria for PoC MGS, why would this need not be addressed by the market? After all, sequencing is attracting large amounts of private investments and the prospect of millions of tests per year should be sufficient to stimulate development. Conversely, the fact that sequencing companies have not developed such a device should be taken as evidence that there may be some fundamental roadblock preventing its development.
 
+While this "efficient market assumption" is a reasonable starting point, there are also reasons to believe that there is significant room for improvement. A number of observations, informed largely by the authors' experience with the sequencing landscape, as well as conversations with experts, push in this direction:
+- Development is driven by customer demand. The primary market for sequencing instruments is in research and high-end diagnostics (e.g. cancer). In these contexts, the primary consideration is often extraordinarily high accuracy, as the correct identification of every single base is potentially informative. The task of correctly classifying a pathogen of interest or detecting an anomaly does not require such high single-base accuracies, as we justify later. Similarly, the requirements for read length, as well as sequencing depth, are much lower.
+- Time to answer of hours or days is not a limiting factor in many research contexts. Typical workflows are structured around large runs, often counted in thousands of billions of bases (e.g. ONT PromethIon, Illumina Novaseq). Researchers typically care about a low cost per base for these large runs. Large, high-end instruments can minimize this cost per base.
+- The sequencing market is still comparatively small, dominated by a few players with relatively enforceable intellectual property.
+- While the "low-end" market is potentially large in volume, there is presently **no clear demand signal** that would justify the relatively large investments (at least tens of millions of dollars for a working product) necessary.
+
+By [our estimates](https://41j.com/blog/2022/09/global-sequencing-capability-notes/), more than half of global sequencing capacity in terms of number of bases sequenced annually is accounted for by Illumina NovaSeq alone. Novaseq is a $1 million instrument that yields up to 6 Tb of data per run with an error rate on the order of 0.1%. A single run can cost more than $5,000. This large share of sequencing capacity is accounted for by only some 1500 instruments in large laboratories.
+
+Another key player, Oxford Nanopore (ONT), is known for its relatively affordable, miniaturized devices such as the MinIon or Flongle. In 2021, however, fully 55.7% of ONT's revenue was generated by its 67 PromethIon instruments (see page 40 of [ONT's annual report](https://nanoporetech.com/sites/default/files/s3/investors/reports/ONT%20Annual%20Report%202021.pdf)), each of which can generate up to 12 Tb of data, with device costs ranging from $225,000 to $450,000.
+
+![img](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F04ac909d-664e-4ba7-8027-eddef4ae3d6c_671x465.png)
+
+As of 2023, the cheapest available instrument for runs on single samples is ONT's Flongle, whose consumables sells for $90 and likely costs ca. $50 to make. In principle, ONT's devices are capable of real-time sequencing. However, when all sample and library preparation steps are included, the most optimized workflows of today can deliver clinical answer in 6 hours for ca. $200 and a specialized clinical microbiology laboratory has to be involved in this process. This contrasts sharply with the alternative of qPCR, which can deliver clinical answers within 45 minutes for less than $20.
+
+Given these considerations, the hypothesis that stimulating development of devices that replicate the success of PCR tests appears worth exploring.
 
 ## Sequencing Platforms
 In this section, we evaluate the current landscape of sequencing platforms against the technical requirements we have previously established. As we argue in this report, these constraints imply requirements that are substantially more modest than those encountered in research or whole-genome sequencing context. In particular, these are (a) single-base accuracy should be higher than 95%, (b) throughput of at least 10M reads per hour and (c) reads should be at least 18bp. While we would ideally seek to exceed these specifications, building a platform which fits all our requirements requires compromise. In the next section we shall see that current instrumentation has been designed around the requirements of different applications and is a poor fit for point-of-care diagnostics.
