@@ -48,7 +48,7 @@ In contrast, while sequencing technologies are based on a wide array of approach
 - Workflows require a complex set of reagents and kits.
 - Given these requirements, we assume that multiplexing, i.e. analyzing multiple samples simultaneously, will not be practical in the point-of-care context, as this step introduces both a significant delay in time to answer and may be hard to fully automate given the requirements for low cost and minimal operator time.
 
-[images/IMG_1889.jpeg]
+<img src="images/IMG_1889.jpeg" alt="Your Image Description" style="max-width:500px;"/>
 
 In the rest of this report, we ask what requirements a sequencing device has to meet in order to match all of the above criteria. In particular, we ask:
 - How does clinical sensitivity translate into sequencing device specifications?
