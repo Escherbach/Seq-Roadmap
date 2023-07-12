@@ -98,13 +98,14 @@ Sequencers also vary widely on two other variables: read length and single-base 
 | Read length        | >25 bp                               |
 | Single-base accuracy        | >95%                               |
 
+
 ## Development goals
-Having determined 
+Having determined these targets for sequencing platforms, can we formulate concrete development goals.
 
 | Nanopore sequencing        | Consumable cost                               | Chip fabrication (MEMS)                               |
 | Single-molecule optical        | Instrumentation cost                               | Multiple optimization targets                               |
 
-
+<img src="images/IMG_1895.jpeg" alt="Reticula sketch" style="max-width:700px;"/>
 
 A number of other novel sequencing approaches have been proposed. We document these in detail in Appendix B. The most interesting of these for our application are solid-state nanopore approaches, which could potentially retain many of the advantages of protein nanopore platforms, while also potentially rectifying many of its problems. Specifically, solid-state nanopore platforms promise higher accuracy, throughput, lower cost, and simpler sample preparation. However, it is worth noting that this technology is at an experimental stage: research has been underway for more than 20 years and, to date, no reproducible demonstration of near single base resolution sequencing has been shown.
 
