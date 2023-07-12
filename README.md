@@ -42,7 +42,7 @@ In particular, MGS assays should aspire to meet these <u>requirements</u>
 ## Current sequencing landscape
 As table 1 illustrates, no sequencing device currently comes close to meeting these specifications. Sensitivity is achievable with sufficient sequencing depth but incompatible with the other requirements of cost and time to answer. Workflows involve complex sequential steps in sample and library preparation and typically require hours of work by trained experts. Automated and integrated solutions are only available at high costs for specialized laboratories. Cost per sample can be reduced below $10 only by sequencing many samples in parallel, which is not practical in the point-of-care context, as this step introduces both a significant delay in time to answer and may be hard to fully automate given the requirements for low cost and minimal operator time.
 
-<img src="images/IMG_1889.jpeg" alt="Your Image Description" style="max-width:500px;"/>
+<img src="images/IMG_1889.jpeg" alt="Your Image Description" style="max-width:700px;"/>
 
 The need for rapid results directly eliminates the majority of sequencing platforms based on "colony-based approaches". Illumina's cluster generation step alone takes at least 60 minutes. In addition, this approach requires a complex set of reagents that would add significant complexity and cost to the design of a sample-to-answer system. New companies (e.g MGI, Singular Genomics) emerged following the expiration of Illumina's core intellectual property. While these are likely to bring about cost decreases.
 
@@ -67,8 +67,11 @@ Cepheid's first and second generation instruments were incapable of processing r
 
 While achieving the same simplicity for MGS may seem like a tall order, it is important to note that currently available have been designed to be versatile and serve a number of applications. For the MGS use case, workflow can commit to a particular sample type (e.g. nasopharyngeal, upper nasal or saliva), consistent input volume and RNA sequencing only.
 
-If we strip sequencing to its bare essentials, then, the complexity need not be much greater than that of qPCR. Like qPCR, sample preparation will, for the foreseeable future, need to involve cell lysis, removal of unwanted nucleic acid material (in this case, DNA with DNAase).
+If we strip sequencing to its bare essentials, then, the complexity need not be much greater than that of qPCR. Like qPCR, sample preparation will, for the foreseeable future, need to involve cell lysis and, unless before direct RNA sequencing becomes more reliable, a reverse transcription step to convert RNA to complementary DNA. Further needed removal of unwanted nucleic acid material (in this case, DNA with DNAase) and, in most cases, the addition of adapters for the sequencing platform in question.
 
+<img src="images/IMG_1893.jpeg" alt="Cartridge sketch" style="max-width:700px;"/>
+
+Developing a cartridge for this use case and integrating the whole system into one box can be done with relatively little technical risk. Why, then, has no player developed such a system? The key reason, we believe, is the lack of a platform that could achieve the sufficient sequencing depth at a low enough cost without the need to analyze multiple samples in parallel. In the next section, we ask what the required sequencing depth for a MGS diagnostic is likely to be.
 
 ## How much sequencing do we need?
 The most important question any candidate test for infectious disease has to address is whether its sensitivity of detection is sufficient. Sequencing a human clinical sample can obviously achieve very high levels of sensitivity: a sequencing run of Terabases on a single sample should comfortably detect even pathogens that are very low in abundance. However, when the requirements of cost and time to answer are added, practical sensitivity of sequencing is a question that has to be determined.
@@ -94,6 +97,9 @@ Sequencers also vary widely on two other variables: read length and single-base 
 | Sequencing depth        | 1-10M reads                               |
 | Read length        | >25 bp                               |
 | Single-base accuracy        | >95%                               |
+
+## Development goals
+
 
 
 ## Is there room for improvement?
@@ -132,14 +138,6 @@ We have reviewed the cost, runtime and sample preparation requirements for a ran
 | Nanopore sequencing               | Runs can be extremely fast (an hour-long run on a Minion could provide nearly 1 million 1Kb reads). This would be sufficient to identify novel viral RNA in a metagenomic sample. | Oxford Nanopore accounts state that goods are sold at 50% margin. This suggests that Minion flow cells would cost \~\$250, and the Flongle flow cell \~\$45. <br />Cost-optimized manufacturing of these devices at scale could lead to COGS <$5 but would require capital investments on the order of $1B. | - Direct RNA readout potentially tractable.<br />- Requires adapters to be added to templates. This process would also need to be integrated into the sample prep instrumentation. |
 | Single-molecule optical (PacBio)  | < 1 hour                                                     | Instrumentation and consumables prohibitively costly.        |                                                              |
 | Single-molecule optical (Helicos) | <1 hour                                                      | As originally implemented in the 2000s Helicos’ instrumentation cost \>\$100000. However, advances in imaging technologies now allow single=molecule imaging to be performed using \$100 CMOS image sensors. B | - Sequencing unmodified RNA directly on a flow cell has been demonstrated with no need for adapter ligation or other library preparation steps.<br />- Currently requires cyclic chemistry, implying complexity of the reagent and fluidic system. However, this requirement could be avoided with a relatively low-risk R&D effort. |
-
-## Sample Acquisition and Preparation
-
-A complete sample-to-answer metagenomic sequencing platform will require the development of a sample acquisition and preparation system. This will **take samples from patients** and prepare them for introduction to sequencing instrumentation. The first step in a sequencing wor Once a sample has been collected, it needs to undergo a number of preparation steps prior to sequencing. Broadly, we describe these as ***sample preparation*** and ***library preparation***. In a clinically viable platform, sample preparation will be ***integrated into sequencing instrumentation***, such that a clinician need only add the sample to a pre-loaded cartridge and insert it into an instrument, replicating the workflow of sample-to-answer qPCR instrumentation (e.g. the Cepheid GeneXpert).
-
-Both sample and library preparation requirements will vary significantly depending on the *sequencing platform* being used. And both these processes will contribute to the complexity of any integrated infectious disease testing device. In fact, for many approaches the sample and library preparation steps *may be the most costly and time consuming parts of the sequencing process*.
-
-In this section we will discuss sample and library preparation requirements for RNA shotgun metagenomic sequencing of samples.
 
 
 
