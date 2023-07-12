@@ -39,6 +39,7 @@ In particular, MGS assays should aspire to meet these <u>requirements</u>
 - The **device itself should be affordable** (<$30,000, ideally $10,000) and compact, ideally portable.
 - **Supply chains** should not be overly complex.
 
+## Current sequencing landscape
 As table 1 illustrates, no sequencing device currently comes close to meeting these specifications. Sensitivity is achievable with sufficient sequencing depth but incompatible with the other requirements of cost and time to answer. Workflows involve complex sequential steps in sample and library preparation and typically require hours of work by trained experts. Automated and integrated solutions are only available at high costs for specialized laboratories. Cost per sample can be reduced below $10 only by sequencing many samples in parallel, which is not practical in the point-of-care context, as this step introduces both a significant delay in time to answer and may be hard to fully automate given the requirements for low cost and minimal operator time.
 
 <img src="images/IMG_1889.jpeg" alt="Your Image Description" style="max-width:500px;"/>
@@ -64,13 +65,9 @@ Given the ease of use and efficacy of Cepheid's sample-to-answer qPCR platform, 
 
 Cepheid's first and second generation instruments were incapable of processing raw samples directly. To establish a comprehensive sample-to-answer system, Cepheid tackled this limitation by incorporating sample preparation into the platform.  This was accomplished by designing a fluidic cartridge capable of processing raw samples and concurrently integrating a qPCR reaction tube. Reagents can be preloaded, with no fluidic coupling to the instrument. The instrument interfaces with the cartridge via a reagent selection valve and plunger. The cost of goods for the cartridge, including reagents, [has been estimated at $10](https://msfaccess.org/sites/default/files/2019-12/2018%20COGS%20analysis%20of%20Xpert%20MTB_RIF%20Ultra%20cartridges.pdf) and marketed at prices typically exceeding $20.
 
-Is it possible to achieve a similar level of simplicity for sequencing? This may seem like a tall order, as typical workflows involve substantially more complexity than qPCR. However, it is important to note that current platforms have been designed to be versatile and serve a number of applications.
+While achieving the same simplicity for MGS may seem like a tall order, it is important to note that currently available have been designed to be versatile and serve a number of applications. For the MGS use case, workflow can commit to a particular sample type (e.g. nasopharyngeal, upper nasal or saliva), consistent input volume and RNA sequencing only.
 
-
-Our main focus here is:
-- **Respiratory samples.** Previous analysis points to respiratory pathogens as the greatest source of future pandemic risk.
-- **RNA detection.** RNA sequencing holds a greater promise for a near-universal diagnostic, as it should be capable of both RNA viruses and the transcripts of DNA viruses and bacteria[^3].
-- **Viral RNA.** Studies suggest that bacterial transcripts in respiratory samples are two orders of magnitude higher than viral fractions. We therefore assume that a device that is sensitive for low-abundance viruses should be even more sensitive for bacterial pathogens. This assumption likely holds for the majority but not for all bacterial species.
+If we strip sequencing to its bare essentials, then, the complexity need not be much greater than that of qPCR. Like qPCR, sample preparation will, for the foreseeable future, need to involve cell lysis, removal of unwanted nucleic acid material (in this case, DNA with DNAase).
 
 
 ## How much sequencing do we need?
