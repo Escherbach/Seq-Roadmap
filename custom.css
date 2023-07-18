@@ -1,0 +1,38 @@
+/* Footnotes */
+.footnotes {
+  position: fixed;
+  right: 0;
+  top: 50px;
+  width: 25%;
+  max-height: 70%;
+  overflow-y: auto;
+  font-size: 0.9em;
+  padding: 10px;
+  border-left: 1px solid #ccc;
+  background-color: #f9f9f9;
+  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.footnotes hr {
+  display: none;
+}
+
+/* Table of Contents */
+.toc {
+  position: fixed;
+  left: 10px;
+  top: 50px;
+  width: 200px;
+  max-height: 80%;
+  overflow-y: auto;
+  font-size: 0.9em;
+  padding: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Content width */
+.content {
+  max-width: 70%;
+  margin-right: 260px;
+}
