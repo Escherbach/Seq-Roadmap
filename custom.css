@@ -1,38 +1,21 @@
-/* Footnotes */
-.footnotes {
-  position: fixed;
-  right: 0;
-  top: 50px;
-  width: 25%;
-  max-height: 70%;
-  overflow-y: auto;
-  font-size: 0.9em;
-  padding: 10px;
-  border-left: 1px solid #ccc;
-  background-color: #f9f9f9;
-  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+/* Margin Notes */
+.margin-note {
+  position: relative;
 }
 
-.footnotes hr {
+.margin-note-content {
   display: none;
-}
-
-/* Table of Contents */
-.toc {
-  position: fixed;
-  left: 10px;
-  top: 50px;
-  width: 200px;
-  max-height: 80%;
-  overflow-y: auto;
-  font-size: 0.9em;
+  position: absolute;
+  top: -20px;
+  right: 100%;
+  width: 250px;
   padding: 10px;
   background-color: #f9f9f9;
-  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  font-size: 0.9em;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Content width */
-.content {
-  max-width: 70%;
-  margin-right: 260px;
+.margin-note:hover .margin-note-content {
+  display: block;
 }
