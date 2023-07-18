@@ -30,7 +30,7 @@ However, PCR cannot in principle detect unknown or changing targets. For example
 
 In principle, then, MGS has a clear advantage, as it can detect any pathogen, whether bacterial, viral, fungal or otherwise. Despite this advantage, however, it is difficult to imagine that MGS might become truly ubiquitous without being being close to matching PCR on the set of requirements that made it successful.
 
-In particular, MGS assays should aspire to meet these <u>requirements</u>
+In particular, MGS assays should aspire to meet these <u>**requirements**</u>
 - **Sensitivity comparable to qPCR** (matching a cycle threshold of 35).
 - **Workflow should be "push-button"**, requiring minimal operator time and skill (<5 minutes).
 - **Time to answer** should be **less than 1 hour**.
