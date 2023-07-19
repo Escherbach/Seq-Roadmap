@@ -1,5 +1,6 @@
 # A roadmap towards ubiquitous metagenomic sequencing
-Imagine a world in which every clinician and patient around the world had access to a simple device capable of detecting any virus or bacterium causing disease in a symptomatic patient. Such a world would be much better positioned to diagnose and treat infectious disease and to detect novel emerging pathogens before they cause a devastating pandemic. [Metagenomic sequencing](https://www.nature.com/articles/s41576-019-0113-7) (MGS) has the potential to become such a universal diagnostic. However, it is not yet ready for prime time: complex workflows and high costs prevent widespread adoption. 
+Imagine a world in which every clinician and patient around the world had access to a simple device capable of detecting any virus or bacterium causing disease in a symptomatic patient. Such a world would be much better positioned to diagnose and treat infectious disease and to detect novel emerging pathogens before they cause a devastating pandemic. [Metagenomic sequencing](https://www.nature.com/articles/s41576-019-0113-7) (MGS) has the potential to become such a universal diagnostic. However, it is not yet ready for prime time: complex workflows and high costs prevent widespread adoption. [^11]
+[^11]: foot
 
 In this report, we ask how MGS could become widely available, at least as much as diagnostic PCR machines are today. The technical answer we arrive at is that a device capable of performing 10 million RNA reads in less than an hour with minimal sample preparation would have sufficient sensitivity to deliver on this goal. We then review the current technological landscape and conclude that at least two approaches, single-molecule optical and nanopore sequencing, could be adapted to meet these specifications.
 
@@ -8,7 +9,7 @@ The first COVID-19 infection occured in mid-October to mid-November of 2019, [at
 
 COVID-19 - far from the worst pandemic we could face within our lifetimes - has clearly demonstrated that our ability to detect and contain new pathogens is inadequate. The diagnostic technologies we use for infections at the point of care are designed for a small set of known pathogens and in principle incapable of recognizing the outbreak of an unsuspected or unknown pathogen.
 
-There is therefore a pressing need for a universal pathogen diagnostic to enable rapid detection and containment of all pathogens and their early containment, without any assumptions about what the pathogen might be. 
+There is therefore a pressing need for a universal pathogen diagnostic to enable rapid detection of all pathogens and their early containment, without any assumptions about what the pathogen might be. 
 
 While it is impossible to predict in advance the nature of a novel threat, we can be confident that its genetic information will be encoded in DNA and RNA. There is therefore a clear candidate technology, the one that [uncovered SARS-CoV-2](https://www.nejm.org/doi/10.1056/NEJMoa2001017) where others failed: metagenomic sequencing (MGS).
 <!-- MGS, also known as unbiased sequencing, is based on the simple idea of analyzing all DNA or RNA in a sample in a hypothesis-free manner. MGS can be leveraged for early detection in a number of ways, including  -->
