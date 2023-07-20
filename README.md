@@ -39,7 +39,7 @@ In particular, we  believe that MGS-based diagnostics should aspire to meet thes
 - **Supply chains** should not be overly complex.
 
 ## Current sequencing landscape
-As table 1 illustrates, no sequencing device currently comes close to meeting these specifications. Sensitivity itself is achievable with sufficient sequencing depth (see [section on sensitivity](## How much sequencing do we need?)) but incompatible with the other requirements of cost and time to answer. Workflows involve complex sequential steps in sample and library preparation and typically require hours of work by trained experts. Automated and integrated solutions are only available at high costs for specialized laboratories. Cost per sample can be reduced below $10 only by sequencing many samples in parallel, which is not practical in the point-of-care context, as this step introduces both a significant delay in time to answer and may be hard to fully automate given the requirements for low cost and minimal operator time.
+As table 1 illustrates, no sequencing device currently comes close to meeting these specifications. Sensitivity itself is achievable with sufficient sequencing depth (see [section on sensitivity](#sensitivity)) but incompatible with the other requirements of cost and time to answer. Workflows involve complex sequential steps in sample and library preparation and typically require hours of work by trained experts. Automated and integrated solutions are only available at high costs for specialized laboratories. Cost per sample can be reduced below $10 only by sequencing many samples in parallel, which is not practical in the point-of-care context, as this step introduces both a significant delay in time to answer and may be hard to fully automate given the requirements for low cost and minimal operator time.
 
 <div style="text-align:center">
     <img src="images/IMG_1911.jpeg" alt="Currently available sequencing solutions" style="max-width:700px;"/>
@@ -77,6 +77,7 @@ If we strip sequencing to its bare essentials, then, the complexity need not be 
 
 Developing a cartridge for this use case and integrating the whole system into one box can be done with relatively little technical risk. Why, then, has no player developed such a system? The key reason, we believe, is the lack of a platform that could achieve the sufficient sequencing depth at a low enough cost without the need to analyze multiple samples in parallel. In the next section, we ask what the required sequencing depth for a MGS diagnostic is likely to be.
 
+<h2 id="sensitivity">How much sequencing do we need?</h2>
 ## How much sequencing do we need?
 The most important question any candidate test for infectious disease has to address is whether its sensitivity of detection is sufficient. Sequencing a human clinical sample can obviously achieve very high levels of sensitivity: a sequencing run of Terabases on a single sample should comfortably detect even pathogens that are very low in abundance. However, when the requirements of cost and time to answer are added, practical sensitivity of sequencing is a question that has to be determined.
 
