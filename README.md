@@ -28,9 +28,9 @@ PCR devices can also test for multiple pathogens or genes (such as those conferr
 
 However, PCR cannot in principle detect unknown or changing targets. For example, a novel gene conferring drug resistance, or a novel virus strain, require the design of novel primers. Perhaps more importantly, the emergence of a completely novel pathogen (in recent decades, consider, SARS-CoV-1 and 2, HIV, Ebola and Marburg virus, for instance) would go completely undetected.
 
-In principle, then, MGS has a clear advantage, as it can detect any pathogen, whether bacterial, viral, fungal or otherwise. Despite this advantage, however, it is difficult to imagine that MGS might become truly ubiquitous without being being close to matching PCR on the set of requirements that made it successful.
+In principle, then, MGS has a clear advantage, as it can detect any pathogen, whether bacterial, viral, fungal or otherwise. Despite this advantage, however, it is difficult to imagine that MGS might become truly ubiquitous without being close to matching PCR on the set of characteristics that made it successful.
 
-In particular, MGS assays should aspire to meet these <u>**requirements**</u>
+In particular, we  believe that MGS-based diagnostics should aspire to meet these <u>**requirements**</u>:
 - **Sensitivity comparable to qPCR** (matching a cycle threshold of 35).
 - **Workflow should be "push-button"**, requiring minimal operator time and skill (<5 minutes).
 - **Time to answer** should be **less than 1 hour**.
@@ -39,7 +39,7 @@ In particular, MGS assays should aspire to meet these <u>**requirements**</u>
 - **Supply chains** should not be overly complex.
 
 ## Current sequencing landscape
-As table 1 illustrates, no sequencing device currently comes close to meeting these specifications. Sensitivity is achievable with sufficient sequencing depth but incompatible with the other requirements of cost and time to answer. Workflows involve complex sequential steps in sample and library preparation and typically require hours of work by trained experts. Automated and integrated solutions are only available at high costs for specialized laboratories. Cost per sample can be reduced below $10 only by sequencing many samples in parallel, which is not practical in the point-of-care context, as this step introduces both a significant delay in time to answer and may be hard to fully automate given the requirements for low cost and minimal operator time.
+As table 1 illustrates, no sequencing device currently comes close to meeting these specifications. Sensitivity itself is achievable with sufficient sequencing depth (see [section on sensitivity](## How much sequencing do we need?)) but incompatible with the other requirements of cost and time to answer. Workflows involve complex sequential steps in sample and library preparation and typically require hours of work by trained experts. Automated and integrated solutions are only available at high costs for specialized laboratories. Cost per sample can be reduced below $10 only by sequencing many samples in parallel, which is not practical in the point-of-care context, as this step introduces both a significant delay in time to answer and may be hard to fully automate given the requirements for low cost and minimal operator time.
 
 <div style="text-align:center">
     <img src="images/IMG_1911.jpeg" alt="Currently available sequencing solutions" style="max-width:700px;"/>
