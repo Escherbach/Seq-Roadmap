@@ -158,6 +158,12 @@ Another technically feasible approach would be to change the manufacturing proce
 ### Optical platforms
 Single-molecule optical technologies were brought to the market by Helicos (now defunct) or [Pacific Biosciences](https://www.pacb.com/). Considering this class of technologies as a candidate platform may be surprising, as they have generally been embodied as costly, "fridge-sized" instruments with long library preparation (>[3 hours](https://www.pacb.com/products-and-services/consumables/library-prep-and-barcoding-kits/)). However, this is driven not by the fundamental needs of the platform, but rather by the market demand for high single-base accuracy and long read length. If these requirements are relaxed, single-molecule optical approaches can achieve very simple sample preparation and a low cost of consumables.
 
+One of the authors (Nava Whiteford), has previously proposed a minimalist adaptation of the Helicos platform, based on single-molecule sequencing-by-synthesis, for infectious disease testing. This method's combination of short reads (~25 bp) and base calling accuracy of ~95% has made it a poor fit for whole genome sequencing. At the same time, optical instrumentation has historically been too expensive for this platform to target a low instrument cost (cMOS cameras cost over $200,000). However, in 2023, $300 consumer-grade cameras are sufficientl for this sequencing approach and a full instrument can be assembled for <$1,000. 
+
+<img src="images/IMG_1895.jpeg" alt="Reticula sketch" style="max-width:700px;"/>
+
+Like nanopore sequencing, this platform is capable of real-time analysis and at a read length of 25bp can finish a run in minutes. The chief advantage of this approach lies in extremely simple library preparation and the potential for direct RNA sequencing. The key uncertainty is in throughput: the goal of 1M reads is easily achievable in a fixed imaging region, whereas 10M reads may prove difficult to achieve.
+
 In the context of the more familiar PacBio platform, one can readily envision an adaptation to a miniaturized, integrated system with low-cost consumables. For instance,
 - The SMRTBells library preparation introduced to drive accuracy  to >99.9% and read length to ~15 kb is not required for pathogen detection, as argued above. Without these requirements, library preparation for optical methods can be as fast as for nanopore sequencing (~5 minutes).
 - Photonic chips need not be monolithically integrated. Consumer-grade cameras available for ~$300 have resolution sufficient for the accuracy requirements of a MGS diagnostic.
@@ -168,7 +174,6 @@ A key advantage of an optical approach relative to nanopore sequencing is that i
 
 A particularly promising avenue is that of [electro-optical zero-mode waveguides](https://onlinelibrary.wiley.com/doi/10.1002/adma.202108479), which may enable substantially lower input requirements, obviating the need for random amplification of nucleic acids in a sample.
 
-<img src="images/IMG_1895.jpeg" alt="Reticula sketch" style="max-width:700px;"/>
 
 <!--### Fast, pathogen-agnostic depletion methods-->
 
