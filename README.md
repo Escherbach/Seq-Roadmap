@@ -122,11 +122,12 @@ Sequencers also vary widely on two other variables: read length and single-base 
 </div>
 
 <div style="text-align:center">
-| Variable             | Goal        |
-| -------------------- | ----------- |
-| Sequencing depth     | 1-10M reads |
-| Read length          | >25 bp      |
-| Single-base accuracy | >95%        |
+    
+    | Variable             | Goal        |
+    | -------------------- | ----------- |
+    | Sequencing depth     | 1-10M reads |
+    | Read length          | >25 bp      |
+    | Single-base accuracy | >95%        |
 </div>
 
 
@@ -135,10 +136,12 @@ Sequencers also vary widely on two other variables: read length and single-base 
 Having determined these targets for sequencing platforms, can we formulate concrete development goals.
 
 <div style="text-align:center">
+    
 | Approach                           | Driver of device cost        | Driver of consumable cost                             | Proposed solution                                            |
 | ---------------------------------- | ---------------------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
 | Nanopore sequencing                | Already acceptable (~$1,000) | Chip area. MEMS fabrication methods presently costly. | Explore alternative fabrication methods (e.g. PCB).          |
 | Single-molecule optical sequencing | CMOS cameras.                | Library preparation kits (>$200).                     | Design around shorter reads (<$50). Consumer-grade cameras are sufficient given imaging area and error rate requirement. |
+
 </div>
 
 
@@ -160,7 +163,7 @@ One of the authors (Nava Whiteford), has previously proposed a minimalist adapta
 
 <div style="text-align:center">
 <img src="images/IMG_1895.jpeg" alt="Reticula sketch" style="max-width:700px;"/>
-
+</div>
 
 Like nanopore sequencing, this platform is capable of real-time analysis and at a read length of 25bp can finish a run in minutes. The chief advantage of this approach lies in extremely simple library preparation and the potential for direct RNA sequencing. The key uncertainty is in throughput: the goal of 1M reads is easily achievable in a fixed imaging region, whereas 10M reads may prove difficult to achieve.
 
@@ -173,7 +176,7 @@ These design decisions should be compatible with a single-base accuracy of >95% 
 A key advantage of an optical approach relative to nanopore sequencing is that it is compatible with the use of a "dry" chip and hence a clear path to a consumable cost of $10 or less. Achievable throughput in a low-cost platform will be limited by compatibility with low-cost cameras, but the goal of 10 million sensing regions (and hence reads) appears achievable.
 
 A particularly promising avenue is that of [electro-optical zero-mode waveguides](https://onlinelibrary.wiley.com/doi/10.1002/adma.202108479), which may enable substantially lower input requirements, obviating the need for random amplification of nucleic acids in a sample.
-</div>
+
 
 <!--### Fast, pathogen-agnostic depletion methods-->
 
