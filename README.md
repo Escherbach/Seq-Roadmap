@@ -83,9 +83,7 @@ The most important question any candidate test for infectious disease has to add
 
 PCR tests are characterized by a high sensitivity, or very low limit of detection (LoD): in principle, they can detect the presence of a target fragment with only a handful of copies present in a sample. The required sensitivity for viral infections (which are generally less abundant and thus more difficult to detect) is typically at least 1,000 copies per mL (or 1 copy per uL) 
 
-The sensitivity of detection is then determined of how many cycles of amplification are applied to the sample, quantified as the "cycle threshold", or Ct.
-
-PCR has a key advantage over sequencing:  because PCR targets a short, unique region of a genetic sequence, it is _insensitive to background material_. A high fraction of human material (mostly rRNA in the case of RT-qPCR) or bacterial material will have only a minor effect on the sensitivity of qPCR. In other words, the limit of detection relies on the sample's _absolute abundance of the target_. MGS, however, is _sensitive to background material_. To ensure that the target of interest is detected, one must also sequence through background fragments until the target is reached. Thus, the sensitivity of MGS relies on the _relative abundance_ of the target among the other nucleic acid in a sample.
+PCR has a key advantage over sequencing:  because PCR targets a short, unique region of a genetic sequence, it is _insensitive to background material_. A high fraction of human material (mostly rRNA in the case of RT-qPCR) or bacterial material will have only a minor effect on the sensitivity of qPCR. In other words, the limit of detection relies on the sample's _absolute abundance of the target_. MGS, however, is _sensitive to background material_. To ensure that the target of interest is detected, one must also sequence through background fragments until the target is reached. Thus, the sensitivity of MGS relies on the _relative abundance_ of the target among the other nucleic acid in a sample. 
 
 In the context of PCR, therefore, it is sufficient to think of the absolute number of copies per unit of volume (e.g. mL). For instance, [HIV in blood is present at relatively low copy numbers ranging from <0.2 to 40 copies/ml](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7646261/). For MGS, we care not only about the number of pathogen genome copies per unit volume, but also about the number of human (and non-pathogenic microbial) RNA in a sample. In typical human clinical samples, host nucleic acids are orders of magnitude more abundant than those of the pathogen. For example, the typical fraction of SARS-CoV-2 RNA in nasopharyngeal samples was between 0.01% (or one fragment in 10,000) and 0.001% (one in 100,000). However, viral load has been found to [span some 8 orders of magnitude](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7302192/figure/F2/), with loads as low as tens of copies/mL found in more than 1% of cases and a high-sensitivity device therefore has to be equipped for even low abundance pathogens.
 
@@ -104,18 +102,16 @@ With these constraints, what sequencing depth is required for an expected 10 or 
 </div>
 
 
-
-
-
-
 In the [technical appendix on sensitivity](sensitivity.md), we approach this question both via modelling and by reviewing the empirical literature. Based on this exercise and interviews with practitioners, we conclude that a **<u>sequencing depth of 10 million reads should robustly achieve PCR-level sensitivity</u>** for the vast majority of pathogens found in respiratory samples, without depleting human nucleic acids or amplifying targets. Given our time budget of 1 hour, this requirement leads quite directly to a throughput of ca. 10M reads/hour. It is worth noting, however, that this conclusion may not hold for sample types with greater abundance of human RNA such as blood, where low-abundance pathogens such as HIV are [present at concentrations](https://translational-medicine.biomedcentral.com/articles/10.1186/s12967-020-02368-y/figures/3) requiring an order of magnitude or two greater sequencing depth for a corresponding amount of depletion.
 
+<div style="text-align:center">
 |Ct|Copies per mL (approx.)|Reads per million|
 |---|---|:-:|
 |36|10|0.1|
 |33.5|100|1|
 |31|1,000|10|
 |28.5|10,000|100|
+</div>
 
 Rough equivalence between Ct values, expected reads per million for SARS-CoV-2 in nasopharyngeal samples, no amplification and depletion. Based on [Babiker et al. (2020)](https://journals.asm.org/doi/full/10.1128/JCM.02142-20), [Kudo et al. (2020)](https://www.biorxiv.org/content/10.1101/2020.06.16.155887v1.full.pdf), [Arnaoud et al. (2021)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7929140/). See [modeling spreadsheet](https://docs.google.com/spreadsheets/d/1rXfCUE1XGXAcFTdEugw1uRm5aNi8CoAFirWUsG0BzUc/edit#gid=1993789150) for more detail.
 
@@ -125,23 +121,25 @@ Sequencers also vary widely on two other variables: read length and single-base 
     <img src="https://lh6.googleusercontent.com/_gt7HtPp-hr1pLQ5G2EOB8c5iKvB2T0hdnOiX5uQu2nZ0QKMJ213-B0lMKNBnm16OhbUrh1Jm2Efui_ZuAVSbYVePCOBqVepE5Xu4eP10i_0JfUU65JNo9IA0EUbsJkAuuzHLQQ62iQl7tmS6z6MD6c" alt="Read length" style="max-width:700px;"/>
 </div>
 
+<div style="text-align:center">
 | Variable             | Goal        |
 | -------------------- | ----------- |
 | Sequencing depth     | 1-10M reads |
 | Read length          | >25 bp      |
 | Single-base accuracy | >95%        |
-
+</div>
 
 
 
 ## Development goals
 Having determined these targets for sequencing platforms, can we formulate concrete development goals.
 
+<div style="text-align:center">
 | Approach                           | Driver of device cost        | Driver of consumable cost                             | Proposed solution                                            |
 | ---------------------------------- | ---------------------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
 | Nanopore sequencing                | Already acceptable (~$1,000) | Chip area. MEMS fabrication methods presently costly. | Explore alternative fabrication methods (e.g. PCB).          |
 | Single-molecule optical sequencing | CMOS cameras.                | Library preparation kits (>$200).                     | Design around shorter reads (<$50). Consumer-grade cameras are sufficient given imaging area and error rate requirement. |
-
+</div>
 
 
 ### Nanopore platforms
@@ -160,7 +158,9 @@ Single-molecule optical technologies were brought to the market by Helicos (now 
 
 One of the authors (Nava Whiteford), has previously proposed a minimalist adaptation of the Helicos platform, based on single-molecule sequencing-by-synthesis, for infectious disease testing. This method's combination of short reads (~25 bp) and base calling accuracy of ~95% has made it a poor fit for whole genome sequencing. At the same time, optical instrumentation has historically been too expensive for this platform to target a low instrument cost (cMOS cameras cost over $200,000). However, in 2023, $300 consumer-grade cameras are sufficientl for this sequencing approach and a full instrument can be assembled for <$1,000. 
 
+<div style="text-align:center">
 <img src="images/IMG_1895.jpeg" alt="Reticula sketch" style="max-width:700px;"/>
+
 
 Like nanopore sequencing, this platform is capable of real-time analysis and at a read length of 25bp can finish a run in minutes. The chief advantage of this approach lies in extremely simple library preparation and the potential for direct RNA sequencing. The key uncertainty is in throughput: the goal of 1M reads is easily achievable in a fixed imaging region, whereas 10M reads may prove difficult to achieve.
 
@@ -173,7 +173,7 @@ These design decisions should be compatible with a single-base accuracy of >95% 
 A key advantage of an optical approach relative to nanopore sequencing is that it is compatible with the use of a "dry" chip and hence a clear path to a consumable cost of $10 or less. Achievable throughput in a low-cost platform will be limited by compatibility with low-cost cameras, but the goal of 10 million sensing regions (and hence reads) appears achievable.
 
 A particularly promising avenue is that of [electro-optical zero-mode waveguides](https://onlinelibrary.wiley.com/doi/10.1002/adma.202108479), which may enable substantially lower input requirements, obviating the need for random amplification of nucleic acids in a sample.
-
+</div>
 
 <!--### Fast, pathogen-agnostic depletion methods-->
 
@@ -193,7 +193,9 @@ By [our estimates](https://41j.com/blog/2022/09/global-sequencing-capability-not
 
 Another key player, Oxford Nanopore (ONT), is known for its relatively affordable, miniaturized devices such as the MinIon or Flongle. In 2021, however, fully 55.7% of ONT's revenue was generated by its 67 [PromethION](https://nanoporetech.com/products/promethion) instruments (see page 40 of [ONT's annual report](https://nanoporetech.com/sites/default/files/s3/investors/reports/ONT%20Annual%20Report%202021.pdf)), each of which can generate up to 12 Tb of data, with device costs ranging from $225,000 to $450,000.
 
+<div style="text-align:center">
 ![img](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F04ac909d-664e-4ba7-8027-eddef4ae3d6c_671x465.png)
+</div>
 
 What, then, could shift these market dynamics?
 
