@@ -156,7 +156,7 @@ Another technically feasible approach would be to change the manufacturing proce
 <!--The most interesting of these for our application are solid-state nanopore approaches, which could potentially retain many of the advantages of protein nanopore platforms, while also potentially rectifying many of its problems. Specifically, solid-state nanopore platforms promise higher accuracy, throughput, lower cost, and simpler sample preparation. However, it is worth noting that this technology is at an experimental stage: research has been underway for more than 20 years and, to date, no reproducible demonstration of near single base resolution sequencing has been shown.-->
 
 ### Optical platforms
-Single-molecule optical technologies were brought to the market by Helicos (now defunct) or [Pacific Biosciences](https://www.pacb.com/). Considering this class of technologies as a candidate platform may be surprising, as they have generally been embodied as costly, "fridge-sized" instruments with long library preparation (>3 hours). However, this is driven not by the fundamental needs of the platform, but rather by the market demand for high single-base accuracy and long read length. If these requirements are relaxed, single-molecule optical approaches can achieve very simple sample preparation and a low cost of consumables.
+Single-molecule optical technologies were brought to the market by Helicos (now defunct) or [Pacific Biosciences](https://www.pacb.com/). Considering this class of technologies as a candidate platform may be surprising, as they have generally been embodied as costly, "fridge-sized" instruments with long library preparation (>[3 hours](https://www.pacb.com/products-and-services/consumables/library-prep-and-barcoding-kits/)). However, this is driven not by the fundamental needs of the platform, but rather by the market demand for high single-base accuracy and long read length. If these requirements are relaxed, single-molecule optical approaches can achieve very simple sample preparation and a low cost of consumables.
 
 In the context of the more familiar PacBio platform, one can readily envision an adaptation to a miniaturized, integrated system with low-cost consumables. For instance,
 - The SMRTBells library preparation introduced to drive accuracy  to >99.9% and read length to ~15 kb is not required for pathogen detection, as argued above. Without these requirements, library preparation for optical methods can be as fast as for nanopore sequencing (~5 minutes).
@@ -170,10 +170,7 @@ A particularly promising avenue is that of [electro-optical zero-mode waveguides
 
 <img src="images/IMG_1895.jpeg" alt="Reticula sketch" style="max-width:700px;"/>
 
-### 
-
-### Fast, pathogen-agnostic depletion methods
-
+<!--### Fast, pathogen-agnostic depletion methods-->
 
 
 ## Is there room for improvement?
