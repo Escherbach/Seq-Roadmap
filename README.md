@@ -105,8 +105,9 @@ With these constraints, what sequencing depth is required for an expected 10 or 
 In the [technical appendix on sensitivity](sensitivity.md), we approach this question both via modelling and by reviewing the empirical literature. Based on this exercise and interviews with practitioners, we conclude that a **<u>sequencing depth of 10 million reads should robustly achieve PCR-level sensitivity</u>** for the vast majority of pathogens found in respiratory samples, without depleting human nucleic acids or amplifying targets. Given our time budget of 1 hour, this requirement leads quite directly to a throughput of ca. 10M reads/hour. It is worth noting, however, that this conclusion may not hold for sample types with greater abundance of human RNA such as blood, where low-abundance pathogens such as HIV are [present at concentrations](https://translational-medicine.biomedcentral.com/articles/10.1186/s12967-020-02368-y/figures/3) requiring an order of magnitude or two greater sequencing depth for a corresponding amount of depletion.
 
 <div style="text-align:center">
+    
 |Ct|Copies per mL (approx.)|Reads per million|
-|---|---|:-:|
+|---|---|---|
 |36|10|0.1|
 |33.5|100|1|
 |31|1,000|10|
