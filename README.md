@@ -123,11 +123,11 @@ Sequencers also vary widely on two other variables: read length and single-base 
 
 <div style="text-align:center">
     
-    | Variable             | Goal        |
-    | -------------------- | ----------- |
-    | Sequencing depth     | 1-10M reads |
-    | Read length          | >25 bp      |
-    | Single-base accuracy | >95%        |
+| Variable             | Goal        |
+| -------------------- | ----------- |
+| Sequencing depth     | 1-10M reads |
+| Read length          | >25 bp      |
+| Single-base accuracy | >95%        |
 </div>
 
 
@@ -146,12 +146,9 @@ Having determined these targets for sequencing platforms, can we formulate concr
 
 
 ### Nanopore platforms
-As noted earlier, the greatest barrier for a nanopore-based diagnostic platform is the high COGS of consumables. At present, this is primarily driven by the cost of manufacturing nanopore arrays. From published patents, it is possible to infer that the design employed by the leading player, Oxford Nanopore, presently requires non-standard MEMS fabrication. This is largely driven by limited capacity of MEMS fabs globally, rather than by the fundamental cost of materials and fabrication procedures.
-
-At present, building a fab from scratch, an endeavor in the hundreds of millions of dollars, is difficult to justify given the lack of a credible demand signal. However, at volumes comparable to qPCR diagnostics (>1M units a month), such investment could be justified. Tools such as advanced market commitments, as well as credible signals of interest in a MGS diagnostic platform from national and international organizations, could pave the way towards such investments.
+As noted earlier, nanopore platforms already meet the key requirements of fast time to answer, sufficient througput and relativecly simple library preparation. However, the greatest barrier for a nanopore-based diagnostic platform is the high COGS of consumables. At present, this is primarily driven by the cost of manufacturing nanopore arrays. From published patents, it is possible to infer that the design employed by the leading player, Oxford Nanopore, presently requires non-standard MEMS fabrication. This is largely driven by limited capacity of MEMS fabs globally, rather than by the fundamental cost of materials and fabrication procedures.
 
 Another technically feasible approach would be to change the manufacturing process to a more standard and less costly one. In the context of solid-state nanopore arrays, the company Elements has [demonstrated](https://elements-ic.com/wp-content/uploads/2019/07/eNPR-–-Nanopore-Chip-assembly-and-measurement-instructions.pdf) that it is possible to directly fabricate silver electrodes on printed circuit boards. Printed circuit boards with the required area (10 squared milimeters for ONT Flongle) and feature size (down to 125 microns) are available for $0.50. Such cost reduction would enable a system with sufficient throughput that is competitive with qPCR on cost. A prototype system of this sort could likely be developed with relatively little technical risk within existing IP constraints.
-
 
 
 <!--The most interesting of these for our application are solid-state nanopore approaches, which could potentially retain many of the advantages of protein nanopore platforms, while also potentially rectifying many of its problems. Specifically, solid-state nanopore platforms promise higher accuracy, throughput, lower cost, and simpler sample preparation. However, it is worth noting that this technology is at an experimental stage: research has been underway for more than 20 years and, to date, no reproducible demonstration of near single base resolution sequencing has been shown.-->
@@ -202,8 +199,9 @@ Another key player, Oxford Nanopore (ONT), is known for its relatively affordabl
 
 What, then, could shift these market dynamics?
 
-- Push mechanisms have historically been successful in stimulating R&D in sequencing.
-- Pull mechanisms such as advanced market commitments may be appropriate here, as the target product profile is readily definable in this context, and achievable in a timeframe of less than 5 years.
+**Push mechanisms** have historically been successful in stimulating R&D in sequencing. The Human Genome Project and his successors (e.g. the $1,000 Genome Project) paved the way for technology development by direct public investment into R&D. Similarly, a $10 MGS device provides a challenging but achievable goal around which activity can be catalyzed by direct grants or other forms of support.
+
+**Pull mechanisms** such as advanced market commitments may be appropriate here, as the target product profile is readily definable in this context, and achievable in a timeframe of less than 5 years. At present, building a fab from scratch, which could pave the way towards low-cost nanopore devices, is an endeavor in the hundreds of millions of dollars and is difficult to justify given the lack of a credible demand signal. However, at volumes comparable to qPCR diagnostics (>1M units a month), such investment could be justified. Tools such as advanced market commitments, as well as credible signals of interest in a MGS diagnostic platform from national and international organizations, could pave the way towards such investments.
 
 
 
