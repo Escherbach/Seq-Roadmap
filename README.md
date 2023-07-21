@@ -46,6 +46,20 @@ As table 1 illustrates, no sequencing device currently comes close to meeting th
     <img src="images/IMG_1911.jpeg" alt="Currently available sequencing solutions" style="max-width:700px;"/>
 </div>
 
+<div style="display: flex;">
+  <div style="flex: 1;">
+    <p>
+      Here is your text. The image will be aligned to the right, and the text will wrap around it based on the size of the image.
+    </p>
+    <p>
+      You can add more paragraphs if needed, and the text will continue to flow around the image.
+    </p>
+  </div>
+  <div>
+    <img src="images/IMG_1911.jpeg" alt="Currently available sequencing solutions" style="max-width:700px;">
+  </div>
+</div>
+
 The need for rapid speaks against the majority of sequencing platforms based on colony-based approaches. Illumina's cluster generation step alone takes at least 60 minutes. In addition, this approach requires a complex set of reagents that would add significant complexity and cost to the design of a sample-to-answer system. New companies (e.g MGI, Singular Genomics) emerged following the expiration of Illumina's core intellectual property. While these are likely to bring about cost decreases.
 
 While future innovations could make some colony-based approaches compatible with our requirements[^2], a more natural category to focus is that of single-molecule approaches. Single-molecule approaches have the advantage of potentially minimal library preparation and compatibility with a real-time readout, with results delivered in minutes following sample and library preparation. The two main approaches in this category as of 2023 are nanopore sequencing and single-molecule optical (SMO) sequencing.
