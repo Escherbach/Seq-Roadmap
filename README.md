@@ -1,10 +1,3 @@
-<html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" href="tufte.css"/>
-    <link rel="stylesheet" href="latex.css"/>
-  </head>
-
 # A roadmap towards ubiquitous metagenomic sequencing
 Imagine a world in which every clinician and patient around the world had access to a simple device capable of detecting any virus or bacterium causing disease in a symptomatic patient. Such a world would be much better positioned to diagnose and treat infectious disease and to detect novel emerging pathogens before they cause a devastating pandemic. [Metagenomic sequencing](https://www.nature.com/articles/s41576-019-0113-7) (MGS) has the potential to become such a universal diagnostic. However, it is not yet ready for prime time: complex workflows and high costs prevent widespread adoption.
 
