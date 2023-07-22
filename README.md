@@ -104,16 +104,12 @@ With these constraints, what sequencing depth is required for an expected 10 or 
 
 In the [technical appendix on sensitivity](sensitivity.md), we approach this question both via modelling and by reviewing the empirical literature. Based on this exercise and interviews with practitioners, we conclude that a **<u>sequencing depth of 10 million reads should robustly achieve PCR-level sensitivity</u>** for the vast majority of pathogens found in respiratory samples, without depleting human nucleic acids or amplifying targets. Given our time budget of 1 hour, this requirement leads quite directly to a throughput of ca. 10M reads/hour. It is worth noting, however, that this conclusion may not hold for sample types with greater abundance of human RNA such as blood, where low-abundance pathogens such as HIV are [present at concentrations](https://translational-medicine.biomedcentral.com/articles/10.1186/s12967-020-02368-y/figures/3) requiring an order of magnitude or two greater sequencing depth for a corresponding amount of depletion.
 
-
-<div style="text-align:center">
-
 |Ct|Copies per mL (approx.)|Reads per million|
 |:---:|:---:|:---:|
 |36|10|0.1|
 |33.5|100|1|
 |31|1,000|10|
 |28.5|10,000|100|
-</div>
 
 
 Rough equivalence between Ct values, expected reads per million for SARS-CoV-2 in nasopharyngeal samples, no amplification and depletion. Based on [Babiker et al. (2020)](https://journals.asm.org/doi/full/10.1128/JCM.02142-20), [Kudo et al. (2020)](https://www.biorxiv.org/content/10.1101/2020.06.16.155887v1.full.pdf), [Arnaoud et al. (2021)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7929140/). See [modeling spreadsheet](https://docs.google.com/spreadsheets/d/1rXfCUE1XGXAcFTdEugw1uRm5aNi8CoAFirWUsG0BzUc/edit#gid=1993789150) for more detail.
@@ -128,14 +124,11 @@ Sequencers also vary widely on two other variables: read length and single-base 
 ## Development goals
 Having determined these targets for sequencing platforms, can we formulate concrete development goals.
 
-<div style="text-align:center">
     
 | Approach                           | Driver of device cost        | Driver of consumable cost                             | Proposed solution                                            |
 | ---------------------------------- | ---------------------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
 | Nanopore sequencing                | Already acceptable (~$1,000) | Chip area. MEMS fabrication methods presently costly. | Explore alternative fabrication methods (e.g. PCB).          |
 | Single-molecule optical sequencing | CMOS cameras.                | Library preparation kits (>$200).                     | Design around shorter reads (<$50). Consumer-grade cameras are sufficient given imaging area and error rate requirement. |
-
-</div>
 
 
 ### Nanopore platforms
