@@ -122,16 +122,12 @@ Sequencers also vary widely on two other variables: read length and single-base 
     <img src="https://lh6.googleusercontent.com/_gt7HtPp-hr1pLQ5G2EOB8c5iKvB2T0hdnOiX5uQu2nZ0QKMJ213-B0lMKNBnm16OhbUrh1Jm2Efui_ZuAVSbYVePCOBqVepE5Xu4eP10i_0JfUU65JNo9IA0EUbsJkAuuzHLQQ62iQl7tmS6z6MD6c" alt="Read length" style="max-width:700px;"/>
 </div>
 
-<div style="text-align:center">
-    
-| Variable             | Goal        |
-| -------------------- | ----------- |
-| Sequencing depth     | 1-10M reads |
-| Read length          | >25 bp      |
-| Single-base accuracy | >95%        |
-</div>
-
-
+|Ct|Copies per mL (approx.)|Reads per million|
+|:---:|:---:|:---:|
+|36|10|0.1|
+|33.5|100|1|
+|31|1,000|10|
+|28.5|10,000|100|
 
 ## Development goals
 Having determined these targets for sequencing platforms, can we formulate concrete development goals.
