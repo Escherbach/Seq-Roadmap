@@ -4,5 +4,3 @@ plugins:
   - jekyll-relative-links
 kramdown:
   input: GFM
-include:
-  - assets
