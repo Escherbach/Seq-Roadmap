@@ -196,7 +196,7 @@ Another key player, Oxford Nanopore (ONT), is known for its relatively affordabl
 
 
 <div style="text-align:center">
-    <img src="images/seq_capacity.jpeg" alt="Sequencing capacity" style="max-width:700px;"/>
+    <img src="images/seq_capacity.png" alt="Sequencing capacity" style="max-width:700px;"/>
 </div>
 
 What, then, could shift these market dynamics?
