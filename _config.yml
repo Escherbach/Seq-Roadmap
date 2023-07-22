@@ -1,4 +1,2 @@
 markdown: kramdown
 title: A roadmap towards ubiquitous metagenomic sequencing
-remote_theme: minima 
-plugins: jekyll-relative-links
