@@ -1,8 +1,6 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>A roadmap towards ubiquitous metagenomic sequencing</title>
     <link rel="stylesheet" href="tufte.css"/>
     <link rel="stylesheet" href="latex.css"/>
   </head>
