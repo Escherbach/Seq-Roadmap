@@ -198,6 +198,10 @@ Another key player, Oxford Nanopore (ONT), is known for its relatively affordabl
 ![img](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F04ac909d-664e-4ba7-8027-eddef4ae3d6c_671x465.png)
 </div>
 
+<div style="text-align:center">
+    <img src="images/seq_capacity.jpeg" alt="Currently available sequencing solutions" style="max-width:700px;"/>
+</div>
+
 What, then, could shift these market dynamics?
 
 **Push mechanisms** have historically been successful in stimulating R&D in sequencing. The Human Genome Project and his successors (e.g. the $1,000 Genome Project) paved the way for technology development by direct public investment into R&D. Similarly, a $10 MGS device provides a challenging but achievable goal around which activity can be catalyzed by direct grants or other forms of support.
