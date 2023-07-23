@@ -138,7 +138,7 @@ Another technically feasible approach would be to change the manufacturing proce
 
 <div style="text-align:center">
     <img src="images/image8.png" alt="Sequencing capacity" style="max-width:700px;"/>
-    <p>Composition of a MinION device. Source: <a href="https://www.nature.com/articles/s41587-021-01108-x">Wang et al. (2021)</a>.</p>
+    <p>Composition of an ONT MinION device. Source: <a href="https://www.nature.com/articles/s41587-021-01108-x">Wang et al. (2021)</a>.</p>
 </div>
 
 <!--The most interesting of these for our application are solid-state nanopore approaches, which could potentially retain many of the advantages of protein nanopore platforms, while also potentially rectifying many of its problems. Specifically, solid-state nanopore platforms promise higher accuracy, throughput, lower cost, and simpler sample preparation. However, it is worth noting that this technology is at an experimental stage: research has been underway for more than 20 years and, to date, no reproducible demonstration of near single base resolution sequencing has been shown.-->
