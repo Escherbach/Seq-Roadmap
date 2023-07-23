@@ -6,9 +6,6 @@ Imagine a world in which every clinician and patient around the world had access
 
 In this report, we ask how MGS could become widely available, at least as much as diagnostic PCR machines are today. The answer we arrive at is that a device capable of performing 10 million RNA reads in less than an hour with minimal library preparation would be well positioned to deliver on this goal. We then review the current technological landscape and conclude that adaptation of least two mature approaches, single-molecule optical and nanopore sequencing, could meet these specifications if optimized for human respiratory samples.
 
-In his later books{% sidenote 'two' 'http://www.edwardtufte.com/tufte/books_be'%}, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and sets the first few words of the sentence in small caps. To accomplish this using this style, enclose the sentence fragment you want styled with small caps in a custom Liquid tag called 'newthought' like so:
-
-
 ## Motivation
 The first COVID-19 infection occured in mid-October to mid-November of 2019, [at least six weeks earlier than the Wuhan cluster of infections was identified in late December 2019](https://www.science.org/doi/10.1126/science.abf8003). The SARS-CoV-2 genome was only made publicly available in January 2020, more than two months after the first human transmission. This delay resulted in millions of deaths and trillions of dollars in economic costs.
 
