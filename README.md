@@ -124,7 +124,7 @@ Sequencers also vary widely on two other variables: read length and single-base 
 ## Development goals
 Having determined these targets for sequencing platforms, can we formulate concrete development goals.
 
-    
+
 | Approach                           | Driver of device cost        | Driver of consumable cost                             | Proposed solution                                            |
 | ---------------------------------- | ---------------------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
 | Nanopore sequencing                | Already acceptable (~$1,000) | Chip area. MEMS fabrication methods presently costly. | Explore alternative fabrication methods (e.g. PCB).          |
@@ -136,6 +136,10 @@ As noted earlier, nanopore platforms already meet the key requirements of fast t
 
 Another technically feasible approach would be to change the manufacturing process to a more standard and less costly one. In the context of solid-state nanopore arrays, the company Elements has [demonstrated](https://elements-ic.com/wp-content/uploads/2019/07/eNPR-–-Nanopore-Chip-assembly-and-measurement-instructions.pdf) that it is possible to directly fabricate silver electrodes on printed circuit boards. Printed circuit boards with the required area (10 squared milimeters for ONT Flongle) and feature size (down to 125 microns) are available for $0.50. Such cost reduction would enable a system with sufficient throughput that is competitive with qPCR on cost. A prototype system of this sort could likely be developed with relatively little technical risk within existing IP constraints.
 
+<div style="text-align:center">
+    <img src="images/image8.png" alt="Sequencing capacity" style="max-width:700px;"/>
+    <p>Composition of a MinION device. Source: <a href="https://www.nature.com/articles/s41587-021-01108-x">Wang et al. (2021)</a>.</p>
+</div>
 
 <!--The most interesting of these for our application are solid-state nanopore approaches, which could potentially retain many of the advantages of protein nanopore platforms, while also potentially rectifying many of its problems. Specifically, solid-state nanopore platforms promise higher accuracy, throughput, lower cost, and simpler sample preparation. However, it is worth noting that this technology is at an experimental stage: research has been underway for more than 20 years and, to date, no reproducible demonstration of near single base resolution sequencing has been shown.-->
 
