@@ -3,20 +3,13 @@
 /* Import ET Book styles
    adapted from https://github.com/edwardtufte/et-book/blob/gh-pages/et-book.css */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    width: 100%;
+    width: 60%;
     margin-left: 0;
     margin-right: auto;
     padding-left: 0;
     background-color: #fffff8;
     color: #111;
-    max-width: 1400px;
     counter-reset: sidenote-counter;
 }
 
