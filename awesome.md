@@ -81,9 +81,8 @@ While achieving the same simplicity for MGS may seem like a tall order, it is im
 
 If we strip sequencing to its bare essentials, then, the complexity need not be much greater than that of qPCR. Like qPCR, sample preparation will, for the foreseeable future, need to involve cell lysis and, unless before direct RNA sequencing becomes more reliable, a reverse transcription step to convert RNA to complementary DNA. Further needed removal of unwanted nucleic acid material (in this case, DNA with DNAase) and, in most cases, the addition of adapters for the sequencing platform in question.
 
-<div style="text-align:center">
-    <img src="images/IMG_1893.jpeg" alt="Cartridge sketch" style="max-width:700px;"/>
-</div>
+
+ <p><span class="marginnote"><img src="images/IMG_1893.jpeg" alt="Cartridge sketch"/>A sketch of a sample and library preparation cartridge, Nava Whiteford</em>.</span> But tight integration of graphics with text is central to Tufte’s work even when those graphics are ancillary to the main body of a text. In many of those cases, a margin figure may be most appropriate. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a <code>p</code> tag, as seen to the right of this paragraph.</p>
 
 
 Developing a cartridge for this use case and integrating the whole system into one box can be done with relatively little technical risk. Why, then, has no player developed such a system? The key reason, we believe, is the lack of a platform that could achieve the sufficient sequencing depth at a low enough cost without the need to analyze multiple samples in parallel. In the next section, we ask what the required sequencing depth for a MGS diagnostic is likely to be.
