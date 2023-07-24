@@ -7,10 +7,10 @@ body {
     width: 100%;
     margin-left: 0;
     margin-right: auto;
-    padding-left: 2%;
+    padding-left: 0;
     background-color: #fffff8;
     color: #111;
-    max-width: 1200px;
+    max-width: 1400px;
     counter-reset: sidenote-counter;
 }
 
