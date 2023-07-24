@@ -117,7 +117,7 @@ Rough equivalence between Ct values, expected reads per million for SARS-CoV-2 i
 
 Sequencers also vary widely on two other variables: read length and single-base accuracy. Both of these features are highly desirable in research contexts where changes of even a single mutation are often the object of study. However, [our simulations](https://aseq.substack.com/p/what-length-reads-to-you-need-for) suggest that for the task of correctly classifying a known virus, or detecting a high abundance of unknown material, read length and accuracy requirements are comparatively modest. We estimate that **<u>read length of only 25 bp and single-base accuracy of 95% are sufficient for unique viral detection</u>**, given sufficient sequencing depth. This has important implications for technology development goals, as we discuss in the next section.
 
- <p><span class="marginnote"><img src="https://lh6.googleusercontent.com/_gt7HtPp-hr1pLQ5G2EOB8c5iKvB2T0hdnOiX5uQu2nZ0QKMJ213-B0lMKNBnm16OhbUrh1Jm2Efui_ZuAVSbYVePCOBqVepE5Xu4eP10i_0JfUU65JNo9IA0EUbsJkAuuzHLQQ62iQl7tmS6z6MD6c" alt="Read length" style="max-width:700px;"/>A sketch of a sample and library preparation cartridge, Nava Whiteford</em>.</span> But tight integration of graphics with text is central to Tufte’s work even when those graphics are ancillary to the main body of a text. In many of those cases, a margin figure may be most appropriate. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a <code>p</code> tag, as seen to the right of this paragraph.</p>
+ <p><span class="marginnote"><img src="https://lh6.googleusercontent.com/_gt7HtPp-hr1pLQ5G2EOB8c5iKvB2T0hdnOiX5uQu2nZ0QKMJ213-B0lMKNBnm16OhbUrh1Jm2Efui_ZuAVSbYVePCOBqVepE5Xu4eP10i_0JfUU65JNo9IA0EUbsJkAuuzHLQQ62iQl7tmS6z6MD6c" alt="Read length"/>A sketch of a sample and library preparation cartridge, Nava Whiteford</em>.</span> But tight integration of graphics with text is central to Tufte’s work even when those graphics are ancillary to the main body of a text. In many of those cases, a margin figure may be most appropriate. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a <code>p</code> tag, as seen to the right of this paragraph.</p>
 
 ## Development goals
 Having determined these targets for sequencing platforms, can we formulate concrete development goals.
@@ -136,21 +136,16 @@ Another technically feasible approach would be to change the manufacturing proce
 
  <p><span class="marginnote"><img src="images/image8.png" alt="nanopore sequencing" style="max-height: 400px;"/>Composition of an ONT MinION device. Source: <a href="https://www.nature.com/articles/s41587-021-01108-x">Wang et al. (2021)</a></span> But tight integration of graphics with text is central to Tufte’s work even when those graphics are ancillary to the main body of a text. In many of those cases, a margin figure may be most appropriate. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a <code>p</code> tag, as seen to the right of this paragraph.</p>
 
-<div style="text-align:center">
-    <img src="images/image8.png" alt="Sequencing capacity" style="max-width:700px;"/>
-    <p>Composition of an ONT MinION device. Source: <a href="https://www.nature.com/articles/s41587-021-01108-x">Wang et al. (2021)</a>.</p>
-</div>
 
 <!--The most interesting of these for our application are solid-state nanopore approaches, which could potentially retain many of the advantages of protein nanopore platforms, while also potentially rectifying many of its problems. Specifically, solid-state nanopore platforms promise higher accuracy, throughput, lower cost, and simpler sample preparation. However, it is worth noting that this technology is at an experimental stage: research has been underway for more than 20 years and, to date, no reproducible demonstration of near single base resolution sequencing has been shown.-->
 
 ### Optical platforms
 Single-molecule optical technologies were brought to the market by Helicos (now defunct) or [Pacific Biosciences](https://www.pacb.com/). Considering this class of technologies as a candidate platform may be surprising, as they have generally been embodied as costly, "fridge-sized" instruments with long library preparation (>[3 hours](https://www.pacb.com/products-and-services/consumables/library-prep-and-barcoding-kits/)). However, this is driven not by the fundamental needs of the platform, but rather by the market demand for high single-base accuracy and long read length. If these requirements are relaxed, single-molecule optical approaches can achieve very simple sample preparation and a low cost of consumables.
 
-One of the authors (Nava Whiteford), has previously proposed a minimalist adaptation of the Helicos platform, based on single-molecule sequencing-by-synthesis, for infectious disease testing. This method's combination of short reads (~25 bp) and base calling accuracy of ~95% has made it a poor fit for whole genome sequencing. At the same time, optical instrumentation has historically been too expensive for this platform to target a low instrument cost (cMOS cameras cost over $200,000). However, in 2023, $300 consumer-grade cameras are sufficientl for this sequencing approach and a full instrument can be assembled for <$1,000. 
 
-<div style="text-align:center">
-<img src="images/IMG_1895.jpeg" alt="Reticula sketch" style="max-width:700px;"/>
-</div>
+
+ <p><span class="marginnote"><img src="images/IMG_1895.jpeg" alt="nanopore sequencing" style="max-height: 400px;"/>Sketch of a cost-optimized single-molecule optical platform</span> One of the authors (Nava Whiteford), has previously proposed a minimalist adaptation of the Helicos platform, based on single-molecule sequencing-by-synthesis, for infectious disease testing. This method's combination of short reads (~25 bp) and base calling accuracy of ~95% has made it a poor fit for whole genome sequencing. At the same time, optical instrumentation has historically been too expensive for this platform to target a low instrument cost (cMOS cameras cost over $200,000). However, in 2023, $300 consumer-grade cameras are sufficient for this sequencing approach and a full instrument can be assembled for <$1,000. </p>
+
 
 Like nanopore sequencing, this platform is capable of real-time analysis and at a read length of 25bp can finish a run in minutes. The chief advantage of this approach lies in extremely simple library preparation and the potential for direct RNA sequencing. The key uncertainty is in throughput: the goal of 1M reads is easily achievable in a fixed imaging region, whereas 10M reads may prove difficult to achieve.
 
@@ -183,10 +178,8 @@ By [our estimates](https://41j.com/blog/2022/09/global-sequencing-capability-not
 
 Another key player, Oxford Nanopore (ONT), is known for its relatively affordable, miniaturized devices such as the MinIon or Flongle. In 2021, however, fully 55.7% of ONT's revenue was generated by its 67 [PromethION](https://nanoporetech.com/products/promethion) instruments (see page 40 of [ONT's annual report](https://nanoporetech.com/sites/default/files/s3/investors/reports/ONT%20Annual%20Report%202021.pdf)), each of which can generate up to 12 Tb of data, with device costs ranging from $225,000 to $450,000.
 
+ <p><span class="marginnote"><img src="images/seq_capacity.png" alt="nanopore sequencing" style="max-height: 400px;"/>Estimates of global sequencing capacity</span> <p>By <a href="https://41j.com/blog/2022/09/global-sequencing-capability-notes/">our estimates</a>, more than half of global sequencing capacity in terms of number of bases sequenced annually is accounted for by Illumina NovaSeq alone. NovaSeq is a $1 million instrument that yields up to 6 Tb of data per run with an error rate on the order of 0.1%. A single run can cost more than $5,000. This large share of sequencing capacity is accounted for by only some 1500 instruments in large laboratories.</p>
 
-<div style="text-align:center">
-    <img src="images/seq_capacity.png" alt="Sequencing capacity" style="max-width:700px;"/>
-</div>
 
 What, then, could shift these market dynamics?
 
