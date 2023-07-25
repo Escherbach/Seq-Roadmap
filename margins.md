@@ -47,17 +47,18 @@ In particular, we  believe that MGS-based diagnostics should aspire to meet thes
 ## Current sequencing landscape
 As table 1 illustrates, no sequencing device currently comes close to meeting these specifications. Sensitivity itself is achievable with sufficient sequencing depth (see [section on sensitivity](#sensitivity)) but incompatible with the other requirements of cost and time to answer. Workflows involve complex sequential steps in sample and library preparation and typically require hours of work by trained experts. Automated and integrated solutions are only available at high costs for specialized laboratories. Cost per sample can be reduced below $10 only by sequencing many samples in parallel, which is not practical in the point-of-care context, as this step introduces both a significant delay in time to answer.
 
-<p><span class="marginnote">Table 1. Documented and estimated parameters for available sequencing solutions.</span></p>
+<p><span class="marginnote"><br><br><br><br><br>Table 1. Documented and estimated parameters for available sequencing solutions.</span></p>
 
 <div style="text-align:center">
-    <img src="images/IMG_1911.jpeg" alt="Currently available sequencing solutions" style="max-width:700px;"/>
-</div> </p>
+    <img src="images/IMG_1911.jpeg" alt="Currently available sequencing solutions" style="max-height:600px;"/>
+</div>
+
 
 
 
 The need for rapid speaks against the majority of sequencing platforms based on **<u>colony-based approaches</u>**. Illumina's cluster generation step alone takes at least 60 minutes. In addition, this approach requires a large set of reagents that would add significant complexity and cost to the design of a sample-to-answer system. New companies (e.g MGI, Singular Genomics) emerged following the expiration of Illumina's core intellectual property. While this development is likely to decrease consumable and device costs by driving down margins and enabling innovations, the new players are unlikely to change this fundamental limitations. To our knowledge, the most serious attempt at decreasing the time requirements is the use of [Lighting Terminators](https://www.genomeweb.com/sequencing/lasergen-says-its-new-reversible-terminators-could-improve-several-sequencing-pl). One company, 454.bio, has set a goal to achieve a 1-hour sample-to-answer runtime with this approach.
 
-While this and other future innovations could make some colony-based approaches viable, a more natural category to focus on is that of **<u>single-molecule approaches</u**>. Single-molecule approaches have the advantage of potentially minimal library preparation and compatibility with a real-time readout, with results delivered in minutes following sample and library preparation. The two main approaches in this category as of 2023 are nanopore sequencing and single-molecule optical (SMO) sequencing.
+While this and other future innovations could make some colony-based approaches viable, a more natural category to focus on is that of **<u>single-molecule approaches</u>**. Single-molecule approaches have the advantage of potentially minimal library preparation and compatibility with a real-time readout, with results delivered in minutes following sample and library preparation. The two main approaches in this category as of 2023 are nanopore sequencing and single-molecule optical (SMO) sequencing.
 
 As of 2023, the cheapest available instrument for runs on single samples is Oxford Nanopore (ONT)'s Flongle, whose consumables sells for $90 and likely costs ca. $50 to make. Optimized clinical workflows utilizing real-time sequencing with ONT's MinION can achieve a time to answer of 6 hours ([Charalampous 2019](https://pubmed.ncbi.nlm.nih.gov/31235920/)). This is driven primarily by sample and library preparation, as sequencing itself takes <30 minutes for pathogen classification.
 
