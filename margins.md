@@ -47,7 +47,15 @@ In particular, we  believe that MGS-based diagnostics should aspire to meet thes
 ## Current sequencing landscape
 As table 1 illustrates, no sequencing device currently comes close to meeting these specifications. Sensitivity itself is achievable with sufficient sequencing depth (see [section on sensitivity](#sensitivity)) but incompatible with the other requirements of cost and time to answer. Workflows involve complex sequential steps in sample and library preparation and typically require hours of work by trained experts. Automated and integrated solutions are only available at high costs for specialized laboratories. Cost per sample can be reduced below $10 only by sequencing many samples in parallel, which is not practical in the point-of-care context, as this step introduces both a significant delay in time to answer.
 
-<p><span class="marginnote"><br><br><br><br><br>Table 1. Documented and estimated parameters for available sequencing solutions.</span></p>
+<p><span class="marginnote"><br><br><br>Table 1. Documented and estimated parameters for available sequencing solutions.
+a. If a 36SE run on the SB flow cell were offered, we would expect a faster (perhaps around 4-6 hr, similar to the MiSeq) run time.<br>
+b. Run time includes DNA nanoball loading into the flow cell.<br>
+c. Nanopore sequencing allows real-time analysis during the run. Runs can be stopped within minutes of starting or up to 72 hrs.<br>
+d. Nanopore sequencing scales in throughput in a roughly linear manner as fragment length decreases. Ref 30 demonstrates 0.625 reads / hr with 400 bp amplicons in S1.<br>
+e. Nanopore sequencing is capable of sequencing a wide range of nucleotide lengths (>100 kb). 200 bp was chosen to set a fixed throughput value.<br>
+f. Direct RNA sequencing on the MinION is less mature and currently exhibits notably poorer performance.<br>
+g. Flongle exhibits roughly 5x lower throughput than a MinION flow cell
+</span></p>
 
 <div style="text-align:center">
     <img src="images/IMG_1911.jpeg" alt="Currently available sequencing solutions" style="max-height:600px;"/>
