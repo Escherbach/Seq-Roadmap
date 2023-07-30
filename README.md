@@ -1,7 +1,7 @@
 <head>
     <link rel="stylesheet" href="tufte.css"/>
   </head>
-
+<p><span class="marginnote">Authors: Nava Whiteford, Andrew Heron, Leonard McCline, Ales Flidr, Jacob Swett</p>
 Imagine a world in which every clinician and patient around the world had access to a simple device capable of detecting any virus or bacterium causing disease in a symptomatic patient. Such a world would be much better positioned to diagnose and treat infectious disease and to detect novel emerging pathogens before they cause a devastating pandemic. [Metagenomic sequencing](https://www.nature.com/articles/s41576-019-0113-7) (MGS) has the potential to become such a universal diagnostic. However, it is not yet ready for prime time: complex workflows and high costs prevent widespread adoption.
 
 In this report, we ask how MGS could become widely available, at least as much as diagnostic PCR machines are today. The answer we arrive at is that a device capable of performing 10 million RNA reads in less than an hour with minimal library preparation would be well positioned to deliver on this goal. We then review the current technological landscape and conclude that adaptation of least two mature approaches, single-molecule optical and nanopore sequencing, could meet these specifications if optimized for human respiratory samples.
@@ -84,8 +84,7 @@ Given the ease of use and efficacy of Cepheid's sample-to-answer qPCR platform, 
 Cepheid's first and second generation instruments were incapable of processing raw samples directly. To establish a comprehensive sample-to-answer system, Cepheid tackled this limitation by incorporating sample preparation into the platform.  This was accomplished by designing a fluidic cartridge capable of processing raw samples and concurrently integrating a qPCR reaction tube. Reagents can be preloaded, with no fluidic coupling to the instrument. The instrument interfaces with the cartridge via a reagent selection valve and plunger. The cost of goods for the cartridge, including reagents, [has been estimated at $10](https://msfaccess.org/sites/default/files/2019-12/2018%20COGS%20analysis%20of%20Xpert%20MTB_RIF%20Ultra%20cartridges.pdf) and marketed at prices typically exceeding $20.
 
 
-
- <p><span class="marginnote"><img src="images/IMG_1893.jpeg" alt="Cartridge sketch"/>A sketch of a sample and library preparation cartridge, Nava Whiteford.</span> 
+<p><span class="marginnote"><img src="images/IMG_1893.jpeg" alt="Cartridge sketch"/>A sketch of a sample and library preparation cartridge, Nava Whiteford.</span> 
 While achieving the same simplicity for MGS may seem like a tall order, it is important to note that currently available have been designed to be versatile and serve a number of applications. For the MGS use case, workflow can commit to a particular sample type (e.g. nasopharyngeal, upper nasal or saliva), consistent input volume and RNA sequencing only. If we strip sequencing to its bare essentials, then, the complexity need not be much greater than that of qPCR. Like qPCR, sample preparation will, for the foreseeable future, need to involve cell lysis and, unless before direct RNA sequencing becomes more reliable, a reverse transcription step to convert RNA to complementary DNA. Further needed removal of unwanted nucleic acid material (in this case, DNA with DNAase) and, in most cases, the addition of adapters for the sequencing platform in question.</p>
 
 
