@@ -124,14 +124,7 @@ Rough equivalence between Ct values, expected reads per million for SARS-CoV-2 i
 Sequencers also vary widely on two other variables: read length and single-base accuracy. Both of these features are highly desirable in research contexts where changes of even a single mutation are often the object of study. However, [our simulations](https://aseq.substack.com/p/what-length-reads-to-you-need-for) suggest that for the task of correctly classifying a known virus, or detecting a high abundance of unknown material, read length and accuracy requirements are comparatively modest. We estimate that **<u>read length of only 25 bp and single-base accuracy of 95% are sufficient for unique viral detection</u>**, given sufficient sequencing depth. This has important implications for technology development goals, as we discuss in the next section.
 
 ## Development goals
-Having determined these targets for sequencing platforms, can we formulate concrete development goals.
-
-
-| Approach                           | Driver of device cost        | Driver of consumable cost                             | Proposed solution                                            |
-| ---------------------------------- | ---------------------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
-| Nanopore sequencing                | Already acceptable (~$1,000) | Chip area. MEMS fabrication methods presently costly. | Explore alternative fabrication methods (e.g. PCB).          |
-| Single-molecule optical sequencing | CMOS cameras.                | Library preparation kits (>$200).                     | Design around shorter reads (<$50). Consumer-grade cameras are sufficient given imaging area and error rate requirement. |
-
+Having determined these targets for sequencing platforms, we can now formulate concrete development goals for the previously mentioned candidate single-molecule platforms, focusing on nanopore and single-molecule optical sequencing. It is worth emphasizing that while we expect viable solutions in the next 5-10 years to come from these two categories, we cannot confidently rule out that a viable solution will emerge from a colony-based method (e.g. if cluster generation time is reduced by an order of magnitude) or from unexpectedly fast progress on a novel technology (such as solid-state nanopores).
 
 ### Nanopore platforms
  <p><span class="marginnote"> MinION is typically known to achieve on the order of 100,000 reads in an hour. However, these numbers are achieved in typical experiments that utilize MinION’s long reads and more reads can be achieved when input nucleic acid is more fragmented. Minion has 512 active channels, so if we assume the system is saturated (sufficient nucleic acid in the chamber for the throughput to function optimally) and a standard translocation speed of 420 bp/s, we need an average fragment length of ~775 bp to get 1M reads / hr.</a></span> </p>
@@ -144,8 +137,6 @@ Another technically feasible approach would be to change the manufacturing proce
 
 ### Optical platforms
 Single-molecule optical technologies were brought to the market by Helicos (now defunct) or [Pacific Biosciences](https://www.pacb.com/). Considering this class of technologies as a candidate platform may be surprising, as they have generally been embodied as costly, "fridge-sized" instruments with long library preparation (>[3 hours](https://www.pacb.com/products-and-services/consumables/library-prep-and-barcoding-kits/)). However, this is driven not by the fundamental needs of the platform, but rather by the market demand for high single-base accuracy and long read length. If these requirements are relaxed, single-molecule optical approaches can achieve very simple sample preparation and a low cost of consumables.
-
-
 
  <p><span class="marginnote"><img src="images/IMG_1895.jpeg" alt="nanopore sequencing" style="max-height: 400px;"/>Sketch of a cost-optimized single-molecule optical platform</span> One of the authors (Nava Whiteford), has previously proposed a minimalist adaptation of the Helicos platform, based on single-molecule sequencing-by-synthesis, for infectious disease testing. This method's combination of short reads (~25 bp) and base calling accuracy of ~95% has made it a poor fit for whole genome sequencing. At the same time, optical instrumentation has historically been too expensive for this platform to target a low instrument cost (cMOS cameras cost over $200,000). However, in 2023, $300 consumer-grade cameras are sufficient for this sequencing approach and a full instrument can be assembled for <$1,000. </p>
 
@@ -162,6 +153,13 @@ A key advantage of an optical approach relative to nanopore sequencing is that i
 
 A particularly promising avenue is that of [electro-optical zero-mode waveguides](https://onlinelibrary.wiley.com/doi/10.1002/adma.202108479), which may enable substantially lower input requirements, obviating the need for random amplification of nucleic acids in a sample.
 
+|**Platform**|**Challenge**|**R&D or engineering goals**|
+|---|---|---|
+|Nanopore|Consumable cost|Shift to conventional fabrication methods or increase pore density.|
+||Throughput|Fragment RNA during sample prep.|
+|Optical (PacBio)|Device cost|Commit to single workflow, employ cheaper optical instrumentation (e.g. TIRF)|
+||Long library prep and runtime|Sacrifice read length and single-base accuracy to simplify library prep.|
+|Optical (Helicos, Reticula)|Low TRL|Invest in development of novel chemistries.|
 
 <!--### Fast, pathogen-agnostic depletion methods-->
 
@@ -184,11 +182,7 @@ Another key player, Oxford Nanopore (ONT), is known for its relatively affordabl
  <p><span class="marginnote"><img src="images/seq_capacity.png" alt="nanopore sequencing" style="max-height: 400px;"/>Estimates of global sequencing capacity</span> <p>By <a href="https://41j.com/blog/2022/09/global-sequencing-capability-notes/">our estimates</a>, more than half of global sequencing capacity in terms of number of bases sequenced annually is accounted for by Illumina NovaSeq alone. NovaSeq is a $1 million instrument that yields up to 6 Tb of data per run with an error rate on the order of 0.1%. A single run can cost more than $5,000. This large share of sequencing capacity is accounted for by only some 1500 instruments in large laboratories.</p>
 
 
-What, then, could shift these market dynamics?
-
-**Push mechanisms** have historically been successful in stimulating R&D in sequencing. The Human Genome Project and his successors (e.g. the $1,000 Genome Project) paved the way for technology development by direct public investment into R&D. Similarly, a $10 MGS device provides a challenging but achievable goal around which activity can be catalyzed by direct grants or other forms of support.
-
-**Pull mechanisms** such as advanced market commitments may be appropriate here, as the target product profile is readily definable in this context, and achievable in a timeframe of less than 5 years. At present, building a fab from scratch, which could pave the way towards low-cost nanopore devices, is an endeavor in the hundreds of millions of dollars and is difficult to justify given the lack of a credible demand signal. However, at volumes comparable to qPCR diagnostics (>1M units a month), such investment could be justified. Tools such as advanced market commitments, as well as credible signals of interest in a MGS diagnostic platform from national and international organizations, could pave the way towards such investments.
+What, then, could shift these market dynamics? Broadly, we see two approaches to this problem. **Push mechanisms** have historically been successful in stimulating R&D in sequencing. The Human Genome Project and his successors (e.g. the $1,000 Genome Project) paved the way for technology development by direct public investment into R&D. Similarly, a $10 MGS device provides a challenging but achievable goal around which activity can be catalyzed by direct grants or other forms of support. **Pull mechanisms** such as advanced market commitments may be appropriate here, as the target product profile is readily definable in this context, and achievable in a timeframe of less than 5 years. At present, building a fab from scratch, which could pave the way towards low-cost nanopore devices, is an endeavor in the hundreds of millions of dollars and is difficult to justify given the lack of a credible demand signal. However, at volumes comparable to qPCR diagnostics (>1M units a month), such investment could be justified. Tools such as advanced market commitments, as well as credible signals of interest in a MGS diagnostic platform from national and international organizations, could pave the way towards such investments.
 
 
 
