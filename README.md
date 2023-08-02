@@ -67,7 +67,7 @@ g. Flongle exhibits roughly 5x lower throughput than a MinION flow cell
 </div>
 
 
-The need for rapid speaks against the majority of sequencing platforms based on **<u>colony-based approaches</u>**. Illumina's cluster generation step alone takes at least 60 minutes. In addition, this approach requires a large set of reagents that would add significant complexity and cost to the design of a sample-to-answer system. New companies (e.g MGI, Singular Genomics) emerged following the expiration of Illumina's core intellectual property. While this development is likely to decrease consumable and device costs by driving down margins and enabling innovations, the new players are unlikely to change this fundamental limitations. To our knowledge, the most serious attempt at decreasing the time requirements is the use of [Lighting Terminators](https://www.genomeweb.com/sequencing/lasergen-says-its-new-reversible-terminators-could-improve-several-sequencing-pl). One company, 454.bio, has set a goal to achieve a 1-hour sample-to-answer runtime with this approach.
+The need for rapid results speaks against the majority of sequencing platforms based on **<u>colony-based approaches</u>**. Illumina's [cluster generation step alone takes at least 60 minutes](https://aseq.substack.com/p/why-does-cluster-generation-take). In addition, this approach requires a large set of reagents that would add significant complexity and cost to the design of a sample-to-answer system. New companies (e.g MGI, Singular Genomics) emerged following the expiration of Illumina's core intellectual property. While this development is likely to decrease consumable and device costs by driving down margins and enabling innovations, the new players are unlikely to change this fundamental limitations. To our knowledge, the most serious attempt at decreasing the time requirements is the use of [Lighting Terminators](https://www.genomeweb.com/sequencing/lasergen-says-its-new-reversible-terminators-could-improve-several-sequencing-pl). One company, 454.bio, has set a goal to achieve a 1-hour sample-to-answer runtime with this approach.
 
 While this and other future innovations could make some colony-based approaches viable, a more natural category to focus on is that of **<u>single-molecule approaches</u>**. Single-molecule approaches have the advantage of potentially minimal library preparation and compatibility with a real-time readout, with results delivered in minutes following sample and library preparation. The two main approaches in this category as of 2023 are nanopore sequencing and single-molecule optical (SMO) sequencing.
 
@@ -160,7 +160,7 @@ A particularly promising avenue is that of [electro-optical zero-mode waveguides
 |**Platform**|**Challenge**|**R&D or engineering goals**|
 |---|---|---|
 |Nanopore|Consumable cost|Shift to conventional fabrication methods or increase pore density.|
-||Throughput|Fragment RNA during sample prep.|
+||Throughput|Already sufficient assuming for short reads; translocation speed could be higher if single-base accuracy is relaxed|
 |Optical (PacBio)|Device cost|Commit to single workflow, employ cheaper optical instrumentation (e.g. TIRF)|
 ||Long library prep and runtime|Sacrifice read length and single-base accuracy to simplify library prep.|
 |Optical (Helicos, Reticula)|Low TRL|Invest in development of novel chemistries.|
