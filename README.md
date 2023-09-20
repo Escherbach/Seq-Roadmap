@@ -4,7 +4,7 @@
 <p><span class="marginnote">Authors: Nava Whiteford, Andrew Heron, Leonard McCline, Ales Flidr, Jacob Swett.
 NW performed the majority of research and analysis. AH provided guidance on research and analysis. LM provided research assistance and performed modeling. AF conducted expert interviews and edited the document. JS conceptualized the project.
     Funding was provided by <a href="https://www.openphilanthropy.org">Open Philanthropy</a> and organized by <a href="https://www.convergentresearch.org">Convergent Research.</a>
-</span></p>
+
 <div class="keywords">
 <p>metagenomic sequencing | sample preparation | clinical microbiology |
 single-molecule sequencing | technology roadmap</p>
@@ -17,13 +17,15 @@ single-molecule sequencing | technology roadmap</p>
 identify emerging pathogens. SARS-CoV-2 circulated in human populations
 as an unknown pneumonia, undetected by standard-of-care diagnostics, for
 an estimated 4-8 weeks <span class="citation"
-data-cites="Pekar2021"></span> before a novel coronavirus was identified
-in infected samples by unbiased <span data-acronym-label="MGS"
-data-acronym-form="singular+short">MGS</span> <span class="citation"
-data-cites="Zhu2020"></span>. This delay lost valuable time for
-addressing the pandemic, which has resulted in millions of deaths and
-trillions of dollars in economic costs <span class="citation"
-data-cites="glennerster2023calculating"></span>.</p>
+data-cites="Pekar2021">(Pekar et al. 2021)</span> before a novel
+coronavirus was identified in infected samples by unbiased <span
+data-acronym-label="MGS" data-acronym-form="singular+short">MGS</span>
+<span class="citation" data-cites="Zhu2020">(Zhu et al. 2020)</span>.
+This delay lost valuable time for addressing the pandemic, which has
+resulted in millions of deaths and trillions of dollars in economic
+costs <span class="citation"
+data-cites="glennerster2023calculating">(Glennerster, Snyder, and Tan
+2023)</span>.</p>
 <p>Imagine if, instead, every clinician and patient around the world had
 access to a simple device capable of detecting any virus, bacterium or
 other pathogen causing disease in a symptomatic patient. Such a world
@@ -32,28 +34,30 @@ and to detect novel emerging pathogens before they cause a devastating
 pandemic.</p>
 <p>MGS has demonstrated the potential to become such a near-universal
 diagnostic <span class="citation"
-data-cites="Chiu2019 schlaberg_viral_2017 Zinter2019 Charalampous2019"></span>
-and is already saving lives by informing clinical decisions for a
-variety of symptoms and sample types <span class="citation"
-data-cites="edgeworth2023respiratory"></span>. However, it is not yet
-ready for prime time: complex workflows and high costs prevent
-widespread adoption <span class="citation"
-data-cites="Chiu2019"></span>. As a result, MGS has had a limited impact
-on the management of the pandemic at the point of care. Therefore,
-regardless of their value for public health, sequencing-based assays
-have to become comparable with the standard of care to be considered a
-viable alternative.</p>
+data-cites="Chiu2019 schlaberg_viral_2017 Zinter2019 Charalampous2019">(Chiu
+and Miller 2019; Schlaberg et al. 2017; Zinter et al. 2019; Charalampous
+et al. 2019)</span> and is already saving lives by informing clinical
+decisions for a variety of symptoms and sample types <span
+class="citation" data-cites="edgeworth2023respiratory">(Edgeworth
+2023)</span>. However, it is not yet ready for prime time: complex
+workflows and high costs prevent widespread adoption <span
+class="citation" data-cites="Chiu2019">(Chiu and Miller 2019)</span>. As
+a result, MGS has had a limited impact on the management of the pandemic
+at the point of care. Therefore, regardless of their value for public
+health, sequencing-based assays have to become comparable with the
+standard of care to be considered a viable alternative.</p>
 <p>While isothermal amplification methods and other new modalities
 gained in use during COVID-19, assays based on the <span
 data-acronym-label="qPCR" data-acronym-form="singular+short">qPCR</span>
 were by far the most widely used molecular diagnostic. Currently, qPCR
 is considered the gold standard for the detection of respiratory
 pathogens, offering high sensitivity, specificity, and a rapid
-turnaround time <span class="citation" data-cites="WHO2011"></span>. In
-this paper, we use qPCR as a benchmark and outline the specifications
-for a clinical MGS device for viral respiratory infection diagnostics.
-Having outlined these specifications, we discuss the most promising
-candidate technologies that may meet these requirements.</p>
+turnaround time <span class="citation" data-cites="WHO2011">(World
+Health Organization 2011)</span>. In this paper, we use qPCR as a
+benchmark and outline the specifications for a clinical MGS device for
+viral respiratory infection diagnostics. Having outlined these
+specifications, we discuss the most promising candidate technologies
+that may meet these requirements.</p>
 <h1 class="unnumbered"
 id="motivation-pandemic-early-detection">Motivation: pandemic early
 detection</h1>
@@ -61,28 +65,30 @@ detection</h1>
 <img src="images/threatnet_architecture.jpeg" />
 <figcaption>Proposed architecture of a network of MGS early detection
 sites in emergency departments. Source: Sharma et al. 2023 <span
-class="citation" data-cites="sharma2023threat"></span>, with permission
-from the authors.</figcaption>
+class="citation" data-cites="sharma2023threat">(Sharma et al.
+2023)</span>, with permission from the authors.</figcaption>
 </figure>
 <p>MGS can be leveraged for early detection in a number of ways,
 including sequencing sites searching for emerging pathogens in
 wastewater and waterways <span class="citation"
-data-cites="Consortium2021"></span>, or strategic testing of "sentinel"
-populations. While these approaches should certainly form an important
-part of a layered early detection system, we focus this roadmap report
-solely on the vision of MGS deployed widely at the point of care for
-detection of pathogens in human respiratory samples. The key reasons for
-this focus are:</p>
+data-cites="Consortium2021">(The Nucleic Acid Observatory Consortium
+2021)</span>, or strategic testing of "sentinel" populations. While
+these approaches should certainly form an important part of a layered
+early detection system, we focus this roadmap report solely on the
+vision of MGS deployed widely at the point of care for detection of
+pathogens in human respiratory samples. The key reasons for this focus
+are:</p>
 <ul>
 <li><p>Distinguishing between signal and noise is likely to be easier in
 human respiratory samples than in environmental ones.</p></li>
 <li><p>Early detection of pathogens will only be enabled when MGS is
 deployed at a relatively large scale <span class="citation"
-data-cites="sharma2023threat"></span>. If MGS proves to be clinically
-useful and cost-effective, it can scale up naturally within the current
-health-economic system <span class="citation"
-data-cites="Topol2023"></span>, without the need for continued public or
-philanthropic support above those of current diagnostics.</p></li>
+data-cites="sharma2023threat">(Sharma et al. 2023)</span>. If MGS proves
+to be clinically useful and cost-effective, it can scale up naturally
+within the current health-economic system <span class="citation"
+data-cites="Topol2023">(Topol 2023)</span>, without the need for
+continued public or philanthropic support above those of current
+diagnostics.</p></li>
 <li><p>Detecting a pathogen of concern in an individual sample
 immediately enables effective quarantining and contact tracing.</p></li>
 <li><p>Widely available MGS testing would put humanity in a position
@@ -111,38 +117,42 @@ hours to produce results. Over time, they have been transformed into
 affordable, user-friendly devices that can quickly deliver results with
 the "push of a button", eliminating the need for specialized personnel.
 According to a WHO report <span class="citation"
-data-cites="WHO2011"></span>, real-time PCR devices have led to wider
-adoption of molecular diagnostics due to their improved rapidity,
-sensitivity, reproducibility and the reduced risk of carry-over
-contamination. With the exception of sensitivity, all of these problems
-currently still plague MGS.</p>
+data-cites="WHO2011">(World Health Organization 2011)</span>, real-time
+PCR devices have led to wider adoption of molecular diagnostics due to
+their improved rapidity, sensitivity, reproducibility and the reduced
+risk of carry-over contamination. With the exception of sensitivity, all
+of these problems currently still plague MGS.</p>
 <figure>
 <img src="images/cepheid.jpeg" />
 <figcaption>A Cepheid GeneXpert device. Source: MSF (2022) <span
-class="citation" data-cites="msf2022access"></span>.</figcaption>
+class="citation" data-cites="msf2022access">(Médecins Sans Frontières
+2022)</span>.</figcaption>
 </figure>
 <p>A concrete example of this success is the Cepheid GeneXpert <span
-class="citation" data-cites="GeneXpertSystem"></span> device. Originally
-developed for the detection of anthrax, it has been adapted to many
-other infectious diseases following collaboration between Cepheid and
-international organizations and philanthropic bodies. Through successive
-rounds of cost-optimization, the device arrived at a point where it
-became practical even in developing countries for testing infections
-such as tuberculosis or HIV. This resulted in an overall installed base
-of some 22,000 devices even prior to the COVID pandemic <span
-class="citation" data-cites="CepheidNewsReleaseArchive"></span>, which
-increased to 40,000 between 2019 and 2022 <span class="citation"
-data-cites="GenomeWeb2022"></span>. This enabled relatively rapid
-development of primers for testing the presence of SARS-CoV-2 in
-clinical samples without the need for developing novel
-infrastructure.</p>
+class="citation" data-cites="GeneXpertSystem">(Cepheid, n.d.)</span>
+device. Originally developed for the detection of anthrax, it has been
+adapted to many other infectious diseases following collaboration
+between Cepheid and international organizations and philanthropic
+bodies. Through successive rounds of cost-optimization, the device
+arrived at a point where it became practical even in developing
+countries for testing infections such as tuberculosis or HIV. This
+resulted in an overall installed base of some 22,000 devices even prior
+to the COVID pandemic <span class="citation"
+data-cites="CepheidNewsReleaseArchive">(<span>“Cepheid News Release
+Archive. Cepheid Announces FleXible Cartridge Program,”</span>
+n.d.)</span>, which increased to 40,000 between 2019 and 2022 <span
+class="citation" data-cites="GenomeWeb2022">(GenomeWeb 2022)</span>.
+This enabled relatively rapid development of primers for testing the
+presence of SARS-CoV-2 in clinical samples without the need for
+developing novel infrastructure.</p>
 <p>PCR devices can also test for multiple pathogens or genes (such as
 those conferring antimicrobial resistance) in parallel. The BioFire
 FilmArray <span class="citation"
-data-cites="BioFireDiagnostics2016"></span>, for instance, offers
-simultaneous sensitive detection of 20-40 targets in samples including
-respiratory (sputum, bronchoalveolar lavage), blood culture,
-cerebrospinal fluid or gastrointestinal.</p>
+data-cites="BioFireDiagnostics2016">(<span>“BioFire Diagnostics.
+FilmArray Panels—Infectious Disease Diagnostics”</span> 2016)</span>,
+for instance, offers simultaneous sensitive detection of 20-40 targets
+in samples including respiratory (sputum, bronchoalveolar lavage), blood
+culture, cerebrospinal fluid or gastrointestinal.</p>
 <p>However, PCR cannot in principle detect unknown or changing targets.
 For example, a novel gene conferring drug resistance, or a novel virus
 strain, require the design of novel primers. Perhaps more importantly,
@@ -194,7 +204,7 @@ complex.</p></li>
 <td style="text-align: left;">No</td>
 <td style="text-align: left;">$50</td>
 <td style="text-align: left;"><span class="citation"
-data-cites="novaSeq6000"></span></td>
+data-cites="novaSeq6000">(Illumina 2023c)</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Illumina MiSeq</td>
@@ -204,7 +214,7 @@ data-cites="novaSeq6000"></span></td>
 <td style="text-align: left;">No</td>
 <td style="text-align: left;">$30</td>
 <td style="text-align: left;"><span class="citation"
-data-cites="miseqSpecs"></span></td>
+data-cites="miseqSpecs">(Illumina 2023b)</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Illumina iSeq</td>
@@ -214,7 +224,7 @@ data-cites="miseqSpecs"></span></td>
 <td style="text-align: left;">No</td>
 <td style="text-align: left;">$50</td>
 <td style="text-align: left;"><span class="citation"
-data-cites="iseq100"></span></td>
+data-cites="iseq100">(Illumina 2023a)</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Ion Torrent GeneStudio S5</td>
@@ -224,7 +234,8 @@ data-cites="iseq100"></span></td>
 <td style="text-align: left;">No</td>
 <td style="text-align: left;">$50</td>
 <td style="text-align: left;"><span class="citation"
-data-cites="ionGeneStudio ion520Chip quail2012 heger2015"></span></td>
+data-cites="ionGeneStudio ion520Chip quail2012 heger2015">(Ion Torrent
+2023b, 2023a; Quail et al. 2012; GenomeWeb 2015)</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">ONT MinION</td>
@@ -234,7 +245,12 @@ data-cites="ionGeneStudio ion520Chip quail2012 heger2015"></span></td>
 <td style="text-align: left;">Yes</td>
 <td style="text-align: left;">$250</td>
 <td style="text-align: left;"><span class="citation"
-data-cites="nanoporeKits greninger2015 tyson2020 nanoporeUpdate2023"></span></td>
+data-cites="nanoporeKits greninger2015 tyson2020 nanoporeUpdate2023">(Oxford
+Nanopore Technologies 2023a; Greninger et al. 2015; Tyson et al. 2020;
+<span>“Oxford Nanopore Delivers Technology Update at Annual London
+Calling Conference: Bringing Together Years of Innovation to Showcase
+One Sensing Platform for All Biological Analyses”</span>
+2023)</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">SeqLL (Helicos)</td>
@@ -244,7 +260,7 @@ data-cites="nanoporeKits greninger2015 tyson2020 nanoporeUpdate2023"></span></td
 <td style="text-align: left;">Yes</td>
 <td style="text-align: left;">$50</td>
 <td style="text-align: left;"><span class="citation"
-data-cites="seqll2017brochure"></span></td>
+data-cites="seqll2017brochure">(SeqLL 2017)</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Pacific Biosciences Sequel II</td>
@@ -254,7 +270,7 @@ data-cites="seqll2017brochure"></span></td>
 <td style="text-align: left;">No</td>
 <td style="text-align: left;">$50</td>
 <td style="text-align: left;"><span class="citation"
-data-cites="sequelSystems"></span></td>
+data-cites="sequelSystems">(Pacific BioSciences 2018)</span></td>
 </tr>
 </tbody>
 </table>
@@ -271,26 +287,30 @@ incompatible with the other requirements of cost and time-to-answer.
 Workflows involve complex sequential steps in both sample and library
 preparation and typically require hours of work by trained experts.
 Automated and integrated solutions such as VolTRAX for nanopore
-sequencing <span class="citation" data-cites="voltrax"></span> or
-NeoPrep for Illumina <span class="citation" data-cites="neoprep"></span>
-are only available at high costs for specialized laboratories. Cost per
-sample can be reduced below $10 only by sequencing many samples in
-parallel, which is not practical in the point-of-care context, as this
-step introduces a significant delay in time-to-answer.</p>
+sequencing <span class="citation" data-cites="voltrax">(Oxford Nanopore
+Technologies n.d.c)</span> or NeoPrep for Illumina <span
+class="citation" data-cites="neoprep">(Illumina n.d.)</span> are only
+available at high costs for specialized laboratories. Cost per sample
+can be reduced below $10 only by sequencing many samples in parallel,
+which is not practical in the point-of-care context, as this step
+introduces a significant delay in time-to-answer.</p>
 <p>The need for rapid results speaks against the majority of sequencing
 platforms based on <strong>colony-based approaches</strong>. The cluster
 generation step alone takes at least 60 minutes <span class="citation"
-data-cites="whiteford2023cluster"></span>. In addition, this approach
-requires a large set of reagents that would add significant complexity
-and cost to the design of a sample-to-answer system.</p>
+data-cites="whiteford2023cluster">(N. Whiteford 2023)</span>. In
+addition, this approach requires a large set of reagents that would add
+significant complexity and cost to the design of a sample-to-answer
+system.</p>
 <p>Although the emergence of new companies (e.g. MGI <span
-class="citation" data-cites="MGITech2023"></span>, Singular Genomics
-<span class="citation" data-cites="SingularGenomics2023"></span>) is
+class="citation" data-cites="MGITech2023">(MGI 2023)</span>, Singular
+Genomics <span class="citation"
+data-cites="SingularGenomics2023">(Singular Genomics 2023)</span>) is
 likely to decrease consumable and device costs by driving down margins
 and enabling innovations, the new players are unlikely to change this
 fundamental limitation. To our knowledge, the most serious attempt at
 decreasing the time requirements is the use of Lighting Terminators
-<span class="citation" data-cites="GenomeWeb2009"></span>.</p>
+<span class="citation" data-cites="GenomeWeb2009">(GenomeWeb
+2009)</span>.</p>
 <p>While this and other future innovations could make some colony-based
 approaches viable, a more natural category to focus on is that of
 <strong>single-molecule approaches</strong>. Single-molecule approaches
@@ -303,15 +323,17 @@ single-molecule optical (SMO) sequencing.</p>
 samples is <span data-acronym-label="ONT"
 data-acronym-form="singular+short">ONT</span>’s Flongle, whose
 consumables sell for $90 <span class="citation"
-data-cites="flongle"></span> and likely costs around $50 to make <span
-class="citation" data-cites="Whiteford2022notes_on_nanopores"></span>.
-Optimized clinical workflows utilizing real-time sequencing with <span
-data-acronym-label="ONT" data-acronym-form="singular+short">ONT</span>’s
-MinION can achieve a time-to-answer of 6 hours <span class="citation"
-data-cites="Charalampous2019"></span>. This is driven primarily by
-sample and library preparation, as sequencing itself takes less than 1
-hour. Even workflows optimized for the ICU setting require a clinical
-microbiology laboratory to execute.</p>
+data-cites="flongle">(Oxford Nanopore Technologies 2023b)</span> and
+likely costs around $50 to make <span class="citation"
+data-cites="Whiteford2022notes_on_nanopores">(Nava Whiteford
+2022d)</span>. Optimized clinical workflows utilizing real-time
+sequencing with <span data-acronym-label="ONT"
+data-acronym-form="singular+short">ONT</span>’s MinION can achieve a
+time-to-answer of 6 hours <span class="citation"
+data-cites="Charalampous2019">(Charalampous et al. 2019)</span>. This is
+driven primarily by sample and library preparation, as sequencing itself
+takes less than 1 hour. Even workflows optimized for the ICU setting
+require a clinical microbiology laboratory to execute.</p>
 <p>In the rest of this report, we ask what requirements a sequencing
 device has to meet in order to match all of the above criteria. In
 particular, we ask:</p>
@@ -332,10 +354,10 @@ sample-to-answer system</h2>
 lies in the complexity of workflows. As previously mentioned, even
 workflows optimized for the ICU setting require a clinical microbiology
 laboratory to execute <span class="citation"
-data-cites="edgeworth2023respiratory"></span>. Interviews with
-practitioners at the forefront of clinical MGS adoption reveal that
-training new personnel in MGS workflows takes months and results vary
-significantly based on operator skill.</p>
+data-cites="edgeworth2023respiratory">(Edgeworth 2023)</span>.
+Interviews with practitioners at the forefront of clinical MGS adoption
+reveal that training new personnel in MGS workflows takes months and
+results vary significantly based on operator skill.</p>
 <p>In contrast, PCR assays are straightforward. To obtain a clinical
 answer with the previously mentioned Cepheid GeneXpert, the user places
 the sample into a cartridge, inserts it into the device, and waits for
@@ -358,15 +380,17 @@ be preloaded, with no fluidic coupling to the instrument. The instrument
 interfaces with the cartridge via a reagent selection valve and plunger.
 The cost of goods for the cartridge, including reagents, has been
 estimated at $10 <span class="citation"
-data-cites="CambridgeConsultants2019"></span> and marketed at prices
+data-cites="CambridgeConsultants2019">(<span>“Cambridge Consultants,
+Medecins Sans Frontieres. Cost of Goods and Manufacturing Analysis of
+GeneXpert Cartridges,”</span> n.d.)</span> and marketed at prices
 typically exceeding $20.</p>
 <figure id="fig:cartridge">
 <img src="images/IMG_1893.jpeg" />
 <p>. <span id="fig:cartridge" label="fig:cartridge"></span></p>
 <figcaption>A sketch of a sample and library preparation cartridge for a
 fixed respiratory MGS workflow. Originally appeared in <span
-class="citation"
-data-cites="Whiteford2022Metagenomic"></span>.</figcaption>
+class="citation" data-cites="Whiteford2022Metagenomic">(Nava Whiteford
+2022a)</span>.</figcaption>
 </figure>
 <p>While achieving the same simplicity for MGS may seem like a tall
 order, it is important to note that currently available cartridges have
@@ -388,7 +412,7 @@ sequencing platform in question. For platforms with relatively high
 input requirements such as ONT, random amplification may be necessary to
 reach a lower threshold of nucleic acids in a sample without introducing
 undue bias <span class="citation"
-data-cites="regnault2021deep"></span>.</p>
+data-cites="regnault2021deep">(Regnault et al. 2021)</span>.</p>
 <p>Developing a cartridge for this use case and integrating the whole
 system into one box can be done with relatively little technical risk.
 Why, then, has no one developed such a system? The key reason, we
@@ -417,7 +441,8 @@ a pathogen of interest, in addition to fragments of the host and the
 non-pathogenic microbiome. Hence, an additional judgment call is
 necessary for determining whether a given result should be taken as
 indication of infection <span class="citation"
-data-cites="Zinter2019 Chiu2019"></span>.</p>
+data-cites="Zinter2019 Chiu2019">(Zinter et al. 2019; Chiu and Miller
+2019)</span>.</p>
 <p>In clinical practice, cutoffs for clinical significance will likely
 be determined for each pathogen or pathogen class as information about
 typical abundance in non-infected individuals is accumulated. As an
@@ -428,10 +453,11 @@ bacteria as a deviation of <span
 class="math inline"><em>Z</em> ≥ 2</span> or <span
 class="math inline">10</span> rpm, and for viruses and fungi as <span
 class="math inline">1</span> rpm <span class="citation"
-data-cites="Zinter2019"></span>. Miller et al. developed threshold
-criteria based on the detection of non-overlapping reads from <span
-class="math inline"> ≥ 3</span> distinct genomic regions <span
-class="citation" data-cites="Miller2019"></span>.</p>
+data-cites="Zinter2019">(Zinter et al. 2019)</span>. Miller et al.
+developed threshold criteria based on the detection of non-overlapping
+reads from <span class="math inline"> ≥ 3</span> distinct genomic
+regions <span class="citation" data-cites="Miller2019">(Miller et al.
+2019)</span>.</p>
 <div class="table*">
 <table>
 <thead>
@@ -514,9 +540,10 @@ sensitivity: a sequencing run of terabases (Tb) on a single sample
 should readily detect even pathogens that are very low in abundance. At
 a depth of 40M reads per sample, MGS was shown to consistently achieve a
 sensitivity on par with if not greater than PCR <span class="citation"
-data-cites="jumpcode Whiteford2022Metagenomic"></span>. However, when
-the requirements of cost and time-to-answer are added, practical
-sensitivity of sequencing has to be determined.</p>
+data-cites="jumpcode Whiteford2022Metagenomic">(Chan et al. 2022; Nava
+Whiteford 2022a)</span>. However, when the requirements of cost and
+time-to-answer are added, practical sensitivity of sequencing has to be
+determined.</p>
 <p>PCR has a key advantage over sequencing: because PCR targets a short,
 unique region of a genetic sequence, it is <em>insensitive to background
 material</em>. A high fraction of human material (mostly <span
@@ -535,7 +562,8 @@ typical fraction of SARS-CoV-2 RNA in nasopharyngeal samples was between
 0.01% (or one fragment in 10,000) and 0.001% (one in 100,000). However,
 viral load has been found to span some 8 orders of magnitude, with loads
 as low as tens of copies/mL found in more than 1% of cases <span
-class="citation" data-cites="Arnaout2020"></span>.</p>
+class="citation" data-cites="Arnaout2020">(Arnaout et al.
+2020)</span>.</p>
 <p>The expected number of reads from the pathogen of interest is a
 straightforward function of the relative fraction of the pathogen in the
 sample, and the number of fragments sequenced in a run. For example, if
@@ -547,9 +575,10 @@ role="doc-noteref"><sup>1</sup></a>.</p>
 <img src="images/jumpcode.jpg" />
 <figcaption>Scatter plot of target fraction and Ct data that form the
 basis of predicted Ct in Table 2 based on data from <span
-class="citation" data-cites="jumpcode"></span>. Originally appeared in
-<span class="citation"
-data-cites="Whiteford2022Modeling"></span>.</figcaption>
+class="citation" data-cites="jumpcode">(Chan et al. 2022)</span>.
+Originally appeared in <span class="citation"
+data-cites="Whiteford2022Modeling">(Nava Whiteford
+2022c)</span>.</figcaption>
 </figure>
 <p>One way to think about the requirements for a MGS diagnostic is to
 draw a rough correspondence with the familiar <span
@@ -557,15 +586,17 @@ data-acronym-label="Ct" data-acronym-form="singular+short">Ct</span>
 values from PCR for given sample characteristics. As a heuristic, Ct
 values of 25 represent high viral load and values over 35 are of
 disputed clinical relevance <span class="citation"
-data-cites="healy2021impact"></span>. The relationship between viral
-load, Ct values and fraction of reads have been by a number of empirical
-studies for SARS-CoV-2 <span class="citation"
-data-cites="babiker_metagenomic_2020 jumpcode"></span>. <a
-href="#table:target_reads" data-reference-type="autoref"
+data-cites="healy2021impact">(Healy et al. 2021)</span>. The
+relationship between viral load, Ct values and fraction of reads have
+been by a number of empirical studies for SARS-CoV-2 <span
+class="citation" data-cites="babiker_metagenomic_2020 jumpcode">(Babiker
+et al. 2020; Chan et al. 2022)</span>. <a href="#table:target_reads"
+data-reference-type="autoref"
 data-reference="table:target_reads">[table:target_reads]</a> shows the
 relationship between the real fraction of target nucleic acids in a
 sample, measured Ct values and expected target reads based on data
-obtained from <span class="citation" data-cites="jumpcode"></span>.</p>
+obtained from <span class="citation" data-cites="jumpcode">(Chan et al.
+2022)</span>.</p>
 <p>Based on this, we can map quite directly from the desired limit of
 detection to the required sequencing depth. For example, we see that for
 respiratory samples with 10 ng total nucleic acid yield, a MGS device
@@ -579,63 +610,68 @@ expect to range from 1M to 10M reads/hour. This conclusion notably does
 not generalize for sample types with greater abundance of human RNA such
 as blood, where low-abundance pathogens such as HIV are present at
 concentrations requiring an order of magnitude or two greater sequencing
-depth <span class="citation" data-cites="orlandi2020hiv"></span>.</p>
+depth <span class="citation" data-cites="orlandi2020hiv">(Orlandi et al.
+2020)</span>.</p>
 <p>It is worth noting that these requirements could potentially be
 dramatically reduced by depleting host nucleic acids. Depletion methods
 remove known non-target nucleic acids (e.g., host material) from a
 sequencing library and doing so can reduce read depth requirements and
 increase detection sensitivity for pathogen nucleic acid <span
-class="citation" data-cites="jumpcode"></span>. When sequencing RNA
-libraries, highly repetitive ribosomal RNA (rRNA) can constitute 60-95%
-of a sample, making it a prime target for depletion. As indicated by
-interviews with practitioners, Qiagen’s FastSelect <span
-class="citation" data-cites="Qiagen"></span> is currently the most
-viable alternative, removing &gt;95% rRNA (host and bacterial) in 14
-minutes. There are yet to be sufficient studies examining the
-effectiveness of FastSelect across various sample types, but in a case
-where FastSelect was applied to <span data-acronym-label="CSF"
+class="citation" data-cites="jumpcode">(Chan et al. 2022)</span>. When
+sequencing RNA libraries, highly repetitive ribosomal RNA (rRNA) can
+constitute 60-95% of a sample, making it a prime target for depletion.
+As indicated by interviews with practitioners, Qiagen’s FastSelect <span
+class="citation" data-cites="Qiagen">(<span>“Qiagen. QIAseq FastSelect
+Epidemiology Kits,”</span> n.d.)</span> is currently the most viable
+alternative, removing &gt;95% rRNA (host and bacterial) in 14 minutes.
+There are yet to be sufficient studies examining the effectiveness of
+FastSelect across various sample types, but in a case where FastSelect
+was applied to <span data-acronym-label="CSF"
 data-acronym-form="singular+short">CSF</span> samples, practitioners
 report a 10x reduction in required read depth requirements (from 10-20M
 to 1-2M).</p>
 <p>Unfortunately, FastSelect costs &gt;$50/sample <span class="citation"
-data-cites="Qiagen"></span>, although labs have reported <span
-class="citation" data-cites="RapidResponse2021"></span> similar
-depletion results after diluting the reagent tenfold to reduce cost. The
-cost and time budget may be justified in many or all cases and cost
-reduction for rapid depletion kits are a high priority for development.
-However, here we conservatively assume no depletion when further
-building on these sequencing depth requirements.</p>
+data-cites="Qiagen">(<span>“Qiagen. QIAseq FastSelect Epidemiology
+Kits,”</span> n.d.)</span>, although labs have reported <span
+class="citation" data-cites="RapidResponse2021">(Chan Zuckerberg Biohub
+2021)</span> similar depletion results after diluting the reagent
+tenfold to reduce cost. The cost and time budget may be justified in
+many or all cases and cost reduction for rapid depletion kits are a high
+priority for development. However, here we conservatively assume no
+depletion when further building on these sequencing depth
+requirements.</p>
 <h2 class="unnumbered" id="accuracy-and-read-length">Accuracy and read
 length</h2>
 <p>Sequencers also vary widely on two other variables: read length and
 single-base accuracy. Both of these features are highly desirable in
 research contexts where changes of even a single mutation are often the
 object of study. However, our simulations <span class="citation"
-data-cites="whiteford2022longreads"></span> suggest that for the task of
-correctly classifying a known virus, or detecting a high abundance of
-unknown material, read length and accuracy requirements are
-comparatively modest. In addition, decrease in one can be compensated by
-an increase in the other.</p>
+data-cites="whiteford2022longreads">(Nava Whiteford 2022f)</span>
+suggest that for the task of correctly classifying a known virus, or
+detecting a high abundance of unknown material, read length and accuracy
+requirements are comparatively modest. In addition, decrease in one can
+be compensated by an increase in the other.</p>
 <p>For example, for read length, we estimate that a <strong>read length
 of only 25 <span data-acronym-label="bp"
 data-acronym-form="singular+short">bp</span></strong> and
 <strong>single-base accuracy of 95%</strong> are sufficient for unique
 pathogen detection, given sufficient sequencing depth <span
-class="citation" data-cites="whiteford2022longreads"></span>. In terms
-of single-base accuracy, highly sensitive detection of emerging
-pathogens has been demonstrated in the field with error rates as high as
-20-30% with early versions of long-read nanopore sequencing <span
-class="citation" data-cites="quick2016real"></span>. The fact that
-requirements for pathogen detection diverge so significantly from that
-for research applications has key implications for development
-directions, the subject of the next section.</p>
+class="citation" data-cites="whiteford2022longreads">(Nava Whiteford
+2022f)</span>. In terms of single-base accuracy, highly sensitive
+detection of emerging pathogens has been demonstrated in the field with
+error rates as high as 20-30% with early versions of long-read nanopore
+sequencing <span class="citation" data-cites="quick2016real">(Quick et
+al. 2016)</span>. The fact that requirements for pathogen detection
+diverge so significantly from that for research applications has key
+implications for development directions, the subject of the next
+section.</p>
 <figure id="fig:read_length">
 <img src="images/read length.png" />
 <p>. <span id="fig:read_length" label="fig:read_length"></span></p>
 <figcaption>Relationship between read length, accuracy, and unique
 alignment to the SARS-CoV-2 genome. Originally appeared in <span
-class="citation"
-data-cites="whiteford2022longreads"></span></figcaption>
+class="citation" data-cites="whiteford2022longreads">(Nava Whiteford
+2022f)</span></figcaption>
 </figure>
 <h1 class="unnumbered" id="sec:dev-goals">Development directions</h1>
 <p>Having determined these targets for sequencing platforms, we can now
@@ -645,10 +681,12 @@ single-molecule optical (SMO) sequencing. While these two platform
 classes have a different profile of upsides and downsides for MGS, they
 share a key advantage in minimal time required for library preparation.
 ONT’s rapid sequencing kit <span class="citation"
-data-cites="ont2023rapidkit"></span> requires less than 10 minutes, and
-some SMO platforms do not require any library preparation after lysis
-and nucleic acid extraction <span class="citation"
-data-cites="seqll2017brochure whiteford2022reticulatech"></span>.</p>
+data-cites="ont2023rapidkit">(Oxford Nanopore Technologies 2023c)</span>
+requires less than 10 minutes, and some SMO platforms do not require any
+library preparation after lysis and nucleic acid extraction <span
+class="citation"
+data-cites="seqll2017brochure whiteford2022reticulatech">(SeqLL 2017;
+Nava Whiteford 2022e)</span>.</p>
 <p>It is worth emphasizing that while we expect viable solutions in the
 next 5-10 years to come from these two categories, we cannot confidently
 rule out that a viable solution will emerge from a colony-based method
@@ -663,29 +701,30 @@ which bases translocate through the pore, and the number of active pores
 working in parallel. Unfortunately, speed of translocation is already
 close to the upper bound: the translocation needs to be slowed down by a
 specialized motor protein in order for the electrical signal to be
-interpretable <span class="citation"
-data-cites="wang2021nanopore"></span>.</p>
+interpretable <span class="citation" data-cites="wang2021nanopore">(Wang
+et al. 2021)</span>.</p>
 <p>In a research context, the primary advantage of nanopore sequencing
 over other platforms lies in its long reads. Average read lengths in a
 standard protocol exceed 1,000 bp and the longest recorded reads exceed
 a million base pairs <span class="citation"
-data-cites="loose2019whale"></span>. In the MGS context, long reads
-provide limited utility and, for nanopore sequencing in particular,
-present an active hindrance, as longer fragments occupy pores for a
-longer time period. There is therefore a direct trade-off between read
-length and number of reads: to a first approximation, the number of
-fragments sequenced scales linearly with the inverse of average read
-length.</p>
+data-cites="loose2019whale">(Loose et al. 2019)</span>. In the MGS
+context, long reads provide limited utility and, for nanopore sequencing
+in particular, present an active hindrance, as longer fragments occupy
+pores for a longer time period. There is therefore a direct trade-off
+between read length and number of reads: to a first approximation, the
+number of fragments sequenced scales linearly with the inverse of
+average read length.</p>
 <p>A logical conclusion is that for MGS, sample preparation should
 include a fragmentation step to reduce the average fragment size and
 thus increase the chance of detecting a low-abundance pathogen. ONT
 MinION has 512 active channels working in parallel <span
-class="citation" data-cites="ont_minion"></span>. With sufficient
-saturation and the standard translocation speed of approximately 400
-bp/s, we need an average fragment length of some 700 bp to get 1M reads
-in an hour of sequencing, and 70 bp to achieve 10M reads. The cheapest
-device, Flongle, has approximately 100 active channels, implying some 2
-million reads in 60 minutes of sequencing.</p>
+class="citation" data-cites="ont_minion">(Oxford Nanopore Technologies
+n.d.a)</span>. With sufficient saturation and the standard translocation
+speed of approximately 400 bp/s, we need an average fragment length of
+some 700 bp to get 1M reads in an hour of sequencing, and 70 bp to
+achieve 10M reads. The cheapest device, Flongle, has approximately 100
+active channels, implying some 2 million reads in 60 minutes of
+sequencing.</p>
 <p>This implies that for a sufficiently fragmented sample, nanopore
 platforms already meet the key requirements of fast time-to-answer,
 sufficient throughput, and relatively simple library preparation.
@@ -694,18 +733,19 @@ diagnostic platform is the high <span data-acronym-label="COGS"
 data-acronym-form="singular+short">COGS</span> of consumables. This
 cost, in turn, is primarily driven by the cost of manufacturing nanopore
 arrays, whose cost scales linearly with chip area <span class="citation"
-data-cites="Whiteford2022notes_on_nanopores"></span>. It follows that
-the two available levers for cost-optimization are reducing the required
-area or using lower-cost materials or fabrication procedures.</p>
+data-cites="Whiteford2022notes_on_nanopores">(Nava Whiteford
+2022d)</span>. It follows that the two available levers for
+cost-optimization are reducing the required area or using lower-cost
+materials or fabrication procedures.</p>
 <p>From published patents <span class="citation"
-data-cites="ont-array-patent"></span>, it is possible to infer that the
-design employed by ONT presently requires the use of non-standard
-fabrication facilities able to process novel materials, such as <span
-data-acronym-label="MEMS" data-acronym-form="singular+short">MEMS</span>
-fabrication facilities. Thus, the cost is likely to be driven driven by
-the limited capacity of MEMS fabrication facilities globally, rather
-than by the fundamental cost of materials and fabrication
-procedures.</p>
+data-cites="ont-array-patent">(Hyde et al. 2022)</span>, it is possible
+to infer that the design employed by ONT presently requires the use of
+non-standard fabrication facilities able to process novel materials,
+such as <span data-acronym-label="MEMS"
+data-acronym-form="singular+short">MEMS</span> fabrication facilities.
+Thus, the cost is likely to be driven driven by the limited capacity of
+MEMS fabrication facilities globally, rather than by the fundamental
+cost of materials and fabrication procedures.</p>
 <p>The potential to replace MEMS fabrication with a less costly process
 is worth investigating as a pathway of achieving a device that fits the
 point-of-care specifications. There are potentially many approaches to
@@ -717,9 +757,10 @@ in the Flongle—alternative methodologies may offer advantages. One such
 alternative is the direct fabrication of silver electrodes onto printed
 circuit boards, a technique successfully demonstrated on a smaller scale
 by the companies Nanion and Elements <span class="citation"
-data-cites="elements2019"></span>. While there is technical uncertainty
-as to whether this approach can scale beyond 16 channels, scaling to
-some 100 channels with this approach might be feasible.</p>
+data-cites="elements2019">(Elements 2019)</span>. While there is
+technical uncertainty as to whether this approach can scale beyond 16
+channels, scaling to some 100 channels with this approach might be
+feasible.</p>
 <p>While it is difficult to predict which approach will yield the best
 results, we should expect that a ground-up reimplentation that aims for
 cost-optimization should achieve a much lower cost point. Although it is
@@ -835,45 +876,49 @@ label="table:sequencing_capacity"></span></p>
 <h2 id="single-molecule-optical-platforms">Single-molecule optical
 platforms</h2>
 <p>Single-molecule optical technologies were brought to the market by
-Helicos <span class="citation" data-cites="thompson2010helicos"></span>
+Helicos <span class="citation"
+data-cites="thompson2010helicos">(Thompson and Steinmann 2010)</span>
 (now defunct) and <span data-acronym-label="PacBio"
 data-acronym-form="singular+short">PacBio</span> <span class="citation"
-data-cites="rhoads_pacbio_2015"></span>. Considering this class of
-technologies as a candidate platform may be surprising, as they have
-generally been embodied as costly, "fridge-sized" instruments with long
-library preparation (&gt;3 hours). However, this is driven not by the
-fundamental needs of the platform, but rather by the market demand for
-high single-base accuracy and long reads. If these requirements are
-relaxed, <span data-acronym-label="SMO"
+data-cites="rhoads_pacbio_2015">(Rhoads and Au 2015)</span>. Considering
+this class of technologies as a candidate platform may be surprising, as
+they have generally been embodied as costly, "fridge-sized" instruments
+with long library preparation (&gt;3 hours). However, this is driven not
+by the fundamental needs of the platform, but rather by the market
+demand for high single-base accuracy and long reads. If these
+requirements are relaxed, <span data-acronym-label="SMO"
 data-acronym-form="singular+short">SMO</span> approaches can achieve
 very simple sample preparation <span class="citation"
-data-cites="seqll2017brochure"></span> and a low cost of consumables
-<span class="citation"
-data-cites="whiteford2022reticulatech"></span>.</p>
+data-cites="seqll2017brochure">(SeqLL 2017)</span> and a low cost of
+consumables <span class="citation"
+data-cites="whiteford2022reticulatech">(Nava Whiteford
+2022e)</span>.</p>
 <p>Commonly employed library preparation techniques take many hours and
 are not a good fit for point-of-care MGS. However, the SMRTBells library
-preparation kit <span class="citation" data-cites="SMRTbells"></span>
-was introduced to drive accuracy to &gt;99.9% and read length to  15 kb,
-neither of which is required for MGS. Without these requirements,
-library preparation for optical methods can be as fast as for nanopore
-sequencing ( 5 minutes) and still achieve accuracies upwards of 80%
-combined with a compensating read length of hundreds of bases.
-Similarly, approaches derived from the Helicos technology have been
-demonstrated to work with minimal library preparation with error rates
-below 5% and read lengths exceeding 25 bp, making them a potential
-candidate for a MGS device <span class="citation"
-data-cites="whiteford2022reticulatech"></span>.</p>
+preparation kit <span class="citation" data-cites="SMRTbells">(Pacific
+BioSciences 2023)</span> was introduced to drive accuracy to &gt;99.9%
+and read length to  15 kb, neither of which is required for MGS. Without
+these requirements, library preparation for optical methods can be as
+fast as for nanopore sequencing ( 5 minutes) and still achieve
+accuracies upwards of 80% combined with a compensating read length of
+hundreds of bases. Similarly, approaches derived from the Helicos
+technology have been demonstrated to work with minimal library
+preparation with error rates below 5% and read lengths exceeding 25 bp,
+making them a potential candidate for a MGS device <span
+class="citation" data-cites="whiteford2022reticulatech">(Nava Whiteford
+2022e)</span>.</p>
 <p>In terms of throughput, the sequencing step alone can be achieved in
 a fraction of the time required for nanopore sequencing, as SMO
 approaches can use many more sensors working in parallel. In PacBio
 sequencing, imaging more than 1 million fragments in parallel is common
-<span class="citation" data-cites="sequelSystems"></span> and, with a
-speed of 10 nucleotides per second, the run can be finished in less than
-a minute for the read lengths required for MGS. Another key advantage of
-an optical approach relative to nanopore sequencing is that it is
-compatible with a less complex chip and presents a clearer path to a
-consumable cost of $10 or less <span class="citation"
-data-cites="whiteford2022reticulatech"></span>.</p>
+<span class="citation" data-cites="sequelSystems">(Pacific BioSciences
+2018)</span> and, with a speed of 10 nucleotides per second, the run can
+be finished in less than a minute for the read lengths required for MGS.
+Another key advantage of an optical approach relative to nanopore
+sequencing is that it is compatible with a less complex chip and
+presents a clearer path to a consumable cost of $10 or less <span
+class="citation" data-cites="whiteford2022reticulatech">(Nava Whiteford
+2022e)</span>.</p>
 <p>A key challenge to address will be the optimization of device cost,
 currently exceeding $500,000 in the case of PacBio instruments. However,
 achieving a cost lower than $10,000 appears feasible if instrumentation
@@ -885,14 +930,15 @@ compatibility with low-cost cameras, but the goal of 1-10 million
 sensing regions (and hence reads) appears achievable.</p>
 <p>A particularly promising emerging approach is that of electro-optical
 zero-mode waveguides <span class="citation"
-data-cites="wanunu2022zmw"></span>, which may enable substantially lower
-input requirements, potentially obviating the need for random
-amplification of nucleic acids in a sample.</p>
+data-cites="wanunu2022zmw">(Farhangdoust et al. 2022)</span>, which may
+enable substantially lower input requirements, potentially obviating the
+need for random amplification of nucleic acids in a sample.</p>
 <figure>
 <img src="images/IMG_1895.jpeg" />
 <figcaption>Sketch of a cost-optimized single-molecule optical platform.
 Originally appeared in <span class="citation"
-data-cites="whiteford2022reticulatech"></span>.</figcaption>
+data-cites="whiteford2022reticulatech">(Nava Whiteford
+2022e)</span>.</figcaption>
 </figure>
 <h1 class="unnumbered" id="sec:accelerating">Accelerating
 development</h1>
@@ -933,19 +979,20 @@ millions of dollars for a working product) necessary.</p></li>
 <p>By our estimates, more than half of global sequencing capacity in
 terms of the number of bases sequenced annually is accounted for by
 Illumina NovaSeq alone <span class="citation"
-data-cites="whiteford_seq_capability"></span>. NovaSeq is a $1 million
-instrument that yields up to 6 Tb of data per run with an error rate on
-the order of 0.1%.A single run can cost more than $5,000. This large
-share of sequencing capacity is accounted for by only some 1500
-instruments in large laboratories <span class="citation"
-data-cites="whiteford_seq_capability"></span>.</p>
+data-cites="whiteford_seq_capability">(Nava Whiteford 2022b)</span>.
+NovaSeq is a $1 million instrument that yields up to 6 Tb of data per
+run with an error rate on the order of 0.1%.A single run can cost more
+than $5,000. This large share of sequencing capacity is accounted for by
+only some 1500 instruments in large laboratories <span class="citation"
+data-cites="whiteford_seq_capability">(Nava Whiteford 2022b)</span>.</p>
 <p>Another key player, ONT, is known for its relatively affordable,
 miniaturized devices such as the MinION or Flongle. In 2021, however,
 fully 55.7% of ONT’s revenue was generated by its 67 PromethION <span
-class="citation" data-cites="ont_promethion"></span> instruments <span
-class="citation" data-cites="ont-2021-annual-report"></span>, each of
-which can generate up to 12 Tb of data, with device costs ranging from
-$225,000 to $450,000.</p>
+class="citation" data-cites="ont_promethion">(Oxford Nanopore
+Technologies n.d.b)</span> instruments <span class="citation"
+data-cites="ont-2021-annual-report">(Oxford Nanopore Technologies
+2021)</span>, each of which can generate up to 12 Tb of data, with
+device costs ranging from $225,000 to $450,000.</p>
 <p>What, then, could shift these market dynamics? Broadly, we see two
 approaches to this problem:</p>
 <ul>
@@ -957,18 +1004,18 @@ Similarly, a $10 MGS device provides a challenging but achievable goal
 around which activity can be catalyzed by direct grants or other forms
 of support.</p></li>
 <li><p><strong>Pull mechanisms</strong> such as advanced market
-commitments <span class="citation" data-cites="kremer2020amc"></span>
-may be appropriate here, as the target product profile is readily
-definable in this context, and achievable in a timeframe of less than 5
-years. At present, building a fab from scratch, which could pave the way
-towards low-cost nanopore devices, is an endeavor in the hundreds of
-millions of dollars and is difficult to justify given the lack of a
-credible demand signal. However, at volumes comparable to qPCR
-diagnostics (&gt;1M units a month), such investment could be justified.
-Tools such as advanced market commitments, as well as credible signals
-of interest in an MGS diagnostic platform from national and
-international organizations, could pave the way towards such
-investments.</p></li>
+commitments <span class="citation" data-cites="kremer2020amc">(Kremer,
+Levin, and Snyder 2020)</span> may be appropriate here, as the target
+product profile is readily definable in this context, and achievable in
+a timeframe of less than 5 years. At present, building a fab from
+scratch, which could pave the way towards low-cost nanopore devices, is
+an endeavor in the hundreds of millions of dollars and is difficult to
+justify given the lack of a credible demand signal. However, at volumes
+comparable to qPCR diagnostics (&gt;1M units a month), such investment
+could be justified. Tools such as advanced market commitments, as well
+as credible signals of interest in an MGS diagnostic platform from
+national and international organizations, could pave the way towards
+such investments.</p></li>
 </ul>
 <h1 class="unnumbered" id="conclusions">Conclusions</h1>
 <p>Widespread adoption of metagenomic sequencing for infectious disease
@@ -993,6 +1040,373 @@ number of reads based on given target fraction (predicted Ct on x-axis)
 and sequencing depth (y-axis ranging from 100,000 to 5,000,000
 reads).</figcaption>
 </figure>
+<div id="refs" class="references csl-bib-body hanging-indent"
+data-entry-spacing="0" role="list">
+<div id="ref-Arnaout2020" class="csl-entry" role="listitem">
+Arnaout, R et al. 2020. <span>“SARS-CoV2 Testing: The Limit of Detection
+Matters.”</span> <em>bioRxiv</em>.
+</div>
+<div id="ref-babiker_metagenomic_2020" class="csl-entry"
+role="listitem">
+Babiker, Ahmed, Heath L. Bradley, Victoria D. Stittleburg, Jessica M.
+Ingersoll, Autum Key, Colleen S. Kraft, Jesse J. Waggoner, and Anne
+Piantadosi. 2020. <span>“Metagenomic <span>Sequencing</span>
+<span>To</span> <span>Detect</span> <span>Respiratory</span>
+<span>Viruses</span> in <span>Persons</span> Under
+<span>Investigation</span> for <span>COVID</span>-19.”</span>
+<em>Journal of Clinical Microbiology</em> 59 (1): e02142–20. <a
+href="https://doi.org/10.1128/JCM.02142-20">https://doi.org/10.1128/JCM.02142-20</a>.
+</div>
+<div id="ref-BioFireDiagnostics2016" class="csl-entry" role="listitem">
+<span>“BioFire Diagnostics. FilmArray Panels—Infectious Disease
+Diagnostics.”</span> 2016. <a
+href="https://www.biofiredx.com/products/the-filmarray-panels/">https://www.biofiredx.com/products/the-filmarray-panels/</a>.
+</div>
+<div id="ref-CambridgeConsultants2019" class="csl-entry"
+role="listitem">
+<span>“Cambridge Consultants, Medecins Sans Frontieres. Cost of Goods
+and Manufacturing Analysis of GeneXpert Cartridges.”</span> n.d. <a
+href="\url{https://msfaccess.org/sites/default/files/2019-12/2018\%20COGS\%20analysis\%20of\%20Xpert\%20MTB_RIF\%20Ultra\%20cartridges.pdf}">\url{https://msfaccess.org/sites/default/files/2019-12/2018\%20COGS\%20analysis\%20of\%20Xpert\%20MTB_RIF\%20Ultra\%20cartridges.pdf}</a>.
+</div>
+<div id="ref-GeneXpertSystem" class="csl-entry" role="listitem">
+Cepheid. n.d. <span>“GeneXpert System.”</span> <a
+href="https://www.cepheid.com/en-US/systems/genexpert-family-of-systems/genexpert-system.html">https://www.cepheid.com/en-US/systems/genexpert-family-of-systems/genexpert-system.html</a>.
+</div>
+<div id="ref-CepheidNewsReleaseArchive" class="csl-entry"
+role="listitem">
+<span>“Cepheid News Release Archive. Cepheid Announces FleXible
+Cartridge Program.”</span> n.d. <a
+href="https://cepheid.mediaroom.com/2019-04-15-Cepheid-Announces-FleXible-Cartridge-Program">https://cepheid.mediaroom.com/2019-04-15-Cepheid-Announces-FleXible-Cartridge-Program</a>.
+</div>
+<div id="ref-jumpcode" class="csl-entry" role="listitem">
+Chan, Agnes P, Azeem Siddique, Yvain Desplat, Yongwook Choi, Sridhar
+Ranganathan, Kumari Sonal Choudhary, Josh Diaz, et al. 2022. <span>“A
+Universal Day Zero Infectious Disease Testing Strategy Leveraging
+CRISPR-Based Sample Depletion and Metagenomic Sequencing.”</span>
+<em>medRxiv</em>, 2022–05.
+</div>
+<div id="ref-RapidResponse2021" class="csl-entry" role="listitem">
+Chan Zuckerberg Biohub. 2021. <span>“Rapid Response. Resources.”</span>
+<a
+href="https://www.czbiohub.org/rapid-response/resources/">https://www.czbiohub.org/rapid-response/resources/</a>.
+</div>
+<div id="ref-Charalampous2019" class="csl-entry" role="listitem">
+Charalampous, T et al. 2019. <span>“Nanopore Metagenomics Enables Rapid
+Clinical Diagnosis of Bacterial Lower Respiratory Infection.”</span>
+<em>Nat Biotechnol</em> 37 (7): 783–92.
+</div>
+<div id="ref-Chiu2019" class="csl-entry" role="listitem">
+Chiu, CY, and SA Miller. 2019. <span>“Clinical Metagenomics.”</span>
+<em>Nat Rev Genet</em> 20 (6): 341–55.
+</div>
+<div id="ref-edgeworth2023respiratory" class="csl-entry"
+role="listitem">
+Edgeworth, Jonathan D. 2023. <span>“Respiratory Metagenomics: Route to
+Routine Service.”</span> <em>Current Opinion in Infectious Diseases</em>
+36 (2): 115.
+</div>
+<div id="ref-elements2019" class="csl-entry" role="listitem">
+Elements. 2019. <span>“eNPR – Flow Cell for Nanopore Chip Assembly and
+Measurement Instructions.”</span> 2019. <a
+href="https://elements-ic.com/wp-content/uploads/2019/07/eNPR-%E2%80%93-Nanopore-Chip-assembly-and-measurement-instructions.pdf">https://elements-ic.com/wp-content/uploads/2019/07/eNPR-%E2%80%93-Nanopore-Chip-assembly-and-measurement-instructions.pdf</a>.
+</div>
+<div id="ref-wanunu2022zmw" class="csl-entry" role="listitem">
+Farhangdoust, Fatemeh, Mohammad Alibakshi, Feng Cheng, Wentao Liang,
+Yongmin Liu, and Meni Wanunu. 2022. <span>“Rapid Identification of DNA
+Fragments Through Direct Sequencing with Electro‐optical Zero‐mode
+Waveguides.”</span> <em>Advanced Materials</em> 34 (January): 2108479.
+<a
+href="https://doi.org/10.1002/adma.202108479">https://doi.org/10.1002/adma.202108479</a>.
+</div>
+<div id="ref-GenomeWeb2009" class="csl-entry" role="listitem">
+GenomeWeb. 2009. <span>“LaserGen Says Its New Reversible Terminators
+Could Improve Several Sequencing Platforms.”</span> <a
+href="https://www.genomeweb.com/sequencing/lasergen-says-its-new-reversible-terminators-could-improve-several-sequencing-pl">https://www.genomeweb.com/sequencing/lasergen-says-its-new-reversible-terminators-could-improve-several-sequencing-pl</a>.
+</div>
+<div id="ref-heger2015" class="csl-entry" role="listitem">
+———. 2015. <span>“Thermo Fisher Launches New Systems to Focus on Plug
+and Play Targeted Sequencing.”</span> 2015. <a
+href="https://www.genomeweb.com/sequencing-technology/thermo-fisher-launches-new-systems-focus-plug-and-play-targeted-sequencing">https://www.genomeweb.com/sequencing-technology/thermo-fisher-launches-new-systems-focus-plug-and-play-targeted-sequencing</a>.
+</div>
+<div id="ref-GenomeWeb2022" class="csl-entry" role="listitem">
+———. 2022. <span>“Danaher <span>Q4</span> Revenues Rise 21
+Percent.”</span> <a
+href="https://www.genomeweb.com/business-news/danaher-q4-revenues-rise-21-percent">https://www.genomeweb.com/business-news/danaher-q4-revenues-rise-21-percent</a>.
+</div>
+<div id="ref-glennerster2023calculating" class="csl-entry"
+role="listitem">
+Glennerster, Rachel, Christopher M Snyder, and Brandon Joel Tan. 2023.
+<span>“Calculating the Costs and Benefits of Advance Preparations for
+Future Pandemics.”</span> <em>IMF Economic Review</em>, 1–38.
+</div>
+<div id="ref-greninger2015" class="csl-entry" role="listitem">
+Greninger, AL, SN Naccache, S Federman, G Yu, P Mbala, V Bres, et al.
+2015. <span>“Rapid Metagenomic Identification of Viral Pathogens in
+Clinical Samples by Real-Time Nanopore Sequencing Analysis.”</span>
+<em>Genome Med</em> 7: 99.
+</div>
+<div id="ref-healy2021impact" class="csl-entry" role="listitem">
+Healy, Brendan, Azizah Khan, Huria Metezai, Ian Blyth, and Hibo Asad.
+2021. <span>“The Impact of False Positive COVID-19 Results in an Area of
+Low Prevalence.”</span> <em>Clinical Medicine</em> 21 (1): e54.
+</div>
+<div id="ref-ont-array-patent" class="csl-entry" role="listitem">
+Hyde, Jason Robert, Pedro Miguel Ortiz Bahamon, Clive Gavin Brown,
+Andrew John, and Paul Raymond Mackett. 2022. Formation of array of
+membranes and apparatus therefor. US20220023819A1, issued 2022. <a
+href="https://patents.google.com/patent/US20220023819A1">https://patents.google.com/patent/US20220023819A1</a>.
+</div>
+<div id="ref-iseq100" class="csl-entry" role="listitem">
+Illumina. 2023a. <span>“ISeq 100 System.”</span> 2023. <a
+href="https://www.illumina.com/systems/sequencing-platforms/iseq.html">https://www.illumina.com/systems/sequencing-platforms/iseq.html</a>.
+</div>
+<div id="ref-miseqSpecs" class="csl-entry" role="listitem">
+———. 2023b. <span>“MiSeq Specifications.”</span> 2023. <a
+href="https://www.illumina.com/systems/sequencing-platforms/miseq/specifications.html">https://www.illumina.com/systems/sequencing-platforms/miseq/specifications.html</a>.
+</div>
+<div id="ref-novaSeq6000" class="csl-entry" role="listitem">
+———. 2023c. <span>“NovaSeq 6000 Reagent Kits.”</span> 2023. <a
+href="https://www.illumina.com/products/by-type/sequencing-kits/cluster-gen-sequencing-reagents/novaseq-reagent-kits.html">https://www.illumina.com/products/by-type/sequencing-kits/cluster-gen-sequencing-reagents/novaseq-reagent-kits.html</a>.
+</div>
+<div id="ref-neoprep" class="csl-entry" role="listitem">
+———. n.d. <span>“<span>NeoPrep</span> <span>Library</span>
+<span>Prep</span> <span>System</span>.”</span> Accessed March 3, 2023.
+<a
+href="https://jp.illumina.com/content/dam/illumina-marketing/documents/products/datasheets/neoprep-system-data-sheet-970-2014-004.pdf">https://jp.illumina.com/content/dam/illumina-marketing/documents/products/datasheets/neoprep-system-data-sheet-970-2014-004.pdf</a>.
+</div>
+<div id="ref-ion520Chip" class="csl-entry" role="listitem">
+Ion Torrent. 2023a. <span>“Ion 520 Chip Kit.”</span> 2023. <a
+href="https://www.thermofisher.com/order/catalog/product/A27762">https://www.thermofisher.com/order/catalog/product/A27762</a>.
+</div>
+<div id="ref-ionGeneStudio" class="csl-entry" role="listitem">
+———. 2023b. <span>“Ion GeneStudio S5 System.”</span> 2023. <a
+href="https://www.thermofisher.com/order/catalog/product/A38194">https://www.thermofisher.com/order/catalog/product/A38194</a>.
+</div>
+<div id="ref-kremer2020amc" class="csl-entry" role="listitem">
+Kremer, Michael, Jonathan Levin, and Christopher M Snyder. 2020.
+<span>“Advance Market Commitments: Insights from Theory and
+Experience.”</span> In <em>AEA Papers and Proceedings</em>, 110:269–73.
+American Economic Association 2014 Broadway, Suite 305, Nashville, TN
+37203.
+</div>
+<div id="ref-loose2019whale" class="csl-entry" role="listitem">
+Loose, Matthew, Vardhman Rakyan, Nadine Holmes, and Alexander Payne.
+2019. <span>“Whale Watching with BulkVis: A Graphical Viewer for Oxford
+Nanopore Bulk Fast5 Files.”</span> <em>Bioinformatics</em> 35 (13).
+</div>
+<div id="ref-msf2022access" class="csl-entry" role="listitem">
+Médecins Sans Frontières. 2022. <span>“Principles for Access to
+Multi-Disease Molecular Diagnostics.”</span> <a
+href="https://www.msfaccess.org/principles-access-multi-disease-molecular-diagnostics">https://www.msfaccess.org/principles-access-multi-disease-molecular-diagnostics</a>.
+</div>
+<div id="ref-MGITech2023" class="csl-entry" role="listitem">
+MGI. 2023. <span>“About MGI.”</span> 2023. <a
+href="https://en.mgi-tech.com/about/">https://en.mgi-tech.com/about/</a>.
+</div>
+<div id="ref-Miller2019" class="csl-entry" role="listitem">
+Miller, S et al. 2019. <span>“Laboratory Validation of a Clinical
+Metagenomic Sequencing Assay for Pathogen Detection in Cerebrospinal
+Fluid.”</span> <em>Genome Res</em> 29 (5): 831–42.
+</div>
+<div id="ref-orlandi2020hiv" class="csl-entry" role="listitem">
+Orlandi, C, B Canovari, F Bozzano, F Marras, Z Pasquini, F Barchiesi, et
+al. 2020. <span>“A Comparative Analysis of Unintegrated HIV-1 DNA
+Measurement as a Potential Biomarker of the Cellular Reservoir in the
+Blood of Patients Controlling and Non-Controlling Viral
+Replication.”</span> <em>J Transl Med</em> 18 (1): 204.
+</div>
+<div id="ref-nanoporeUpdate2023" class="csl-entry" role="listitem">
+<span>“Oxford Nanopore Delivers Technology Update at Annual London
+Calling Conference: Bringing Together Years of Innovation to Showcase
+One Sensing Platform for All Biological Analyses.”</span> 2023. 2023. <a
+href="https://nanoporetech.com/about-us/news/oxford-nanopore-delivers-technology-update-annual-london-calling-conference-bringing">https://nanoporetech.com/about-us/news/oxford-nanopore-delivers-technology-update-annual-london-calling-conference-bringing</a>.
+</div>
+<div id="ref-ont-2021-annual-report" class="csl-entry" role="listitem">
+Oxford Nanopore Technologies. 2021. <span>“Oxford <span>Nanopore</span>
+<span>Annual</span> <span>Report</span> 2021.”</span> <a
+href="https://nanoporetech.com/sites/default/files/s3/investors/reports/ONT%20Annual%20Report%202021.pdf">https://nanoporetech.com/sites/default/files/s3/investors/reports/ONT%20Annual%20Report%202021.pdf</a>.
+</div>
+<div id="ref-nanoporeKits" class="csl-entry" role="listitem">
+———. 2023a. <span>“DNA and RNA Sequencing Kits.”</span> 2023. <a
+href="https://nanoporetech.com/products/kits">https://nanoporetech.com/products/kits</a>.
+</div>
+<div id="ref-flongle" class="csl-entry" role="listitem">
+———. 2023b. <span>“Flongle | <span>Oxford Nanopore
+Technologies</span>.”</span> <a
+href="https://nanoporetech.com/products/flongle">https://nanoporetech.com/products/flongle</a>.
+</div>
+<div id="ref-ont2023rapidkit" class="csl-entry" role="listitem">
+———. 2023c. <span>“Rapid Sequencing Kit V1.4.”</span> <a
+href="https://store.nanoporetech.com/uk/productDetail/?id=rapid-sequencing-kit-v14">https://store.nanoporetech.com/uk/productDetail/?id=rapid-sequencing-kit-v14</a>.
+</div>
+<div id="ref-ont_minion" class="csl-entry" role="listitem">
+———. n.d.a. <span>“Getting Started with <span>MinION</span> - What You
+Need to Know.”</span> <em><span>Oxford Nanopore
+Technologies</span></em>. Accessed February 8, 2023. <a
+href="https://nanoporetech.com/community/faqs">https://nanoporetech.com/community/faqs</a>.
+</div>
+<div id="ref-ont_promethion" class="csl-entry" role="listitem">
+———. n.d.b. <span>“<span>PromethION</span>
+24（<span>Nanopore</span>）.”</span> <em>Core Facility</em>. Accessed
+March 4, 2023. <a
+href="https://ashbi.kyoto-u.ac.jp/core-facility/equipment/promethion-24/">https://ashbi.kyoto-u.ac.jp/core-facility/equipment/promethion-24/</a>.
+</div>
+<div id="ref-voltrax" class="csl-entry" role="listitem">
+———. n.d.c. <span>“<span>VolTRAX</span> <span></span>
+<span>Oxford</span> <span>Nanopore</span>
+<span>Technologies</span>.”</span> Accessed March 3, 2023. <a
+href="https://nanoporetech.com/products/voltrax">https://nanoporetech.com/products/voltrax</a>.
+</div>
+<div id="ref-sequelSystems" class="csl-entry" role="listitem">
+Pacific BioSciences. 2018. <span>“Sequel Systems.”</span> 2018. <a
+href="https://www.pacb.com/technology/hifi-sequencing/sequel-system/">https://www.pacb.com/technology/hifi-sequencing/sequel-system/</a>.
+</div>
+<div id="ref-SMRTbells" class="csl-entry" role="listitem">
+———. 2023. <span>“Library Prep and Barcoding Kits.”</span> 2023. <a
+href="https://www.pacb.com/products-and-services/consumables/library-prep-and-barcoding-kits/">https://www.pacb.com/products-and-services/consumables/library-prep-and-barcoding-kits/</a>.
+</div>
+<div id="ref-Pekar2021" class="csl-entry" role="listitem">
+Pekar, J, M Worobey, N Moshiri, K Scheffler, and JO Wertheim. 2021.
+<span>“Timing the SARS-CoV-2 Index Case in Hubei Province.”</span>
+<em>Science</em> 372 (6540): 412–17.
+</div>
+<div id="ref-Qiagen" class="csl-entry" role="listitem">
+<span>“Qiagen. QIAseq FastSelect Epidemiology Kits.”</span> n.d. <a
+href="https://www.qiagen.com/us/products/discovery-and-translational-research/next-generation-sequencing/rna-sequencing/ribosomal-rna-and-globin-mRNA-removal/qiaseq-fastselect-epidemiology-kits">https://www.qiagen.com/us/products/discovery-and-translational-research/next-generation-sequencing/rna-sequencing/ribosomal-rna-and-globin-mRNA-removal/qiaseq-fastselect-epidemiology-kits</a>.
+</div>
+<div id="ref-quail2012" class="csl-entry" role="listitem">
+Quail, MA, M Smith, P Coupland, TD Otto, SR Harris, TR Connor, et al.
+2012. <span>“A Tale of Three Next Generation Sequencing Platforms:
+Comparison of Ion Torrent, <span>Pacific BioSciences</span> and Illumina
+MiSeq Sequencers.”</span> <em>BMC Genomics</em> 13: 341.
+</div>
+<div id="ref-quick2016real" class="csl-entry" role="listitem">
+Quick, Joshua, Nicholas J Loman, Sophie Duraffour, Jared T Simpson,
+Ettore Severi, Lauren Cowley, Joseph Akoi Bore, et al. 2016.
+<span>“Real-Time, Portable Genome Sequencing for Ebola
+Surveillance.”</span> <em>Nature</em> 530 (7589): 228–32.
+</div>
+<div id="ref-regnault2021deep" class="csl-entry" role="listitem">
+Regnault, Béatrice, Thomas Bigot, Laurence Ma, Philippe Pérot, Sarah
+Temmam, and Marc Eloit. 2021. <span>“Deep Impact of Random Amplification
+and Library Construction Methods on Viral Metagenomics Results.”</span>
+<em>Viruses</em> 13 (2): 253.
+</div>
+<div id="ref-rhoads_pacbio_2015" class="csl-entry" role="listitem">
+Rhoads, Anthony, and Kin Fai Au. 2015. <span>“<span>PacBio</span>
+<span>Sequencing</span> and <span>Its</span>
+<span>Applications</span>.”</span> <em>Genomics, Proteomics &amp;
+Bioinformatics</em>, <span>SI</span>: <span>Metagenomics</span> of
+<span>Marine</span> <span>Environments</span>, 13 (5): 278–89. <a
+href="https://doi.org/10.1016/j.gpb.2015.08.002">https://doi.org/10.1016/j.gpb.2015.08.002</a>.
+</div>
+<div id="ref-schlaberg_viral_2017" class="csl-entry" role="listitem">
+Schlaberg, Robert, Krista Queen, Keith Simmon, Keith Tardif, Chris
+Stockmann, Steven Flygare, Brett Kennedy, et al. 2017. <span>“Viral
+<span>Pathogen</span> <span>Detection</span> by
+<span>Metagenomics</span> and <span>Pan</span>-<span>Viral</span>
+<span>Group</span> <span>Polymerase</span> <span>Chain</span>
+<span>Reaction</span> in <span>Children</span> <span>With</span>
+<span>Pneumonia</span> <span>Lacking</span> <span>Identifiable</span>
+<span>Etiology</span>.”</span> <em>The Journal of Infectious
+Diseases</em> 215 (9): 1407–15. <a
+href="https://doi.org/10.1093/infdis/jix148">https://doi.org/10.1093/infdis/jix148</a>.
+</div>
+<div id="ref-seqll2017brochure" class="csl-entry" role="listitem">
+SeqLL. 2017. <span>“<span>SeqLL</span> <span>Sequencing</span>
+<span>Brochure</span>.”</span> <a
+href="\url{http://seqll.com/wp-content/uploads/2017/02/seqll-sequence-brochure2_2017.pdf}">\url{http://seqll.com/wp-content/uploads/2017/02/seqll-sequence-brochure2_2017.pdf}</a>.
+</div>
+<div id="ref-sharma2023threat" class="csl-entry" role="listitem">
+Sharma, Siddhanth, Jaspreet Pannu, Sam Chorlton, Jacob L Swett, and
+David J Ecker. 2023. <span>“Threat Net: A Metagenomic Surveillance
+Network for Biothreat Detection and Early Warning.”</span> <em>Health
+Security</em>.
+</div>
+<div id="ref-SingularGenomics2023" class="csl-entry" role="listitem">
+Singular Genomics. 2023. <span>“About Us.”</span> 2023. <a
+href="https://singulargenomics.com/company/about/">https://singulargenomics.com/company/about/</a>.
+</div>
+<div id="ref-Consortium2021" class="csl-entry" role="listitem">
+The Nucleic Acid Observatory Consortium. 2021. <span>“A Global Nucleic
+Acid Observatory for Biodefense and Planetary Health.”</span> <em>arXiv
+Preprint arXiv:2108.02678</em>. <a
+href="http://arxiv.org/abs/2108.02678">http://arxiv.org/abs/2108.02678</a>.
+</div>
+<div id="ref-thompson2010helicos" class="csl-entry" role="listitem">
+Thompson, John F, and Kathleen E Steinmann. 2010. <span>“Single Molecule
+Sequencing with a HeliScope Genetic Analysis System.”</span> <em>Current
+Protocols in Molecular Biology</em> 92 (1): 7–10.
+</div>
+<div id="ref-Topol2023" class="csl-entry" role="listitem">
+Topol, Eric. 2023. <span>“A Culture of [Blood] Cultures.”</span> 2023.
+<a
+href="https://erictopol.substack.com/p/a-culture-of-blood-cultures">https://erictopol.substack.com/p/a-culture-of-blood-cultures</a>.
+</div>
+<div id="ref-tyson2020" class="csl-entry" role="listitem">
+Tyson, JR, P James, D Stoddart, N Sparks, A Wickenhagen, G Hall, et al.
+2020. <span>“Improvements to the ARTIC Multiplex PCR Method for
+SARS-CoV-2 Genome Sequencing Using Nanopore.”</span> <a
+href="https://doi.org/10.1101/2020.09.04.283077">https://doi.org/10.1101/2020.09.04.283077</a>.
+</div>
+<div id="ref-wang2021nanopore" class="csl-entry" role="listitem">
+Wang, Yunhao, Yue Zhao, Audrey Bollas, Yuru Wang, and Kin Fai Au. 2021.
+<span>“Nanopore Sequencing Technology, Bioinformatics and
+Applications.”</span> <em>Nature Biotechnology</em> 39 (11): 1348–65.
+</div>
+<div id="ref-whiteford2023cluster" class="csl-entry" role="listitem">
+Whiteford, N. 2023. <span>“Why Does Cluster Generation Take 5 Hours?
+ASeq Newsletter.”</span> <a
+href="https://aseq.substack.com/p/why-does-cluster-generation-take">https://aseq.substack.com/p/why-does-cluster-generation-take</a>.
+</div>
+<div id="ref-Whiteford2022Metagenomic" class="csl-entry"
+role="listitem">
+Whiteford, Nava. 2022a. <span>“A Metagenomic Sample Prep System.”</span>
+<em>ASeq Newsletter</em>. <a
+href="https://aseq.substack.com/p/a-metagenomic-sample-prep-system">https://aseq.substack.com/p/a-metagenomic-sample-prep-system</a>.
+</div>
+<div id="ref-whiteford_seq_capability" class="csl-entry"
+role="listitem">
+———. 2022b. <span>“Global Sequencing Capability Notes.”</span> 2022. <a
+href="https://41j.com/blog/2022/09/global-sequencing-capability-notes/">https://41j.com/blog/2022/09/global-sequencing-capability-notes/</a>.
+</div>
+<div id="ref-Whiteford2022Modeling" class="csl-entry" role="listitem">
+———. 2022c. <span>“Modeling Sequencing Sensitivity.”</span> <em>ASeq
+Newsletter</em>. <a
+href="https://aseq.substack.com/p/modeling-sequencing-sensitivity">https://aseq.substack.com/p/modeling-sequencing-sensitivity</a>.
+</div>
+<div id="ref-Whiteford2022notes_on_nanopores" class="csl-entry"
+role="listitem">
+———. 2022d. <span>“Notes on Nanopores.”</span> 2022. <a
+href="https://aseq.substack.com/p/notes-on-nanopores">https://aseq.substack.com/p/notes-on-nanopores</a>.
+</div>
+<div id="ref-whiteford2022reticulatech" class="csl-entry"
+role="listitem">
+———. 2022e. <span>“Reticula Pt. 3 - Technological Approach.”</span>
+<em>ASeq Newsletter</em>. <a
+href="https://aseq.substack.com/p/reticula-pt-3-technological-approach">https://aseq.substack.com/p/reticula-pt-3-technological-approach</a>.
+</div>
+<div id="ref-whiteford2022longreads" class="csl-entry" role="listitem">
+———. 2022f. <span>“Are Long Reads Useful for Infectious Disease
+Testing?”</span> Substack newsletter. <em>ASeq Newsletter</em>. <a
+href="https://aseq.substack.com/p/are-long-reads-useful-for-infectious">https://aseq.substack.com/p/are-long-reads-useful-for-infectious</a>.
+</div>
+<div id="ref-WHO2011" class="csl-entry" role="listitem">
+World Health Organization. 2011. <span>“Establishment of PCR Laboratory
+in Developing Countries.”</span> SEA-HLM-419. WHO Regional Office for
+South-East Asia. <a
+href="https://apps.who.int/iris/rest/bitstreams/1060638/retrieve">https://apps.who.int/iris/rest/bitstreams/1060638/retrieve</a>.
+</div>
+<div id="ref-Zhu2020" class="csl-entry" role="listitem">
+Zhu, N et al. 2020. <span>“A Novel Coronavirus from Patients with
+Pneumonia in China, 2019.”</span> <em>N Engl J Med</em> 382 (8): 727–33.
+</div>
+<div id="ref-Zinter2019" class="csl-entry" role="listitem">
+Zinter, MS et al. 2019. <span>“Pulmonary Metagenomic Sequencing Suggests
+Missed Infections in Immunocompromised Children.”</span> <em>Clin Infect
+Dis</em> 68 (11): 1847–55.
+</div>
+</div>
 <aside id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
