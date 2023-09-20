@@ -51,6 +51,16 @@ h1 {
   border-bottom: 1px solid #000;  /* 2px thick, black line */
 }
 
+/* Initialize counter */
+body {
+  counter-reset: figure-counter;
+}
+
+/* Increment counter and display it */
+figure {
+  counter-increment: figure-counter;
+}
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </style>
   </head>
