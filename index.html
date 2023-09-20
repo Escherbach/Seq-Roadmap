@@ -38,14 +38,6 @@
   text-align: left;  /* Changed from center to left */
   margin-bottom: 2px;
 }
-  
-  body, p, div {
-  max-width: 100%;  /* Full-width */
-  margin: auto;
-  padding: 20px;
-  box-sizing: border-box;  /* Include padding and border in element's total width and height */
-}
-
   body {
   background-color: #ffffff;  /* White */
 }
@@ -619,6 +611,13 @@ relationship between the real fraction of target nucleic acids in a
 sample, measured Ct values and expected target reads based on data
 obtained from <span class="citation"
 data-cites="jumpcode">[43]</span>.</p>
+<figure id="fig:heat-map">
+<img src="images/predicted Ct vs at least one.png" />
+<figcaption>Heat map for probability of at least one read. Expected
+number of reads based on given target fraction (predicted Ct on x-axis)
+and sequencing depth (y-axis ranging from 100,000 to 5,000,000
+reads).</figcaption>
+</figure>
 <p>Based on this, we can map quite directly from the desired limit of
 detection to the required sequencing depth. For example, we see that for
 respiratory samples with 10 ng total nucleic acid yield, a MGS device
@@ -1042,14 +1041,7 @@ grateful for. We are grateful to Rahul Arora, Jake Pencharz and Janvi
 Ahuja for help on the project.</p>
 </div>
 <h1 class="unnumbered" id="bibliography">Bibliography</h1>
-<h1 id="sensitivity">Sensitivity</h1>
-<figure id="fig:heat-map">
-<img src="images/predicted Ct vs at least one.png" />
-<figcaption>Heat map for probability of at least one read. Expected
-number of reads based on given target fraction (predicted Ct on x-axis)
-and sequencing depth (y-axis ranging from 100,000 to 5,000,000
-reads).</figcaption>
-</figure>
+
 <div id="refs" class="references csl-bib-body" role="list">
 <div id="ref-Pekar2021" class="csl-entry" role="listitem">
 <div class="csl-right-inline">[1] J. Pekar, M. Worobey, N. Moshiri, K. Scheffler, and J. Wertheim, <span>“Timing the SARS-CoV-2 index case in hubei province,”</span> <em>Science</em>, vol. 372, no. 6540, pp. 412–7, 2021.</div>
