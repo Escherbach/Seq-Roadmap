@@ -503,8 +503,43 @@ criteria based on the detection of non-overlapping reads from <span
 class="math inline"> ≥ 3</span> distinct genomic regions <span
 class="citation" data-cites="Miller2019">[42]</span>.</p>
 
+
+<h2 class="unnumbered" id="throughput">Throughput</h2>
+<p>With these goals in mind, what sequencing depth is required? PCR
+tests are characterized by a high sensitivity, or very low limit of
+detection (LoD): in principle, they can detect the presence of a target
+fragment with only a handful of copies present in a sample. Sequencing a
+human clinical sample can obviously achieve very high levels of
+sensitivity: a sequencing run of terabases (Tb) on a single sample
+should readily detect even pathogens that are very low in abundance. At
+a depth of 40M reads per sample, MGS was shown to consistently achieve a
+sensitivity on par with if not greater than PCR <span class="citation"
+data-cites="jumpcode Whiteford2022Metagenomic">[40,43]</span>.
+However, when the requirements of cost and time-to-answer are added,
+practical sensitivity of sequencing has to be determined.</p>
+<p>PCR has a key advantage over sequencing: because PCR targets a short,
+unique region of a genetic sequence, it is <em>insensitive to background
+material</em>. A high fraction of human material (mostly <span
+data-acronym-label="rRNA" data-acronym-form="singular+short">rRNA</span>
+in the case of RT-qPCR) or bacterial material will have only a minor
+effect on the sensitivity of qPCR. In other words, the limit of
+detection relies on the sample’s absolute abundance of the target. MGS,
+however, is sensitive to background material. To ensure that the target
+of interest is detected, one must also sequence through background
+fragments until the target is reached. Thus, the sensitivity of MGS
+relies on the <em>relative abundance</em> of the target among the other
+nucleic acids in a sample.</p>
+<p>In typical human clinical samples, host nucleic acids are orders of
+magnitude more abundant than those of the pathogen. For example, the
+typical fraction of SARS-CoV-2 RNA in nasopharyngeal samples was between
+0.01% (or one fragment in 10,000) and 0.001% (one in 100,000). However,
+viral load has been found to span some 8 orders of magnitude, with loads
+as low as tens of copies/mL found in more than 1% of cases <span
+class="citation" data-cites="Arnaout2020">[44]</span>.</p>
+
 <div class="table*">
 <table  id="table2">
+<caption><b>Table 2:</b> Expected target reads for runs with 10M reads, 1M reads and 1M reads with rRNA depletion in SARS-CoV-2 respiratory samples. Best fit for predicted Ct values obtained based on data from [43], where the PerkinElmer®  SARS-CoV-2  Nucleic  Acid  Detection  Kit was used. Modeled with the following parameters.Total RNA: 10ng; Genome Size: 30Kb; rRNA fraction: 60\%; qPCR Target Region: 90nt; Fragment Size: 1000nt.</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Target Fraction</th>
@@ -575,38 +610,7 @@ class="math inline">1.8 × 10<sup>7</sup></span></td>
 </tbody>
 </table>
 </div>
-<h2 class="unnumbered" id="throughput">Throughput</h2>
-<p>With these goals in mind, what sequencing depth is required? PCR
-tests are characterized by a high sensitivity, or very low limit of
-detection (LoD): in principle, they can detect the presence of a target
-fragment with only a handful of copies present in a sample. Sequencing a
-human clinical sample can obviously achieve very high levels of
-sensitivity: a sequencing run of terabases (Tb) on a single sample
-should readily detect even pathogens that are very low in abundance. At
-a depth of 40M reads per sample, MGS was shown to consistently achieve a
-sensitivity on par with if not greater than PCR <span class="citation"
-data-cites="jumpcode Whiteford2022Metagenomic">[40,43]</span>.
-However, when the requirements of cost and time-to-answer are added,
-practical sensitivity of sequencing has to be determined.</p>
-<p>PCR has a key advantage over sequencing: because PCR targets a short,
-unique region of a genetic sequence, it is <em>insensitive to background
-material</em>. A high fraction of human material (mostly <span
-data-acronym-label="rRNA" data-acronym-form="singular+short">rRNA</span>
-in the case of RT-qPCR) or bacterial material will have only a minor
-effect on the sensitivity of qPCR. In other words, the limit of
-detection relies on the sample’s absolute abundance of the target. MGS,
-however, is sensitive to background material. To ensure that the target
-of interest is detected, one must also sequence through background
-fragments until the target is reached. Thus, the sensitivity of MGS
-relies on the <em>relative abundance</em> of the target among the other
-nucleic acids in a sample.</p>
-<p>In typical human clinical samples, host nucleic acids are orders of
-magnitude more abundant than those of the pathogen. For example, the
-typical fraction of SARS-CoV-2 RNA in nasopharyngeal samples was between
-0.01% (or one fragment in 10,000) and 0.001% (one in 100,000). However,
-viral load has been found to span some 8 orders of magnitude, with loads
-as low as tens of copies/mL found in more than 1% of cases <span
-class="citation" data-cites="Arnaout2020">[44]</span>.</p>
+
 <p>The expected number of reads from the pathogen of interest is a
 straightforward function of the relative fraction of the pathogen in the
 sample, and the number of fragments sequenced in a run. For example, if
@@ -807,6 +811,108 @@ cost-optimization should achieve a much lower cost point. Although it is
 unclear whether any of these will be perceived as attractive by ONT, a
 number of companies, including Qitan, Genia or Nanion have entered the
 market and this trend is poised to continue.</p>
+
+
+<h2 id="single-molecule-optical-platforms">Single-molecule optical
+platforms</h2>
+<p>Single-molecule optical technologies were brought to the market by
+Helicos <span class="citation"
+data-cites="thompson2010helicos">[60]</span> (now defunct) and <span
+data-acronym-label="PacBio"
+data-acronym-form="singular+short">PacBio</span> <span class="citation"
+data-cites="rhoads_pacbio_2015">[61]</span>. Considering this class of
+technologies as a candidate platform may be surprising, as they have
+generally been embodied as costly, "fridge-sized" instruments with long
+library preparation (&gt;3 hours). However, this is driven not by the
+fundamental needs of the platform, but rather by the market demand for
+high single-base accuracy and long reads. If these requirements are
+relaxed, <span data-acronym-label="SMO"
+data-acronym-form="singular+short">SMO</span> approaches can achieve
+very simple sample preparation <span class="citation"
+data-cites="seqll2017brochure">[29]</span> and a low cost of consumables
+<span class="citation"
+data-cites="whiteford2022reticulatech">[54]</span>.</p>
+<p>Commonly employed library preparation techniques take many hours and
+are not a good fit for point-of-care MGS. However, the SMRTBells library
+preparation kit <span class="citation"
+data-cites="SMRTbells">[62]</span> was introduced to drive accuracy to
+&gt;99.9% and read length to  15 kb, neither of which is required for
+MGS. Without these requirements, library preparation for optical methods
+can be as fast as for nanopore sequencing ( 5 minutes) and still achieve
+accuracies upwards of 80% combined with a compensating read length of
+hundreds of bases. Similarly, approaches derived from the Helicos
+technology have been demonstrated to work with minimal library
+preparation with error rates below 5% and read lengths exceeding 25 bp,
+making them a potential candidate for a MGS device <span
+class="citation" data-cites="whiteford2022reticulatech">[54]</span>.</p>
+<p>In terms of throughput, the sequencing step alone can be achieved in
+a fraction of the time required for nanopore sequencing, as SMO
+approaches can use many more sensors working in parallel. In PacBio
+sequencing, imaging more than 1 million fragments in parallel is common
+<span class="citation" data-cites="sequelSystems">[30]</span> and, with
+a speed of 10 nucleotides per second, the run can be finished in less
+than a minute for the read lengths required for MGS. Another key
+advantage of an optical approach relative to nanopore sequencing is that
+it is compatible with a less complex chip and presents a clearer path to
+a consumable cost of $10 or less <span class="citation"
+data-cites="whiteford2022reticulatech">[54]</span>.</p>
+<p>A key challenge to address will be the optimization of device cost,
+currently exceeding $500,000 in the case of PacBio instruments. However,
+achieving a cost lower than $10,000 appears feasible if instrumentation
+is reimagined from the ground up. For example, photonic chips need not
+be monolithically integrated. Consumer-grade cameras available for $300
+have resolution sufficient for the accuracy requirements of an MGS
+diagnostic. Throughput in a low-cost platform will be limited by
+compatibility with low-cost cameras, but the goal of 1-10 million
+sensing regions (and hence reads) appears achievable.</p>
+<p>A particularly promising emerging approach is that of electro-optical
+zero-mode waveguides <span class="citation"
+data-cites="wanunu2022zmw">[63]</span>, which may enable substantially
+lower input requirements, potentially obviating the need for random
+amplification of nucleic acids in a sample.</p>
+<p><span class="marginnote"><figure>
+<img src="images/IMG_1895.jpeg" />
+<figcaption>Sketch of a cost-optimized single-molecule optical platform.
+Originally appeared in <span class="citation"
+data-cites="whiteford2022reticulatech">[54]</span>.</figcaption>
+</figure></span></p>
+<h1 class="unnumbered" id="sec:accelerating">Accelerating
+development</h1>
+<p>Based on the previous analysis, there are at least two independent
+pathways that are likely to meet the criteria for a viable point-of-care
+MGS device. Despite the large large amounts of private investments
+flowing into sequencing technology as a whole, there is a number reasons
+to believe that directed development can yield significant improvements
+over business-as-usual. A number of observations, informed largely by
+the authors’ experience with the sequencing landscape, as well as
+conversations with experts, push in this direction:</p>
+<ul>
+<li><p>Development is driven by <strong>customer demand</strong>. The
+primary market for sequencing instruments is in research and high-end
+diagnostics (e.g. cancer). In these contexts, the primary consideration
+is often extraordinarily high accuracy, as the correct identification of
+every single base is potentially informative. The task of correctly
+classifying a pathogen of interest or detecting an anomaly does not
+require such high single-base accuracies, as we justify later.
+Similarly, the requirements for read length, as well as sequencing
+depth, are much lower.</p></li>
+<li><p><strong>Time to answer</strong> of hours or days is not a
+limiting factor in many research contexts. Typical workflows are
+structured around large runs, often counted in thousands of billions of
+bases (e.g. ONT PromethION, Illumina NovaSeq). Researchers typically
+care about a low cost per base for these large runs. Large, high-end
+instruments can minimize this cost per base.</p></li>
+<li><p>The sequencing market is still comparatively small, dominated by
+a few players with relatively enforceable intellectual property, and
+<strong>freedom-to-operate</strong> is thus relatively limited.</p></li>
+<li><p>Relative to the present sequencing device applications, the
+infectious disease diagnostic market is likely to present lower margins
+and lower barriers to entry. While the market is potentially large in
+volume, there is presently <strong>no clear demand signal</strong> that
+would justify the relatively large investments (at least tens of
+millions of dollars for a working product) necessary.</p></li>
+</ul>
+
 <div class="table*">
 <p><span id="table:sequencing_capacity"
 label="table:sequencing_capacity"></span></p>
@@ -913,105 +1019,7 @@ label="table:sequencing_capacity"></span></p>
 </tbody>
 </table>
 </div>
-<h2 id="single-molecule-optical-platforms">Single-molecule optical
-platforms</h2>
-<p>Single-molecule optical technologies were brought to the market by
-Helicos <span class="citation"
-data-cites="thompson2010helicos">[60]</span> (now defunct) and <span
-data-acronym-label="PacBio"
-data-acronym-form="singular+short">PacBio</span> <span class="citation"
-data-cites="rhoads_pacbio_2015">[61]</span>. Considering this class of
-technologies as a candidate platform may be surprising, as they have
-generally been embodied as costly, "fridge-sized" instruments with long
-library preparation (&gt;3 hours). However, this is driven not by the
-fundamental needs of the platform, but rather by the market demand for
-high single-base accuracy and long reads. If these requirements are
-relaxed, <span data-acronym-label="SMO"
-data-acronym-form="singular+short">SMO</span> approaches can achieve
-very simple sample preparation <span class="citation"
-data-cites="seqll2017brochure">[29]</span> and a low cost of consumables
-<span class="citation"
-data-cites="whiteford2022reticulatech">[54]</span>.</p>
-<p>Commonly employed library preparation techniques take many hours and
-are not a good fit for point-of-care MGS. However, the SMRTBells library
-preparation kit <span class="citation"
-data-cites="SMRTbells">[62]</span> was introduced to drive accuracy to
-&gt;99.9% and read length to  15 kb, neither of which is required for
-MGS. Without these requirements, library preparation for optical methods
-can be as fast as for nanopore sequencing ( 5 minutes) and still achieve
-accuracies upwards of 80% combined with a compensating read length of
-hundreds of bases. Similarly, approaches derived from the Helicos
-technology have been demonstrated to work with minimal library
-preparation with error rates below 5% and read lengths exceeding 25 bp,
-making them a potential candidate for a MGS device <span
-class="citation" data-cites="whiteford2022reticulatech">[54]</span>.</p>
-<p>In terms of throughput, the sequencing step alone can be achieved in
-a fraction of the time required for nanopore sequencing, as SMO
-approaches can use many more sensors working in parallel. In PacBio
-sequencing, imaging more than 1 million fragments in parallel is common
-<span class="citation" data-cites="sequelSystems">[30]</span> and, with
-a speed of 10 nucleotides per second, the run can be finished in less
-than a minute for the read lengths required for MGS. Another key
-advantage of an optical approach relative to nanopore sequencing is that
-it is compatible with a less complex chip and presents a clearer path to
-a consumable cost of $10 or less <span class="citation"
-data-cites="whiteford2022reticulatech">[54]</span>.</p>
-<p>A key challenge to address will be the optimization of device cost,
-currently exceeding $500,000 in the case of PacBio instruments. However,
-achieving a cost lower than $10,000 appears feasible if instrumentation
-is reimagined from the ground up. For example, photonic chips need not
-be monolithically integrated. Consumer-grade cameras available for $300
-have resolution sufficient for the accuracy requirements of an MGS
-diagnostic. Throughput in a low-cost platform will be limited by
-compatibility with low-cost cameras, but the goal of 1-10 million
-sensing regions (and hence reads) appears achievable.</p>
-<p>A particularly promising emerging approach is that of electro-optical
-zero-mode waveguides <span class="citation"
-data-cites="wanunu2022zmw">[63]</span>, which may enable substantially
-lower input requirements, potentially obviating the need for random
-amplification of nucleic acids in a sample.</p>
-<p><span class="marginnote"><figure>
-<img src="images/IMG_1895.jpeg" />
-<figcaption>Sketch of a cost-optimized single-molecule optical platform.
-Originally appeared in <span class="citation"
-data-cites="whiteford2022reticulatech">[54]</span>.</figcaption>
-</figure></span></p>
-<h1 class="unnumbered" id="sec:accelerating">Accelerating
-development</h1>
-<p>Based on the previous analysis, there are at least two independent
-pathways that are likely to meet the criteria for a viable point-of-care
-MGS device. Despite the large large amounts of private investments
-flowing into sequencing technology as a whole, there is a number reasons
-to believe that directed development can yield significant improvements
-over business-as-usual. A number of observations, informed largely by
-the authors’ experience with the sequencing landscape, as well as
-conversations with experts, push in this direction:</p>
-<ul>
-<li><p>Development is driven by <strong>customer demand</strong>. The
-primary market for sequencing instruments is in research and high-end
-diagnostics (e.g. cancer). In these contexts, the primary consideration
-is often extraordinarily high accuracy, as the correct identification of
-every single base is potentially informative. The task of correctly
-classifying a pathogen of interest or detecting an anomaly does not
-require such high single-base accuracies, as we justify later.
-Similarly, the requirements for read length, as well as sequencing
-depth, are much lower.</p></li>
-<li><p><strong>Time to answer</strong> of hours or days is not a
-limiting factor in many research contexts. Typical workflows are
-structured around large runs, often counted in thousands of billions of
-bases (e.g. ONT PromethION, Illumina NovaSeq). Researchers typically
-care about a low cost per base for these large runs. Large, high-end
-instruments can minimize this cost per base.</p></li>
-<li><p>The sequencing market is still comparatively small, dominated by
-a few players with relatively enforceable intellectual property, and
-<strong>freedom-to-operate</strong> is thus relatively limited.</p></li>
-<li><p>Relative to the present sequencing device applications, the
-infectious disease diagnostic market is likely to present lower margins
-and lower barriers to entry. While the market is potentially large in
-volume, there is presently <strong>no clear demand signal</strong> that
-would justify the relatively large investments (at least tens of
-millions of dollars for a working product) necessary.</p></li>
-</ul>
+
 <p>By our estimates, more than half of global sequencing capacity in
 terms of the number of bases sequenced annually is accounted for by
 Illumina NovaSeq alone <span class="citation"
@@ -1061,11 +1069,10 @@ adoption, at least two classes of technologies, single-molecule optical
 and nanopore sequencing, have a good chance of achieving a combination
 of cost and performance that would make them a viable solution for
 clinicians worldwide.</p>
-<h1 class="acknowledgements">
+<h1 class="unnumbered">Acknowledgements</h1>
 <p>This project was funded by Open Philanthropy, whose support we are
 grateful for. We are grateful to Rahul Arora, Jake Pencharz and Janvi
 Ahuja for help on the project.</p>
-</h1>
 <h1 class="unnumbered" id="bibliography">Bibliography</h1>
 
 <div id="refs" class="references csl-bib-body" role="list">
