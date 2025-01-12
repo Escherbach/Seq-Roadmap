@@ -1,0 +1,1 @@
+Sama chyba, ale je to dobry.
